@@ -13,16 +13,7 @@ COMPLETION_WAITING_DOTS="true"
 SAVEHIST=99999
 
 # Plugins
-plugins=(
-        dirhistory
-        extract
-        fancy-ctrl-z
-        git
-        globalias
-        magic-enter
-        web-search
-        zsh-autosuggestions
-        zsh-navigation-tools)
+plugins=(zsh-autosuggestions)
 
 # Theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -240,21 +231,6 @@ cp(){
         g++ --std=c++17 $1 -o name; ./name
     fi
 }
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/nltbao/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/nltbao/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/nltbao/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/nltbao/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 
