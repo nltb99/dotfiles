@@ -13,7 +13,10 @@ COMPLETION_WAITING_DOTS="true"
 SAVEHIST=99999
 
 # Plugins
-plugins=(zsh-autosuggestions)
+plugins=(
+    zsh-autosuggestions
+    globalias
+)
 
 # Theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
