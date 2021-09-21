@@ -18,6 +18,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 ```ruby
 FuraCode Nerd Font
 Source Code Pro
+JetBrains Mono
 Consolas
 
 https://www.nerdfonts.com/font-downloads
