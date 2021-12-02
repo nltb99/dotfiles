@@ -1,0 +1,34 @@
+# LINUX SETUP
+
+sudo apt update && sudo apt upgrade
+sudo apt install gimp
+sudo apt install nodejs
+sudo apt install git
+sudo apt install neovim 
+sudo apt install curl
+sudo apt remove firefox --purge
+sudo wget https://github.com/shiftkey/desktop/releases/download/release-2.9.3-linux3/GitHubDesktop-linux-2.9.3-linux3.deb
+sudo gdebi GitHubDesktop-linux-2.9.3-linux3.deb
+# ZSH
+sudo apt install zsh
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+chsh -s $(which zsh)
+echo "$SHELL"
+
+# Font
+# https://www.jetbrains.com/lp/mono/
+
+# Unikey
+sudo apt-get install ibus-unikey
+ibus restart
+ibus-setup
+
+# NODE
+npm cache clean -f
+npm install -g n
+sudo n stable
+PATH="$PATH
+
+$ nodejs, python3 
