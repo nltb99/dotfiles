@@ -7,6 +7,7 @@ autocmd BufEnter * :set scroll=10
 syntax on
 set encoding=UTF-8
 set mouse=a
+set clipboard+=unnamedplus
 
 " Persistent undo
 " set undofile
