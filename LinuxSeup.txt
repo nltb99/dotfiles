@@ -7,6 +7,7 @@ sudo apt install git
 sudo apt install neovim 
 sudo apt install curl
 sudo apt remove firefox --purge
+sudo apt-get install silversearcher-ag
 sudo wget https://github.com/shiftkey/desktop/releases/download/release-2.9.3-linux3/GitHubDesktop-linux-2.9.3-linux3.deb
 sudo gdebi GitHubDesktop-linux-2.9.3-linux3.deb
 # ZSH
