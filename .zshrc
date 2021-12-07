@@ -134,20 +134,15 @@ alias yayi="yay -S"
 alias yayu="yay -Syu"
 alias ytdl="youtube-dl"
 alias zshrc="vim ~/.zshrc"
-
-if hash grc 2>/dev/null; then
-    alias df="grc df"
-    alias gcc="grc gcc"
-    alias iwconfig="grc iwconfig"
-    alias last="grc last"
-    alias make="grc make"
-    alias mount="grc mount"
-    alias mtr="grc mtr"
-    alias ping="grc ping"
-    alias ps="grc ps"
-    alias traceroute="grc traceroute"
-    alias wdiff="grc wdiff"
-fi
+# Config alias
+alias py="python3"
+alias python=python3
+alias preview="ag -i -S . | fzf --preview 'cat {}' --info inline -i -e | pbcopy"
+alias filepreview="ag -l -i -S . | fzf --preview 'cat {}' --info inline -i -e | pbcopy"
+alias ls="ls -G"
+alias gcc="g++ -std=c++17"
+alias cheat="curl cheat.sh/"
+alias weather="curl wttr.in/hochiminh"
 
 # Commands
 export EDITOR=vim 
@@ -156,6 +151,22 @@ export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias: "
 export PATH=$HOME/.gem/ruby/2.6.0/bin:$PATH
 export PATH=$HOME/.node_modules/bin:$PATH
 export PATH=$HOME/Applications/bin:$PATH
+export PATH="/usr/local/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/usr/local/homebrew/bin:$PATH"
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
+export PATH="/usr/local/mysql/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/lib/node_modules:$PATH"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-11.0.11.jdk/Contents/Home"
+export FZF_DEFAULT_COMMAND=""
+# config androi studio
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 #Functions
 function lc () {
@@ -190,41 +201,6 @@ function man() {
              man "$@"
 }
 
-
-# Auto start Tmux
-if [ "$TMUX" = "" ]; then tmux; fi
-
-# Config alias
-alias py="python3"
-alias python=python3
-alias preview="ag -i -S . | fzf --preview 'cat {}' --info inline -i -e | pbcopy"
-alias filepreview="ag -l -i -S . | fzf --preview 'cat {}' --info inline -i -e | pbcopy"
-alias ls="ls -G"
-alias gcc="g++ -std=c++17"
-alias cheat="curl cheat.sh/"
-alias weather="curl wttr.in/hochiminh"
-
-export PATH="/usr/local/mysql/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
-
-export PATH="/usr/local/lib/node_modules:$PATH"
-
-# export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_281.jdk/Contents/Home"
-# export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-16.0.1.jdk/Contents/Home"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-11.0.11.jdk/Contents/Home"
-
-# config androi studio
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-export FZF_DEFAULT_COMMAND=""
-
-# Vscode
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-
 # CPP
 cp(){
     if [ "$#" -ne 1 ]; then
@@ -235,5 +211,6 @@ cp(){
     fi
 }
 
-export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 
+# Auto start Tmux
+if [ "$TMUX" = "" ]; then tmux; fi
