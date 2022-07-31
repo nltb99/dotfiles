@@ -171,6 +171,7 @@ let g:floaterm_wintitle = 0
 let g:floaterm_position = 'topright'
 let g:floaterm_autoclose = 0
 nnoremap <leader>= :FloatermNew g++ --std=c++17 -o name main.cpp; ./name<CR>
+nnoremap g= :FloatermNew go run main.go<CR>
 
 " Any Jump
 let g:any_jump_search_prefered_engine = 'ag'

@@ -137,12 +137,16 @@ alias zshrc="vim ~/.zshrc"
 # Config alias
 alias py="python3"
 alias python=python3
+alias wstorm="open -a /Applications/WebStorm.app"
 alias preview="ag -i -S . | fzf --preview 'cat {}' --info inline -i -e | pbcopy"
 alias filepreview="ag -l -i -S . | fzf --preview 'cat {}' --info inline -i -e | pbcopy"
 alias ls="ls -G"
 alias gcc="g++ -std=c++17"
 alias cheat="curl cheat.sh/"
 alias weather="curl wttr.in/hochiminh"
+alias brow='arch --x86_64 /usr/local/Homebrew/bin/brew'
+alias brew='arch -x86_64 brew'
+alias gorun='go run main.go'
 
 # Commands
 export EDITOR=vim 
@@ -159,14 +163,15 @@ export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/lib/node_modules:$PATH"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-11.0.11.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-11.0.15.jdk/Contents/Home"
 export FZF_DEFAULT_COMMAND=""
+export PATH=$PATH:/usr/local/mongodb/bin  
+export PATH="/usr/local/homebrew/sbin:$PATH"
+
 # config androi studio
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
 #Functions
 function lc () {
@@ -214,3 +219,5 @@ cp(){
 
 # Auto start Tmux
 if [ "$TMUX" = "" ]; then tmux; fi
+
+export POSTMAN_API_KEY=PMAK-62abf64eba3e0a461cc27229-fcdb214c69af9919feef13536a9da8f6cc
