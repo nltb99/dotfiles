@@ -19,7 +19,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tomtom/tcomment_vim'
 Plug 'Xuyuanp/scrollbar.nvim'
+Plug 'dense-analysis/ale'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+Plug 'terryma/vim-multiple-cursors'
 
 call plug#end()
-
-

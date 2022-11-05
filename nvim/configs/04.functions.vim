@@ -68,4 +68,9 @@ command! -nargs=* Agc call fzf#run({
 "     set undofile
 " endif
 
-
+" Clipboard
+" let g:clipboard = {"name": "void", "copy": {}, "paste": {}}
+" let g:clipboard.copy["+"] = {-> v:true}
+" let g:clipboard.paste["+"] = {-> []}
+" let g:clipboard.copy["*"] = g:clipboard.copy["+"]
+" let g:clipboard.paste["*"] = g:clipboard.paste["+"]

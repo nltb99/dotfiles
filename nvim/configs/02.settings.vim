@@ -1,5 +1,14 @@
 let mapleader=","
 
+" Override copy paste
+nnoremap x "_x
+nnoremap d "_d
+nnoremap D "_D
+vnoremap d "_d
+nnoremap <leader>d ""d
+nnoremap <leader>D ""D
+vnoremap <leader>d ""d
+
 filetype plugin on
 filetype plugin indent on
 
@@ -7,7 +16,7 @@ autocmd BufEnter * :set scroll=10
 syntax on
 set encoding=UTF-8
 set mouse=a
-set clipboard^=unnamed,unnamedplus
+" set clipboard^=unnamed,unnamedplus
 
 " Persistent undo
 " set undofile
@@ -19,7 +28,7 @@ set clipboard^=unnamed,unnamedplus
 
 set number
 set relativenumber
-set ignorecase
+" set ignorecase
 set smartcase
 
 set tabstop=4

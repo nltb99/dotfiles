@@ -1,7 +1,7 @@
 "NERDTree
-map <C-b> :NERDTreeToggle<CR>
-map <C-i> :NERDTreeFind<CR>
-let g:NERDTreePatternMatchHighlightFullName = 1 
+map <leader><tab> :NERDTreeToggle<CR>
+map <tab> :NERDTreeFind<cr>
+let g:NERDTreePatternMatchHighlightFullName = 1
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
@@ -15,7 +15,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "typescript
 let g:typescript_indent_disable = 1
-"Theme 
+"Theme
 syntax enable
 set background=dark
 highlight Normal ctermbg=None
@@ -29,6 +29,24 @@ let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
+
+" Prettier
+nmap <Leader>p <Plug>(PrettierAsync)
+let g:prettier#autoformat = 0
+let g:prettier#autoformat_require_pragma = 0
+let g:prettier#autoformat_config_present = 0
+let g:prettier#config#print_width = 'auto'
+let g:prettier#config#tab_width = 2
+let g:prettier#config#trailing_comma = 'all'
+let g:prettier#config#jsx_bracket_same_line = 'true'
+let g:prettier#config#jsxSingleQuote = 'true'
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#arrow_parens = 'always'
+let g:prettier#config#semi = 'false'
+let g:prettier#config#single_quote = 'true'
+let g:prettier#quickfix_enabled = 0
+let g:prettier#config#require_pragma = 'false'
+" autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.scss,*.json,*.md,*.vue,*.yaml,*.html,*.go,*.py PrettierAsync
 
 " AUTO CLOSE TAGS
 let g:closetag_filenames = '*.html,*.jsx,*.tsx,*.js,*.vue,*.ejs,*.jsp'
@@ -170,8 +188,10 @@ let g:floaterm_height = 0.8
 let g:floaterm_wintitle = 0
 let g:floaterm_position = 'topright'
 let g:floaterm_autoclose = 0
-nnoremap <leader>= :FloatermNew g++ --std=c++17 -o name main.cpp; ./name<CR>
-nnoremap g= :FloatermNew go run main.go<CR>
+" nnoremap <leader>= :FloatermNew g++ --std=c++17 -o name main.cpp; ./name<CR>
+nnoremap <leader>= :FloatermNew g++ --std=c++17 -o name main.cpp; ./name < input.txt<CR>
+" nnoremap g= :FloatermNew go run main.go<CR>
+" nnoremap <leader>= :FloatermNew node script.js < input.txt > output.txt && cat output.txt<CR>
 
 " Any Jump
 let g:any_jump_search_prefered_engine = 'ag'
@@ -218,12 +238,32 @@ noremap <silent><leader>cf :TCommentAs <c-r>=&ft<CR>
 noremap <silent><leader>t :UndotreeToggle<CR>
 
 "ALE
-let g:ale_sign_error = '>>'
-let g:ale_sign_warning = '--'
-let b:ale_fixers=[]
-let b:ale_linters=[]
-let b:ale_linter_aliases=[]
+" let g:ale_sign_error = '>>'
+" let g:ale_sign_warning = '--'
+" let b:ale_fixers=[]
+" let b:ale_linters=[]
+" let b:ale_linter_aliases=[]
+" let g:ale_linters_explicit = 1
+let g:ale_fixers = {
+\   '*': ['prettier','remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['black'],
+\   'javascript': ['prettier','eslint'],
+\   'javascriptreact': ['prettier','eslint'],
+\   'typescript': ['prettier','tslint'],
+\   'typescriptreact': ['prettier','tslint'],
+\   'css': ['prettier'],
+\   'rust': ['prettier','rustfmt'],
+\}
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_fix_on_save = 1
 let g:ale_linters_explicit = 1
+augroup FiletypeGroup
+    autocmd!
+    au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
+augroup END
 
 " Scroll Bar
 augroup ScrollbarInit
@@ -233,9 +273,31 @@ augroup ScrollbarInit
   autocmd WinLeave,BufLeave,BufWinLeave,FocusLost            * silent! lua require('scrollbar').clear()
 augroup end
 
+" COC-vim popup
+  inoremap <silent><expr> <TAB>
+    \ coc#pum#visible() ? coc#_select_confirm() :
+    \ coc#expandableOrJumpable() ?
+    \ "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+    \ CheckBackSpace() ? "\<TAB>" :
+    \ coc#refresh()
 
+  function! CheckBackSpace() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
+  endfunction
 
+  let g:coc_snippet_next = '<tab>'
 
+    inoremap <expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<CR>"
 
+      function! CheckBackSpace() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~ '\s'
+  endfunction
 
-
+  " Insert <tab> when previous text is space, refresh completion if not.
+  inoremap <silent><expr> <TAB>
+	\ coc#pum#visible() ? coc#pum#next(1):
+	\ CheckBackSpace() ? "\<Tab>" :
+	\ coc#refresh()
+  inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
