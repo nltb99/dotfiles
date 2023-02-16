@@ -154,7 +154,6 @@ alias cpprun='cp main.cpp < input.txt'
 export EDITOR=vim 
 export GREP_COLOR="1;32"
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias: "
-export PATH=$HOME/.gem/ruby/2.6.0/bin:$PATH
 export PATH=$HOME/.node_modules/bin:$PATH
 export PATH=$HOME/Applications/bin:$PATH
 export PATH="/usr/local/bin:$PATH"
@@ -169,11 +168,15 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-11.0.15.jdk/Contents/Hom
 export FZF_DEFAULT_COMMAND=""
 export PATH=$PATH:/usr/local/mongodb/bin  
 export PATH="/usr/local/homebrew/sbin:$PATH"
+export PATH="$PATH:/Users/nltbao/flutter 2/bin"
+export PATH=$PATH:/Users/nltbao/ffmpeg
+export PATH="/usr/local/homebrew/opt/ruby@2.7/bin:$PATH"
 
 # config androi studio
-export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
-export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH="${HOME}/Library/Android/sdk/tools:${HOME}/Library/Android/sdk/platform-tools:${PATH}"
 
 #Functions
 function lc () {
@@ -222,4 +225,3 @@ cp(){
 # Auto start Tmux
 if [ "$TMUX" = "" ]; then tmux; fi
 
-export POSTMAN_API_KEY=PMAK-62abf64eba3e0a461cc27229-fcdb214c69af9919feef13536a9da8f6cc
