@@ -147,7 +147,7 @@ alias weather="curl wttr.in/hochiminh"
 alias brow='arch --x86_64 /usr/local/Homebrew/bin/brew'
 alias brew='arch -x86_64 brew'
 alias gorun='go run main.go'
-alias jsrun='node script.js < input.txt > output.txt && cat output.txt'
+alias jsrun='node main.js < input.txt'
 alias cpprun='cp main.cpp < input.txt'
 
 # Commands
@@ -217,7 +217,7 @@ cp(){
         echo "Usage: cp <file.cpp>"
     else
         name=$(echo $1 | cut -f 1 -d '.')
-        g++ --std=c++17 $1 -o name; ./name
+        g++ --std=c++17 -Wshadow -Wall -O2 -Wno-unused-result $1 -o name; ./name
     fi
 }
 

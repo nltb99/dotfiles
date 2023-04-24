@@ -1,7 +1,9 @@
 {
+  "editor.formatOnSave": true,
   "editor.fontSize": 15,
   "editor.fontWeight": "400",
   "terminal.integrated.fontFamily": "FuraCode Nerd Font",
+  "editor.fontFamily": "FuraCode Nerd Font",
   "terminal.integrated.fontSize": 15,
   "liveServer.settings.donotShowInfoMsg": true,
   "editor.renderLineHighlight": "none",
@@ -9,6 +11,9 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "window.restoreWindows": "folders",
   "editor.suggestSelection": "first",
@@ -19,8 +24,10 @@
     "**/.factorypath": true,
     "**/*.class": true,
     "**/*.form": true,
+    "**/*.min.css": true,
     "node_modules/": true,
     "yarn.lock": true,
+    "build": true,
     ".next/": true
   },
   "search.exclude": {
@@ -43,9 +50,7 @@
   },
   "terminal.integrated.allowChords": false,
   "security.workspace.trust.untrustedFiles": "open",
-  "json.schemas": [
-  
-  ],
+  "json.schemas": [],
   "errorLens.enabledDiagnosticLevels": ["warning", "info"],
   "explorer.confirmDragAndDrop": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
@@ -120,14 +125,13 @@
   ],
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "workbench.colorTheme": "GitHub Dark",
-  "editor.formatOnSave": false,
   "go.toolsManagement.autoUpdate": true,
   "background.fullscreen": {
-    "image": "/Users/nltbao/Desktop/nvim/myfinder/imgs/zoro.jpg", // url of your image
-    "opacity": 0.97, // 0.85 ~ 0.95 recommended
-    "size": "cover", // also css, `cover` to self-adaption (recommended)，or `contain`、`200px 200px`
-    "position": "center", // alias to `background-position`, default `center`
-    "interval": 0 // seconds of interval for carousel, default `0` to disabled.
+    "image": "/Users/nltbao/Desktop/nvim/myfinder/imgs/zoro.jpg",
+    "opacity": 0.97,
+    "size": "cover",
+    "position": "center",
+    "interval": 0
   },
   "workbench.colorCustomizations": {
     "statusBar.background": "#8FBCBB",
@@ -145,5 +149,19 @@
     "editor.suggestSelection": "first",
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false
+  },
+  "tabnine.experimentalAutoImports": true,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": null,
+      "savePathReplacementPairs": null
+    }
+  ],
+  "liveSassCompile.settings.useNewCompiler": true,
+  "liveSassCompile.settings.generateMap": false,
+  "files.associations": {
+    "*.md": "ftl"
   }
 }
