@@ -22,5 +22,6 @@ Plug 'Xuyuanp/scrollbar.nvim'
 Plug 'dense-analysis/ale'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 Plug 'terryma/vim-multiple-cursors'
+Plug 'neoclide/coc-tsserver'
 
 call plug#end()
