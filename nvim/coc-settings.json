@@ -1,7 +1,7 @@
 {
-    "preferences.autoTrigger": "trigger",
-    "preferences.timeout": 300,
-    "tslint.enable": false,
-    "coc.preferences.jumpCommand": "drop",
-    "tslint.jsEnable": false
+  "preferences.autoTrigger": "trigger",
+  "preferences.timeout": 300,
+  "tslint.enable": true,
+  "coc.preferences.jumpCommand": "drop",
+  "tslint.jsEnable": true
 }

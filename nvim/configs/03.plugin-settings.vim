@@ -86,7 +86,7 @@ let g:EasyMotion_smartcase = 1
 let g:auto_save = 0
 let g:auto_save_events = ["InsertLeave", "TextChanged"]
 "====== COC-NVIM ======
-let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-json', 'coc-html', 'coc-ember', 'coc-eslint', 'coc-git', 'coc-go']
+let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-json', 'coc-html', 'coc-ember', 'coc-eslint', 'coc-git', 'coc-go', 'coc-prettier']
 set updatetime=300
 set shortmess+=c
 set signcolumn=yes
@@ -181,13 +181,13 @@ let g:fzf_preview_window = ['up:40%:hidden', 'ctrl-/']
 let g:fzf_preview_window = []
 
 " Floating Window
-let g:floaterm_keymap_new    = '<F12>'
-let g:floaterm_keymap_kill = '<F11>'
 let g:floaterm_width = 0.8
 let g:floaterm_height = 0.8
 let g:floaterm_wintitle = 0
 let g:floaterm_position = 'topright'
 let g:floaterm_autoclose = 0
+nnoremap   <silent>   <F12>   :FloatermToggle<CR>
+tnoremap   <silent>   <F12>   <C-\><C-n>:FloatermToggle<CR>
 " nnoremap <leader>= :FloatermNew g++ --std=c++17 -o name main.cpp; ./name<CR>
 nnoremap <leader>= :FloatermNew g++ --std=c++17 -o name main.cpp; ./name < input.txt<CR>
 nnoremap <leader>ft :FloatermNew <CR>
@@ -263,6 +263,9 @@ let g:ale_lint_on_enter = 0
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_fix_on_save = 1
 let g:ale_linters_explicit = 1
+let g:ale_typescript_tslint_use_global = 1
+let g:ale_typescript_tslint_executable = 'tslint'
+let g:ale_typescript_tslint_config_path = ''
 augroup FiletypeGroup
     autocmd!
     au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
@@ -305,15 +308,6 @@ augroup end
 	\ coc#refresh()
   inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
-" Typescript config
-if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
-  let g:coc_global_extensions += ['coc-prettier']
-endif
-
-if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
-  let g:coc_global_extensions += ['coc-eslint']
-endif
-
 nnoremap <silent> K :call CocAction('doHover')<CR>
 
 function! ShowDocIfNoDiagnostic(timer_id)
@@ -347,7 +341,7 @@ let g:far#enable_undo=1
 
 " Undo Tree
 " set undofile
-" set undodir=./undo
+" set undodir=./undodir
 " set undolevels=1000
 " set undoreload=10000
 " set history=1000
@@ -366,15 +360,15 @@ endfunction
 command -nargs=0 CU call <SID>ForgetUndo()
 
 " Undo Persistent
-" if has("persistent_undo")
-"    let target_path = expand('~/.undodir')
-"
-"     " create the directory and any parent directories
-"     " if the location does not exist.
-"     if !isdirectory(target_path)
-"         call mkdir(target_path, "p", 0700)
-"     endif
-"
-"     let &undodir=target_path
-"     set undofile
-" endif
+if has("persistent_undo")
+   let target_path = expand('~/.undodir')
+
+    " create the directory and any parent directories
+    " if the location does not exist.
+    if !isdirectory(target_path)
+        call mkdir(target_path, "p", 0700)
+    endif
+
+    let &undodir=target_path
+    set undofile
+endif
