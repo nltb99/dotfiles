@@ -16,7 +16,7 @@ autocmd BufEnter * :set scroll=10
 syntax on
 set encoding=UTF-8
 set mouse=a
-" set clipboard^=unnamed,unnamedplus
+set clipboard^=unnamed,unnamedplus
 
 " Persistent undo
 " set undofile
@@ -63,7 +63,6 @@ noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 noremap Y y$
 nmap <silent> ff <Plug>(easymotion-overwin-f2)
 nmap <silent> fl <Plug>(easymotion-overwin-line)
-nmap <leader>rn <Plug>(coc-rename)
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>

@@ -24,4 +24,12 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --producti
 Plug 'terryma/vim-multiple-cursors'
 Plug 'neoclide/coc-tsserver'
 
+Plug 'pangloss/vim-javascript'    " JavaScript support
+Plug 'leafgarland/typescript-vim' " TypeScript syntax
+Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
+Plug 'jparise/vim-graphql'        " GraphQL syntax
+
+Plug 'APZelos/blamer.nvim'
+Plug 'brooth/far.vim'
+
 call plug#end()

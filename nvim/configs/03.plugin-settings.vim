@@ -86,7 +86,7 @@ let g:EasyMotion_smartcase = 1
 let g:auto_save = 0
 let g:auto_save_events = ["InsertLeave", "TextChanged"]
 "====== COC-NVIM ======
-let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-json', 'coc-html', 'coc-ember']
+let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-json', 'coc-html', 'coc-ember', 'coc-eslint', 'coc-git', 'coc-go']
 set updatetime=300
 set shortmess+=c
 set signcolumn=yes
@@ -301,3 +301,51 @@ augroup end
 	\ CheckBackSpace() ? "\<Tab>" :
 	\ coc#refresh()
   inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+" Typescript config
+if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+  let g:coc_global_extensions += ['coc-prettier']
+endif
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+  let g:coc_global_extensions += ['coc-eslint']
+endif
+
+nnoremap <silent> K :call CocAction('doHover')<CR>
+
+function! ShowDocIfNoDiagnostic(timer_id)
+  if (coc#float#has_float() == 0 && CocHasProvider('hover') == 1)
+    silent call CocActionAsync('doHover')
+  endif
+endfunction
+
+function! s:show_hover_doc()
+  call timer_start(500, 'ShowDocIfNoDiagnostic')
+endfunction
+
+autocmd CursorHoldI * :call <SID>show_hover_doc()
+autocmd CursorHold * :call <SID>show_hover_doc()
+nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
+
+" Coc shortcut extension
+nmap <leader>do <Plug>(coc-codeaction)
+nmap <leader>fix  <Plug>(coc-fix-current)
+nmap <leader>rename <Plug>(coc-rename)
+nmap <leader>gd <Plug>(coc-definition)
+
+" Any jump
+let g:any_jump_disable_default_keybindings = 1
+nmap <leader>jp :AnyJump<CR>
+let g:any_jump_list_numbers = 1
+let g:any_jump_grouping_enabled = 1
+let g:any_jump_search_prefered_engine = 'ag'
+
+
+" Git blamer
+let g:blamer_enabled = 1
+let g:blamer_delay = 500
+let g:blamer_show_in_insert_modes = 0
+
+
+" Far search and replace
+let g:far#enable_undo=1
