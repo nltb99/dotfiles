@@ -31,7 +31,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
 " Prettier
-nmap <Leader>p <Plug>(PrettierAsync)
+nmap <Leader>pt <Plug>(PrettierAsync)
 let g:prettier#autoformat = 0
 let g:prettier#autoformat_require_pragma = 0
 let g:prettier#autoformat_config_present = 0
