@@ -1,3 +1,12 @@
+" Global variable os
+if !exists("g:os")
+    if has("win64") || has("win32") || has("win16")
+        let g:os = "Windows"
+    else
+        let g:os = substitute(system('uname'), '\n', '', '')
+    endif
+endif
+
 let mapleader=","
 
 " Override copy paste
@@ -64,10 +73,17 @@ nmap <silent> <c-l> :wincmd l<CR>
 "copy/pase
 vnoremap < <gv
 vnoremap > >gv
-vnoremap <silent> y y:call ClipboardYank()<cr>
-vnoremap <silent> d d:call ClipboardYank()<cr>
-nnoremap <silent> p :call ClipboardPaste()<cr>p
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+
+if has("gui_running")
+    if g:os == "Darwin"
+        vnoremap <silent> y y:call ClipboardYank()<cr>
+        vnoremap <silent> d d:call ClipboardYank()<cr>
+        nnoremap <silent> p :call ClipboardPaste()<cr>p
+    elseif g:os == "Linux"
+    elseif g:os == "Windows"
+    endif
+endif
 
 " Switch Buffer
 nnoremap <Leader>b :ls<CR>:b<Space>
