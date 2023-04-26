@@ -18,14 +18,6 @@ set encoding=UTF-8
 set mouse=a
 set clipboard^=unnamed,unnamedplus
 
-" Persistent undo
-" set undofile
-" set undodir=./undo
-" set undolevels=1000
-" set undoreload=10000
-" set history=1000
-" set undolevels=1000
-
 set number
 set relativenumber
 " set ignorecase

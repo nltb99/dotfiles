@@ -6,16 +6,6 @@ function! ClipboardPaste()
     let @@=system('pbpaste')
 endfunction
 
-" Undo
-function! <SID>ForgetUndo()
-    let old_undolevels = &undolevels
-    set undolevels=-1
-    exe "normal a \<BS>\<Esc>"
-    let &undolevels = old_undolevels
-    unlet old_undolevels
-endfunction
-command -nargs=0 CU call <SID>ForgetUndo()
-
 " Ag Current File
 function! s:ag_to_qfC(line)
   let parts = split(a:line, ':')
@@ -53,20 +43,6 @@ command! -nargs=* Agc call fzf#run({
 \             '--prompt "Agc> "',
 \ 'down':    '~30%'
 \ })
-
-" Undo Tree
-" if has("persistent_undo")
-"    let target_path = expand('~/.undodir')
-"
-"     " create the directory and any parent directories
-"     " if the location does not exist.
-"     if !isdirectory(target_path)
-"         call mkdir(target_path, "p", 0700)
-"     endif
-"
-"     let &undodir=target_path
-"     set undofile
-" endif
 
 " Clipboard
 " let g:clipboard = {"name": "void", "copy": {}, "paste": {}}

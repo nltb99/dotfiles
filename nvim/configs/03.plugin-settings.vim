@@ -190,6 +190,7 @@ let g:floaterm_position = 'topright'
 let g:floaterm_autoclose = 0
 " nnoremap <leader>= :FloatermNew g++ --std=c++17 -o name main.cpp; ./name<CR>
 nnoremap <leader>= :FloatermNew g++ --std=c++17 -o name main.cpp; ./name < input.txt<CR>
+nnoremap <leader>ft :FloatermNew <CR>
 " nnoremap g= :FloatermNew go run main.go<CR>
 " nnoremap <leader>= :FloatermNew node script.js < input.txt > output.txt && cat output.txt<CR>
 
@@ -211,6 +212,11 @@ let g:any_jump_colors = {
       \"result_path":        "String",
       \"help":               "Comment"
       \}
+let g:any_jump_disable_default_keybindings = 1
+nmap <leader>jp :AnyJump<CR>
+let g:any_jump_list_numbers = 1
+let g:any_jump_grouping_enabled = 1
+let g:any_jump_search_prefered_engine = 'ag'
 
 " Barbar Tab Buffer
 noremap <silent><leader>1 :BufferGoto 1<CR>
@@ -233,9 +239,6 @@ noremap <silent><leader>cc :TComment<CR>
 noremap <silent><leader>ci :TComment<CR>
 noremap <silent><leader>cb :TCommentBlock<CR>
 noremap <silent><leader>cf :TCommentAs <c-r>=&ft<CR>
-
-" Undo Tree
-noremap <silent><leader>t :UndotreeToggle<CR>
 
 "ALE
 " let g:ale_sign_error = '>>'
@@ -333,14 +336,6 @@ nmap <leader>fix  <Plug>(coc-fix-current)
 nmap <leader>rename <Plug>(coc-rename)
 nmap <leader>gd <Plug>(coc-definition)
 
-" Any jump
-let g:any_jump_disable_default_keybindings = 1
-nmap <leader>jp :AnyJump<CR>
-let g:any_jump_list_numbers = 1
-let g:any_jump_grouping_enabled = 1
-let g:any_jump_search_prefered_engine = 'ag'
-
-
 " Git blamer
 let g:blamer_enabled = 1
 let g:blamer_delay = 500
@@ -349,3 +344,37 @@ let g:blamer_show_in_insert_modes = 0
 
 " Far search and replace
 let g:far#enable_undo=1
+
+" Undo Tree
+" set undofile
+" set undodir=./undo
+" set undolevels=1000
+" set undoreload=10000
+" set history=1000
+" set undolevels=1000
+
+noremap <silent><leader>undo :UndotreeToggle<CR>
+
+" Undo Function
+function! <SID>ForgetUndo()
+    let old_undolevels = &undolevels
+    set undolevels=-1
+    exe "normal a \<BS>\<Esc>"
+    let &undolevels = old_undolevels
+    unlet old_undolevels
+endfunction
+command -nargs=0 CU call <SID>ForgetUndo()
+
+" Undo Persistent
+" if has("persistent_undo")
+"    let target_path = expand('~/.undodir')
+"
+"     " create the directory and any parent directories
+"     " if the location does not exist.
+"     if !isdirectory(target_path)
+"         call mkdir(target_path, "p", 0700)
+"     endif
+"
+"     let &undodir=target_path
+"     set undofile
+" endif
