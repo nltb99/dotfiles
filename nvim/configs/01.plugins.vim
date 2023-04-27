@@ -36,5 +36,6 @@ Plug 'APZelos/blamer.nvim'
 Plug 'brooth/far.vim'
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
