@@ -46,6 +46,7 @@ let g:prettier#config#semi = 'false'
 let g:prettier#config#single_quote = 'true'
 let g:prettier#quickfix_enabled = 0
 let g:prettier#config#require_pragma = 'false'
+let g:prettier#exec_cmd_path = "/usr/local/homebrew/bin/prettier"
 " autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.scss,*.json,*.md,*.vue,*.yaml,*.html,*.go,*.py PrettierAsync
 
 " AUTO CLOSE TAGS

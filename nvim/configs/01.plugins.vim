@@ -20,7 +20,10 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tomtom/tcomment_vim'
 Plug 'Xuyuanp/scrollbar.nvim'
 Plug 'dense-analysis/ale'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install --frozen-lockfile --production',
+  \ 'branch': 'release/1.x'
+  \ }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'neoclide/coc-tsserver'
 
@@ -31,5 +34,7 @@ Plug 'jparise/vim-graphql'        " GraphQL syntax
 
 Plug 'APZelos/blamer.nvim'
 Plug 'brooth/far.vim'
+
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
