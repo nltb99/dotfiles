@@ -31,7 +31,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
 " Prettier
-nmap <Leader>pt <Plug>(PrettierAsync)
+nmap <Leader>pp <Plug>(PrettierAsync)
 let g:prettier#autoformat = 0
 let g:prettier#autoformat_require_pragma = 0
 let g:prettier#autoformat_config_present = 0
@@ -214,7 +214,7 @@ let g:any_jump_colors = {
       \"help":               "Comment"
       \}
 let g:any_jump_disable_default_keybindings = 1
-nmap <leader>jp :AnyJump<CR>
+nmap <leader>jj :AnyJump<CR>
 let g:any_jump_list_numbers = 1
 let g:any_jump_grouping_enabled = 1
 let g:any_jump_search_prefered_engine = 'ag'
@@ -329,7 +329,7 @@ nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
 nmap <leader>do <Plug>(coc-codeaction)
 nmap <leader>fix  <Plug>(coc-fix-current)
 nmap <leader>rename <Plug>(coc-rename)
-nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gg <Plug>(coc-definition)
 
 " Git blamer
 let g:blamer_enabled = 1
