@@ -108,7 +108,7 @@ function! RipgrepFzf(query, fullscreen)
   call fzf#vim#grep(initial_command, 1, spec, a:fullscreen)
 endfunction
 
-command! -nargs=* -bang Sr call RipgrepFzf(<q-args>, <bang>0)
+command! -nargs=* -bang SS call RipgrepFzf(<q-args>, <bang>0)
 
 " Search Word Exact
 vnoremap <silent> * :<C-U>
