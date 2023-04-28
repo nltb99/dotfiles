@@ -230,6 +230,7 @@ noremap <silent><leader>7 :BufferGoto 7<CR>
 noremap <silent><leader>8 :BufferGoto 8<CR>
 noremap <silent><leader>9 :BufferGoto 9<CR>
 noremap <silent><leader>w :BufferClose<CR>
+noremap <silent><leader>W :BufferClose!<CR>
 noremap <silent><leader>< :BufferMovePrevious<CR>
 noremap <silent><leader>> :BufferMoveNext<CR>
 noremap <silent><leader>. :BufferPrevious<CR>
