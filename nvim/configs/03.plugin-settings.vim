@@ -176,11 +176,6 @@ let g:NERDTreeSyntaxEnabledExtensions = ['hbs', 'lhs'] " enable highlight to .hb
 "***PYTHON SETUP***
 let g:indentLine_enabled = 0
 
-" Review window on search
-let g:fzf_preview_window = ['right:50%', 'ctrl-/']
-let g:fzf_preview_window = ['up:40%:hidden', 'ctrl-/']
-let g:fzf_preview_window = []
-
 " Floating Window
 let g:floaterm_width = 0.8
 let g:floaterm_height = 0.8

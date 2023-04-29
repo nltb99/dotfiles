@@ -90,8 +90,8 @@ nnoremap <Leader>b :ls<CR>:b<Space>
 
 " FZF
 command! -bang -nargs=? -complete=dir FF call fzf#vim#files(<q-args>, {'options': ['--info=inline', '-i', '--preview', '~/.config/nvim/preview.sh {}']}, <bang>0)
-command! -bang -nargs=? -complete=dir BB call fzf#vim#buffers(<q-args>, {'options': ['--info=inline', '-i', '--preview', 'cat {}']}, <bang>0)
-
+command! -bang -nargs=? -complete=dir FG call fzf#vim#gitfiles(<q-args>, {'options': ['--info=inline', '-i', '--preview', '~/.config/nvim/preview.sh {}']}, <bang>0)
+command! -bang -nargs=? -complete=dir BB call fzf#vim#buffers(<q-args>, {'options': ['--info=inline', '-i', '--preview', '~/.config/nvim/preview.sh {}']}, <bang>0)
 command! -bang -nargs=? -complete=dir Ag call fzf#vim#ag(<q-args>, '--path-to-ignore ~/.ignore --hidden --column --numbers --noheading --color --smart-case -i --ignore-dir node_modules ' , <bang>0)
 
 command! -bang -nargs=* Rg
@@ -99,16 +99,26 @@ command! -bang -nargs=* Rg
   \   'rg --column --line-number --no-heading --color=always --smart-case  '.shellescape(<q-args>), 1,
   \   fzf#vim#with_preview(), <bang>0)
 
-function! RipgrepFzf(query, fullscreen)
-  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case --no-require-git  -- %s || true'
-  let initial_command = printf(command_fmt, shellescape(a:query))
-  let reload_command = printf(command_fmt, '{q}')
+function! RipgrepFzfCurrentDir(query, fullscreen)
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case --no-require-git -- %s -f %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query), expand('%:p:h'))
+  let reload_command = printf(command_fmt, '{q}', expand('%:p:h'))
   let spec = {'options': ['--disabled', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
-  let spec = fzf#vim#with_preview(spec, 'right', 'ctrl-/')
+  let spec = fzf#vim#with_preview(spec, 'hidden,right,50%,<70(up,40%)', 'ctrl-/')
   call fzf#vim#grep(initial_command, 1, spec, a:fullscreen)
 endfunction
 
-command! -nargs=* -bang SS call RipgrepFzf(<q-args>, <bang>0)
+function! RipgrepFzfCurrentFile(query, fullscreen)
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case --no-require-git -- %s -f %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query), expand('%:p'))
+  let reload_command = printf(command_fmt, '{q}', expand('%:p'))
+  let spec = {'options': ['--disabled', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  let spec = fzf#vim#with_preview(spec, 'hidden,right,50%,<70(up,40%)', 'ctrl-/')
+  call fzf#vim#grep(initial_command, 1, spec, a:fullscreen)
+endfunction
+
+command! -nargs=* -bang GG call RipgrepFzfCurrentDir(<q-args>, <bang>0)
+command! -nargs=* -bang SS call RipgrepFzfCurrentFile(<q-args>, <bang>0)
 
 " Search Word Exact
 vnoremap <silent> * :<C-U>
