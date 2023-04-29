@@ -178,6 +178,31 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH="${HOME}/Library/Android/sdk/tools:${HOME}/Library/Android/sdk/platform-tools:${PATH}"
 
+# https://stackoverflow.com/questions/394230/how-to-detect-the-os-from-a-bash-script
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    # Linux
+    alias pbcopy='xclip -selection clipboard'
+    alias pbpaste='xclip -selection clipboard -o'
+
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    # Mac OSX
+
+elif [[ "$OSTYPE" == "cygwin" ]]; then
+    # Mac cygwin
+
+elif [[ "$OSTYPE" == "msys" ]]; then
+    # Window
+
+elif [[ "$OSTYPE" == "win32" ]]; then
+    # I'm not sure this can happen.
+
+elif [[ "$OSTYPE" == "freebsd"* ]]; then
+    # ...
+    
+else
+    echo 'Unknown OS!'
+fi
+
 #Functions
 function lc () {
     cd $1 &&
