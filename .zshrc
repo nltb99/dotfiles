@@ -171,6 +171,9 @@ export PATH="/usr/local/homebrew/sbin:$PATH"
 export PATH="$PATH:/Users/nltbao/flutter 2/bin"
 export PATH=$PATH:/Users/nltbao/ffmpeg
 export PATH="/usr/local/homebrew/opt/ruby@2.7/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+# export PATH="/Users/nltbao/Documents/libs/solana/dev/solana"/bin:"$PATH"
+# export PATH="/Users/nltbao/.local/share/solana/install/active_release/bin:$PATH"
 
 # config androi studio
 export ANDROID_HOME=$HOME/Library/Android/sdk
