@@ -38,4 +38,7 @@ Plug 'brooth/far.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'tpope/vim-fugitive'
 
+Plug 'vim-syntastic/syntastic'
+Plug 'jlevesy/rust.vim'
+
 call plug#end()
