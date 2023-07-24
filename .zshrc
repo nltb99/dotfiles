@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # Path to oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export TERM="xterm-256color"
@@ -174,6 +176,7 @@ export PATH="/usr/local/homebrew/opt/ruby@2.7/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 # export PATH="/Users/nltbao/Documents/libs/solana/dev/solana"/bin:"$PATH"
 # export PATH="/Users/nltbao/.local/share/solana/install/active_release/bin:$PATH"
+export PATH="/Users/nltbao/.local/bin/fig:$PATH"
 
 # config androi studio
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -253,3 +256,5 @@ cp(){
 # Auto start Tmux
 if [ "$TMUX" = "" ]; then tmux; fi
 
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
