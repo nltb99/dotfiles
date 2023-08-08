@@ -177,6 +177,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # export PATH="/Users/nltbao/Documents/libs/solana/dev/solana"/bin:"$PATH"
 # export PATH="/Users/nltbao/.local/share/solana/install/active_release/bin:$PATH"
 export PATH="/Users/nltbao/.local/bin/fig:$PATH"
+export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:"$PATH"
 
 # config androi studio
 export ANDROID_HOME=$HOME/Library/Android/sdk
