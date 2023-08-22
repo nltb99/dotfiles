@@ -151,6 +151,7 @@ alias brew='arch -x86_64 brew'
 alias gorun='go run main.go'
 alias jsrun='node main.js < input.txt'
 alias cpprun='cp main.cpp < input.txt'
+alias chromeinsecure='open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security'
 
 # Commands
 export EDITOR=vim 
