@@ -180,6 +180,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/Users/nltbao/.local/bin/fig:$PATH"
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:"$PATH"
 export PATH=$(go env GOPATH)/bin:$PATH
+export PYTHONPATH=/usr/local/lib/python3.10/site-packages:$PYTHONPATH
 
 # config androi studio
 export ANDROID_HOME=$HOME/Library/Android/sdk
