@@ -59,7 +59,6 @@
     "*.jar": "default"
   },
   "eslint.format.enable": true,
-  "eslint.alwaysShowStatus": true,
   "[typescriptreact]": {
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
   },
@@ -73,61 +72,11 @@
   },
   "bracketPairColorizer.depreciation-notice": false,
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
-  "vim.easymotion": true,
-  "vim.incsearch": true,
-  "vim.useSystemClipboard": true,
-  "vim.useCtrlKeys": true,
-  "vim.hlsearch": true,
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "j"],
-      "after": ["<Esc>"]
-    },
-    {
-      "before": ["w", "w"],
-      "after": ["<Esc>"]
-    }
-  ],
-  "vim.statusBarColorControl": true,
-  "vim.statusBarColors.normal": ["#8FBCBB", "#434C5E"],
-  "vim.statusBarColors.insert": "#BF616A",
-  "vim.statusBarColors.visual": "#B48EAD",
-  "vim.statusBarColors.visualline": "#B48EAD",
-  "vim.statusBarColors.visualblock": "#A3BE8C",
-  "vim.statusBarColors.replace": "#D08770",
-  "vim.statusBarColors.commandlineinprogress": "#007ACC",
-  "vim.statusBarColors.searchinprogressmode": "#007ACC",
-  "vim.statusBarColors.easymotionmode": "#007ACC",
-  "vim.statusBarColors.easymotioninputmode": "#007ACC",
-  "vim.statusBarColors.surroundinputmode": "#007ACC",
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["<leader>", "d"],
-      "after": ["d", "d"]
-    },
-    {
-      "before": ["<C-n>"],
-      "commands": [":nohl"]
-    },
-    {
-      "before": ["K"],
-      "commands": ["lineBreakInsert"],
-      "silent": true
-    },
-    {
-      "before": ["u"],
-      "after": []
-    },
-    {
-      "before": ["<C-R>"],
-      "after": []
-    }
-  ],
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "workbench.colorTheme": "GitHub Dark",
   "go.toolsManagement.autoUpdate": true,
   "background.fullscreen": {
-    "image": "/Users/nltbao/Desktop/nvim/myfinder/imgs/zoro.jpg",
+    "images": ["https://i.ibb.co/7YjMRNg/zoro.jpg"],
     "opacity": 0.97,
     "size": "cover",
     "position": "center",
@@ -139,16 +88,6 @@
     "statusBar.debuggingBackground": "#8FBCBB",
     "statusBar.foreground": "#434C5E",
     "statusBar.debuggingForeground": "#434C5E"
-  },
-  "[dart]": {
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true,
-    "editor.rulers": [80],
-    "editor.selectionHighlight": false,
-    "editor.suggest.snippetsPreventQuickSuggestions": false,
-    "editor.suggestSelection": "first",
-    "editor.tabCompletion": "onlySnippets",
-    "editor.wordBasedSuggestions": false
   },
   "tabnine.experimentalAutoImports": true,
   "liveSassCompile.settings.formats": [
@@ -163,5 +102,9 @@
   "liveSassCompile.settings.generateMap": false,
   "files.associations": {
     "*.md": "ftl"
+  },
+  "launch": {
+    "configurations": [],
+    "compounds": []
   }
 }
