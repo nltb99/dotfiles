@@ -3,5 +3,6 @@
   "preferences.timeout": 300,
   "tslint.enable": true,
   "coc.preferences.jumpCommand": "drop",
-  "tslint.jsEnable": true
+  "tslint.jsEnable": true,
+  "snippets.ultisnips.pythonPrompt": false
 }
