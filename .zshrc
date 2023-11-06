@@ -137,8 +137,7 @@ alias yayu="yay -Syu"
 alias ytdl="youtube-dl"
 alias zshrc="vim ~/.zshrc"
 # Config alias
-alias py="python3"
-alias python=python3
+alias py="python"
 alias wstorm="open -a /Applications/WebStorm.app"
 alias preview="ag -i -S . | fzf --preview 'cat {}' --info inline -i -e | pbcopy"
 alias filepreview="ag -l -i -S . | fzf --preview 'cat {}' --info inline -i -e | pbcopy"
@@ -146,8 +145,8 @@ alias ls="ls -G"
 alias gcc="g++ -std=c++17"
 alias cheat="curl cheat.sh/"
 alias weather="curl wttr.in/hochiminh"
-alias brow='arch --x86_64 /usr/local/Homebrew/bin/brew'
-alias brew='arch -x86_64 brew'
+# alias brow='arch --x86_64 /usr/local/Homebrew/bin/brew'
+# alias brew='arch -x86_64 brew'
 alias gorun='go run main.go'
 alias jsrun='node main.js < input.txt'
 alias cpprun='cp main.cpp < input.txt'
@@ -160,8 +159,10 @@ export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias: "
 export PATH=$HOME/.node_modules/bin:$PATH
 export PATH=$HOME/Applications/bin:$PATH
 export PATH="/usr/local/bin:$PATH"
-export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/usr/local/homebrew/bin:$PATH"
+# export PATH="/opt/homebrew/bin:$PATH"
+# export PATH="/usr/local/homebrew/bin:$PATH"
+# export PATH="/usr/local/homebrew/sbin:$PATH"
+export PATH=/opt/homebrew/bin:$PATH
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
@@ -170,23 +171,18 @@ export PATH="/usr/local/lib/node_modules:$PATH"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-11.0.15.jdk/Contents/Home"
 export FZF_DEFAULT_COMMAND=""
 export PATH=$PATH:/usr/local/mongodb/bin  
-export PATH="/usr/local/homebrew/sbin:$PATH"
 export PATH="$PATH:/Users/nltbao/flutter 2/bin"
 export PATH=$PATH:/Users/nltbao/ffmpeg
-export PATH="/usr/local/homebrew/opt/ruby@2.7/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-# export PATH="/Users/nltbao/Documents/libs/solana/dev/solana"/bin:"$PATH"
-# export PATH="/Users/nltbao/.local/share/solana/install/active_release/bin:$PATH"
 export PATH="/Users/nltbao/.local/bin/fig:$PATH"
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:"$PATH"
 export PATH=$(go env GOPATH)/bin:$PATH
-export PYTHONPATH=/usr/local/lib/python3.10/site-packages:$PYTHONPATH
 
 # config androi studio
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH="${HOME}/Library/Android/sdk/tools:${HOME}/Library/Android/sdk/platform-tools:${PATH}"
+# export ANDROID_HOME=$HOME/Library/Android/sdk
+# export PATH=$PATH:$ANDROID_HOME/emulator
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
+# export PATH="${HOME}/Library/Android/sdk/tools:${HOME}/Library/Android/sdk/platform-tools:${PATH}"
 
 # https://stackoverflow.com/questions/394230/how-to-detect-the-os-from-a-bash-script
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
@@ -213,41 +209,8 @@ else
     echo 'Unknown OS!'
 fi
 
-#Functions
-function lc () {
-    cd $1 &&
-    la $2
-}
-
-mkcd ()
-{
-    mkdir -p -- "$1" &&
-    cd -P -- "$1"
-}
-
-function tmux-clean() {
-    tmux list-sessions | grep -E -v '\(attached\)$' | while IFS='\n' read line; do
-    tmux kill-session -t "${line%%:*}"
-    done
-}
-
-function man() {
-     env \
-         LESS_TERMCAP_mb=$(printf "\e[1;31m") \
-         LESS_TERMCAP_md=$(printf "\e[1;36m") \
-         LESS_TERMCAP_me=$(printf "\e[0m") \
-         LESS_TERMCAP_se=$(printf "\e[0m") \
-         LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
-         LESS_TERMCAP_ue=$(printf "\e[0m") \
-         LESS_TERMCAP_us=$(printf "\e[1;32m") \
-         PAGER="${commands[less]:-$PAGER}" \
-         _NROFF_U=1 \
-         PATH="$HOME/bin:$PATH" \
-             man "$@"
-}
-
 # CPP
-cp(){
+cplusplus(){
     if [ "$#" -ne 1 ]; then
         echo "Usage: cp <file.cpp>"
     else
@@ -259,13 +222,6 @@ cp(){
 
 # Auto start Tmux
 if [ "$TMUX" = "" ]; then tmux; fi
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/nltbao/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/nltbao/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/nltbao/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/nltbao/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -282,3 +238,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+export PATH="$HOME/.local/bin:$PATH"
