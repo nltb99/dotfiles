@@ -1,5 +1,5 @@
-nvim/bundle
-nvim/configs/undodir
+nvim_v1/bundle
+nvim_v1/configs/undodir
 
 # Compiled Lua sources
 luac.out
