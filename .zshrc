@@ -151,6 +151,8 @@ alias gorun='go run main.go'
 alias jsrun='node main.js < input.txt'
 alias cpprun='cp main.cpp < input.txt'
 alias chromeinsecure='open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security'
+alias pypath='export PYTHONPATH=$(pwd)'
+alias pystart='pypath & poetry shell'
 
 # Commands
 export EDITOR=vim 
