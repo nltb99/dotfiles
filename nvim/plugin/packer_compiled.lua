@@ -296,11 +296,6 @@ _G.packer_plugins = {
     path = "/Users/nltbao/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
   },
-  ["vim-wakatime"] = {
-    loaded = true,
-    path = "/Users/nltbao/.local/share/nvim/site/pack/packer/start/vim-wakatime",
-    url = "https://github.com/wakatime/vim-wakatime"
-  },
   ["which-key.nvim"] = {
     loaded = true,
     path = "/Users/nltbao/.local/share/nvim/site/pack/packer/start/which-key.nvim",
