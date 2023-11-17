@@ -35,17 +35,9 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
--- Navigate buffers
-keymap("n", "<Tab>", ":bNext<CR>", opts) -- <Tab> to go to next buffers
-keymap("n", "<S-Tab>", ":bprevious<CR>", opts) -- <Shift><Tab> to go to prev buffers
-
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
-
--- Jump to far left or right of line
-keymap("n", "H", "^", opts)
-keymap("n", "L", "$", opts)
 
 -- Navigate splits
 keymap("n", "<A-Up>", "<C-k>", opts)
@@ -54,7 +46,8 @@ keymap("n", "<A-Left>", "<C-h>", opts)
 keymap("n", "<A-Right>", "<C-l>", opts)
 
 -- NvimTree
-keymap("n", "e", ":NvimTreeFocus<CR>", opts) -- Press "e" to focus to NVimTree, press "e" again to toggle
+-- Press "Tab" to focus to NVimTree, press "e" again to toggle
+keymap("n", "<Tab>", ":NvimTreeFocus<CR>", opts) 
 
 -- Clear highlight search
 keymap("n", "<ESC>", ":nohl<CR>", opts)
