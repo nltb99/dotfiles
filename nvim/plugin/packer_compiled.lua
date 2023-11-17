@@ -266,6 +266,11 @@ _G.packer_plugins = {
     path = "/Users/nltbao/.local/share/nvim/site/pack/packer/start/promise-async",
     url = "https://github.com/kevinhwang91/promise-async"
   },
+  ["scrollbar.nvim"] = {
+    loaded = true,
+    path = "/Users/nltbao/.local/share/nvim/site/pack/packer/start/scrollbar.nvim",
+    url = "https://github.com/Xuyuanp/scrollbar.nvim"
+  },
   ["tabby.nvim"] = {
     loaded = true,
     path = "/Users/nltbao/.local/share/nvim/site/pack/packer/start/tabby.nvim",
