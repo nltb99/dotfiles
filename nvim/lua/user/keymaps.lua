@@ -6,9 +6,9 @@ local term_opts = { silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 --Remap space as leader key
-keymap("", ",", "<Nop>", opts)
-vim.g.mapleader = ","
-vim.g.maplocalleader = ","
+keymap("", "<Space>", "<Nop>", opts)
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- Modes
 --   normal_mode = "n",
@@ -81,6 +81,21 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+
+-- Buffer Jump
+keymap("n", ",1", ":BufferLineGoToBuffer 1<CR>",  opts)
+keymap("n", ",2", ":BufferLineGoToBuffer 2<CR>",  opts)
+keymap("n", ",3", ":BufferLineGoToBuffer 3<CR>",  opts)
+keymap("n", ",4", ":BufferLineGoToBuffer 4<CR>",  opts)
+keymap("n", ",5", ":BufferLineGoToBuffer 5<CR>",  opts)
+keymap("n", ",6", ":BufferLineGoToBuffer 6<CR>",  opts)
+keymap("n", ",7", ":BufferLineGoToBuffer 7<CR>",  opts)
+keymap("n", ",8", ":BufferLineGoToBuffer 8<CR>",  opts)
+keymap("n", ",9", ":BufferLineGoToBuffer 9<CR>",  opts)
+-- keymap("n", "<A-lt>", ":BufferLineMovePrev<CR>",  opts)
+-- keymap("n", "<M-<", ":BufferLineMoveNext<CR>",  opts)
+-- keymap("n", ",x", "<cmd><leader>c<CR>", opts)
+
 
 -- Pasting without yanking
 keymap("v", "p", '"_dP', opts)
