@@ -60,14 +60,11 @@ keymap(
 	opts
 )
 
--- Format code
--- keymap("n", "<leader>fm", ":lua vim.lsp.buf.formatting_sync()", opts)
-vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()' ]])
-
 -- Insert --
 -- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
+keymap("i", "ww", "<ESC>:w<cr>", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -78,9 +75,6 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 
--- Pasting without yanking
-keymap("v", "p", '"_dP', opts)
-
 -- Visual Block --
 -- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
@@ -88,8 +82,16 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
--- Format code
-keymap("x", "<leader>fm", ":lua vim.lsp.buf.range_formatting()", opts)
+-- Pasting without yanking
+keymap("v", "p", '"_dP', opts)
+
+-- -- Format code
+-- keymap("x", "<leader>fm", ":lua vim.lsp.buf.range_formatting()", opts)
+
+-- -- Format code
+-- -- keymap("n", "<leader>fm", ":lua vim.lsp.buf.formatting_sync()", opts)
+-- vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()' ]])
+
 
 -- Terminal --
 -- Better terminal navigation
