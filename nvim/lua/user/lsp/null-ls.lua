@@ -34,32 +34,38 @@ null_ls.setup({
 		-- }),
 		formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
 
-    -- Python
+    	-- Python
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.autoflake.with({ extra_args = { "--fast" } }),
+		diagnostics.pylint,
+		diagnostics.flake8.with({
+			command = "flake8",
+			args = {'--format=%(row)d:%(col)d: %(text)s'}, -- Format for extracting information
+  			diagnostics_format = '[%linter%] %f:%l:%c: %m', -- Format for displaying in the virtual text
+		}),
 
-    -- Lua
+    	-- Lua
 		formatting.stylua,
 
-    -- Markdown
-    -- formatting.buf,
-    -- formatting.markdownlint,
-
-    -- PG
-    -- formatting.pg_format,
-
 		diagnostics.eslint,
-		diagnostics.pylint,
-		diagnostics.flake8,
+
     	diagnostics.actionlint, -- Github Workflows
-    -- diagnostics.alex, -- Markdown, Catch insensitive, inconsiderate writing
-    -- diagnostics.buf, -- Protobuf
+
+		-- diagnostics.alex, -- Markdown, Catch insensitive, inconsiderate writing
+		-- diagnostics.buf, -- Protobuf
 
 		-- completion.spell,
 
-    -- Code actions
-    -- code_actions.gitsigns,
+		-- Code actions
+		-- code_actions.gitsigns,
 
 		-- hover.dictionary,
+
+		-- Markdown
+		-- formatting.buf,
+		-- formatting.markdownlint,
+
+		-- PG
+		-- formatting.pg_format,
 	},
 })

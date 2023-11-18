@@ -24,6 +24,7 @@ local servers = {
 	"rust_analyzer",
 	"terraformls",
 	"tsserver",
+	"pyright",
 }
 
 lsp_installer.setup({
