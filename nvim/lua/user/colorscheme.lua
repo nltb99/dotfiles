@@ -1,13 +1,11 @@
-vim.cmd([[
-try
-   " colorscheme darkplus
-    colorscheme nightfox
-   " colorscheme kanagawa
-   " colorscheme tokyonight-storm
-   " colorscheme tokyonight-day
-   " colorscheme tokyonight-moon
-catch /^Vim\%((\a\+)\)\=:E185/
-  colorscheme default
-  -- set background=dark
-endtry
-]])
+local M = {
+  "LunarVim/primer.nvim",
+  lazy = false, -- make sure we load this during startup if it is your main colorscheme
+  priority = 1000, -- make sure to load this before all the other start plugins
+}
+
+function M.config()
+  vim.cmd.colorscheme "primer_dark"
+end
+
+return M
