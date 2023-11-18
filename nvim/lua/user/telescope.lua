@@ -5,6 +5,8 @@ end
 
 local actions = require "telescope.actions"
 
+telescope.load_extension('media_files')
+
 telescope.setup {
   defaults = {
 
@@ -36,12 +38,12 @@ telescope.setup {
         ["<PageUp>"] = actions.results_scrolling_up,
         ["<PageDown>"] = actions.results_scrolling_down,
 
-        ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
-        ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
-        ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
-        ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
-        ["<C-l>"] = actions.complete_tag,
-        ["<C-_>"] = actions.which_key, -- keys from pressing <C-/>
+        -- ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
+        -- ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
+        -- ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
+        -- ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+        -- ["<C-l>"] = actions.complete_tag,
+        -- ["<C-_>"] = actions.which_key, -- keys from pressing <C-/>
       },
 
       n = {
@@ -87,10 +89,12 @@ telescope.setup {
     -- builtin picker
   -- },
   extensions = {
-    -- Your extension configuration goes here:
-    -- extension_name = {
-    --   extension_config_key = value,
-    -- }
-    -- please take a look at the readme of the extension you want to configure
+    media_files = {
+      -- filetypes whitelist
+      -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+      filetypes = {"png", "webp", "jpg", "jpeg"},
+      -- find command (defaults to `fd`)
+      find_cmd = "rg"
+    }
   },
 }

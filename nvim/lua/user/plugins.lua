@@ -112,6 +112,7 @@ return packer.startup(function(use)
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", tag="0.1.3" })
+	use({ "nvim-telescope/telescope-media-files.nvim", })
 	use({ "nvim-treesitter/nvim-treesitter", tag="v0.9.1" })
 
 	-- Git
