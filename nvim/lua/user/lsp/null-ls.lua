@@ -32,7 +32,8 @@ null_ls.setup({
 		-- 		return { "--edition=2021" }
 		-- 	end,
 		-- }),
-		formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
+		-- formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
+		formatting.prettier.with({ extra_args = { } }),
 
     	-- Python
 		formatting.black.with({ extra_args = { "--fast" } }),
@@ -51,21 +52,20 @@ null_ls.setup({
 
     	diagnostics.actionlint, -- Github Workflows
 
-		-- diagnostics.alex, -- Markdown, Catch insensitive, inconsiderate writing
-		-- diagnostics.buf, -- Protobuf
+		diagnostics.alex, -- Markdown, Catch insensitive, inconsiderate writing
+		diagnostics.buf, -- Protobuf
 
-		-- completion.spell,
+		completion.spell,
 
-		-- Code actions
-		-- code_actions.gitsigns,
+		code_actions.gitsigns,
 
-		-- hover.dictionary,
+		hover.dictionary,
 
 		-- Markdown
-		-- formatting.buf,
-		-- formatting.markdownlint,
+		formatting.buf,
+		formatting.markdownlint,
 
 		-- PG
-		-- formatting.pg_format,
+		formatting.pg_format,
 	},
 })

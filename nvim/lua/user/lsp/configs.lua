@@ -34,8 +34,7 @@ lsp_installer.setup({
 
 for _, server in pairs(servers) do
 	local opts = {
-		-- Temporarily disable `nvim-lspconfig` key mappings here --
-		-- on_attach = require("user.lsp.handlers").on_attach,
+		on_attach = require("user.lsp.handlers").on_attach,
 		capabilities = require("user.lsp.handlers").capabilities,
 	}
 
