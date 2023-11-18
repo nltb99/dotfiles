@@ -126,8 +126,8 @@ alias sysr="sudo systemctl restart"
 alias syss="systemctl status"
 alias systa="sudo systemctl start"
 alias systo="sudo systemctl stop"
-alias tmux="tmux -u"
-alias tmuxm="tmux new-session \; split-window -h \; split-window -v \; attach"
+# alias tmux="tmux -u"
+# alias tmuxm="tmux new-session \; split-window -h \; split-window -v \; attach"
 alias trii="trizen -S --noedit"
 alias tris="trizen -Ss --noedit"
 alias triu="trizen -Syu --noedit"
@@ -223,7 +223,7 @@ cplusplus(){
 
 
 # Auto start Tmux
-if [ "$TMUX" = "" ]; then tmux; fi
+# if [ "$TMUX" = "" ]; then tmux; fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
