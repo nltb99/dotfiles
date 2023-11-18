@@ -114,3 +114,11 @@ keymap("v", "p", '"_dP', opts)
 -- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+
+
+-- Telescope
+keymap("n", "gr", ":Telescope lsp_references<CR>", opts)
+keymap("n", "gd", ":Telescope lsp_definitions<CR>", opts)
+keymap("n", "gt", ":Telescope lsp_type_definitions<CR>", opts)
+keymap("n", "gi", ":Telescope lsp_implementations<CR>", opts)
+keymap("n", "gsy", ":Telescope lsp_document_symbols<CR>", opts)
