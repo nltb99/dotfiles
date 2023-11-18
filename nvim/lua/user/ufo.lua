@@ -1,10 +1,15 @@
+vim.o.foldlevel = 99 ue
 vim.o.foldlevelstart = -1
-vim.o.foldenable = false
+vim.o.foldenable = true
+
 
 local status_ok, ufo = pcall(require, "ufo")
 if not status_ok then
   return
 end
+
+vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
+vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
 
 local capabilities = require("user.lsp.handlers").capabilities
 capabilities.textDocument.foldingRange = {
@@ -19,4 +24,8 @@ for _, ls in ipairs(language_servers) do
   })
 end
 
-ufo.setup()
+ufo.setup({
+    provider_selector = function(bufnr, filetype, buftype)
+        return {'treesitter', 'indent'}
+    end
+})
