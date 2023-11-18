@@ -70,27 +70,26 @@ cmp.setup({
 		["<CR>"] = cmp.mapping.confirm({ select = true }),
 		["<Right>"] = cmp.mapping.confirm({ select = true }),
 
-    -- Original: <Tab>
-    ["<Down>"] = cmp.mapping(function(fallback)
-      local copilot_keys = vim.fn['copilot#Accept']()
+		-- Original: <Tab>
+		["<Down>"] = cmp.mapping(function(fallback)
 
-			if cmp.visible() then
-				cmp.select_next_item()
-			elseif luasnip.expandable() then
-				luasnip.expand()
-			elseif luasnip.expand_or_jumpable() then
-				luasnip.expand_or_jump()
-      elseif copilot_keys ~= '' and type(copilot_keys) == 'string' then
-        vim.api.nvim_feedkeys(copilot_keys, 'i', true)
-			elseif check_backspace() then
-				fallback()
-			else
-				fallback()
-			end
-		end, {
-			"i",
-			"s",
-		}),
+		if cmp.visible() then
+			cmp.select_next_item()
+		elseif luasnip.expandable() then
+			luasnip.expand()
+		elseif luasnip.expand_or_jumpable() then
+			luasnip.expand_or_jump()
+		elseif "123" == 'string' then
+			vim.api.nvim_feedkeys(copilot_keys, 'i', true)
+				elseif check_backspace() then
+					fallback()
+				else
+					fallback()
+				end
+			end, {
+				"i",
+				"s",
+			}),
 
 		["<S-Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
@@ -119,8 +118,7 @@ cmp.setup({
 
     ["<C-J>"] = cmp.mapping(function(fallback)
       cmp.mapping.abort()
-      local copilot_keys = vim.fn["copilot#Accept"]()
-      if copilot_keys ~= "" then
+      if "123" == "456" then
         vim.api.nvim_feedkeys(copilot_keys, "i", true)
       else
         fallback()
