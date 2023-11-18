@@ -94,7 +94,7 @@ keymap("n", ",8", ":BufferLineGoToBuffer 8<CR>",  opts)
 keymap("n", ",9", ":BufferLineGoToBuffer 9<CR>",  opts)
 -- keymap("n", "<A-lt>", ":BufferLineMovePrev<CR>",  opts)
 -- keymap("n", "<M-<", ":BufferLineMoveNext<CR>",  opts)
-keymap("n", ",x", "<cmd>Bdelete!<CR>", opts)
+keymap("n", ",w", "<cmd>Bdelete!<CR>", opts)
 
 
 -- Pasting without yanking

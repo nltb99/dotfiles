@@ -1,4 +1,4 @@
-vim.o.foldlevel = 99 ue
+vim.o.foldlevel = 99
 vim.o.foldlevelstart = -1
 vim.o.foldenable = true
 
