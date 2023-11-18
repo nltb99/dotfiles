@@ -36,6 +36,7 @@ null_ls.setup({
 
     -- Python
 		formatting.black.with({ extra_args = { "--fast" } }),
+		formatting.autoflake.with({ extra_args = { "--fast" } }),
 
     -- Lua
 		formatting.stylua,
@@ -49,7 +50,8 @@ null_ls.setup({
 
 		diagnostics.eslint,
 		diagnostics.pylint,
-    diagnostics.actionlint, -- Github Workflows
+		diagnostics.flake8,
+    	diagnostics.actionlint, -- Github Workflows
     -- diagnostics.alex, -- Markdown, Catch insensitive, inconsiderate writing
     -- diagnostics.buf, -- Protobuf
 

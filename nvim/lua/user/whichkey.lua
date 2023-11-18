@@ -84,6 +84,12 @@ local mappings = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Buffers",
   },
+  ["f"] = {
+    "<cmd>lua require('telescope.builtin').find_files()<cr>",
+    "Find files",
+  },
+  ["F"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
+  ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
   -- ["w"] = { "<cmd>w!<CR>", "Save" },
   -- ["q"] = { "<cmd>q!<CR>", "Quit" },
   -- ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
@@ -91,13 +97,7 @@ local mappings = {
   --   "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
   --   "Find files",
   -- },
-  ["f"] = {
-    "<cmd>lua require('telescope.builtin').find_files()<cr>",
-    "Find files",
-  },
   -- ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
-  ["F"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
-  ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 
   p = {
     name = "Packer",
@@ -129,7 +129,6 @@ local mappings = {
     },
     f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
-    I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
     j = {
       "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
       "Next Diagnostic",
@@ -138,24 +137,25 @@ local mappings = {
       "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
       "Prev Diagnostic",
     },
-    l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
-    q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
-    r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
     s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
-    S = {
-      "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
-      "Workspace Symbols",
-    },
+    -- l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
+    -- q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
+    -- r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+    -- I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
+    -- S = {
+    --   "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
+    --   "Workspace Symbols",
+    -- },
   },
   s = {
     name = "Search",
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
     h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
-    -- M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
     r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
-    -- R = { "<cmd>Telescope registers<cr>", "Registers" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
+    -- M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
+    -- R = { "<cmd>Telescope registers<cr>", "Registers" },
   },
 
   t = {
