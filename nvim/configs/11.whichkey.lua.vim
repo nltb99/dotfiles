@@ -104,7 +104,7 @@ local mappings = {
 
   g = {
     name = "Git",
-    g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
+    l = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
     c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
     s = { ":Telescope git_status<cr>", "Git status" },
@@ -164,6 +164,7 @@ local mappings = {
   k = {
     name = "Other",
     p = { ":MarkdownPreview<cr>", "Markdown Preview" },
+    c = { "<cmd>!code .<cr>", "VSCode" },
   },
 }
 
