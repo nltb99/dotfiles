@@ -2,9 +2,6 @@ call plug#begin('~/.config/nvim/bundle')
 
 " Highlight & Decoration
 Plug 'pangloss/vim-javascript'    " JavaScript support
-Plug 'leafgarland/typescript-vim' " TypeScript syntax
-Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
-Plug 'jparise/vim-graphql'        " GraphQL syntax
 Plug 'windwp/nvim-autopairs'
 Plug 'alvan/vim-closetag'
 Plug 'kyazdani42/nvim-web-devicons'
@@ -29,6 +26,15 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'lukas-reineke/lsp-format.nvim'
 
+" CMP
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-buffer' 
+Plug 'hrsh7th/cmp-path'
+Plug 'saadparwaiz1/cmp_luasnip' 
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-nvim-lua'
+Plug 'hrsh7th/cmp-cmdline'
+
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'lewis6991/gitsigns.nvim'
@@ -48,6 +54,8 @@ Plug 'romgrk/barbar.nvim'
 Plug 'mbbill/undotree'
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 Plug 'ahmedkhalf/project.nvim'
+Plug 'easymotion/vim-easymotion'
+Plug 'tomtom/tcomment_vim'
 
 " Telescope
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.3' }
@@ -55,24 +63,21 @@ Plug 'nvim-telescope/telescope-media-files.nvim'
 Plug 'nvim-lua/popup.nvim'
 
 " Prettier
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install --frozen-lockfile --production',
-  \ 'branch': 'release/1.x'
-  \ }
+" Plug 'prettier/vim-prettier', {
+"   \ 'do': 'yarn install --frozen-lockfile --production',
+"   \ 'branch': 'release/1.x'
+"   \ }
 
 " Programming
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pechorin/any-jump.vim'
-Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'tomtom/tcomment_vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'neoclide/coc-tsserver'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'brooth/far.vim'
-Plug 'jlevesy/rust.vim'
 
 call plug#end()
 
