@@ -23,20 +23,19 @@ Plug 'joshdick/onedark.vim'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig' 
-Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'lukas-reineke/lsp-format.nvim'
+" Plug 'jose-elias-alvarez/null-ls.nvim'
 
 " CMP
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-buffer' 
-Plug 'hrsh7th/cmp-path'
-Plug 'saadparwaiz1/cmp_luasnip' 
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-nvim-lua'
-Plug 'hrsh7th/cmp-cmdline'
+" Plug 'hrsh7th/nvim-cmp'
+" Plug 'hrsh7th/cmp-buffer' 
+" Plug 'hrsh7th/cmp-path'
+" Plug 'saadparwaiz1/cmp_luasnip' 
+" Plug 'hrsh7th/cmp-nvim-lsp'
+" Plug 'hrsh7th/cmp-nvim-lua'
+" Plug 'hrsh7th/cmp-cmdline'
 
 " Git
-Plug 'tpope/vim-fugitive'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'APZelos/blamer.nvim'
 
@@ -60,7 +59,6 @@ Plug 'tomtom/tcomment_vim'
 " Telescope
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.3' }
 Plug 'nvim-telescope/telescope-media-files.nvim'
-Plug 'nvim-lua/popup.nvim'
 
 " Prettier
 " Plug 'prettier/vim-prettier', {
