@@ -32,7 +32,7 @@ spec "user.bufdelete"
 -- Extras
 spec "user.extras.colorizer"
 spec "user.extras.smoothie"
-spec "user.extras.copilot"
+-- spec "user.extras.copilot"
 spec "user.extras.modicator"
 spec "user.extras.rainbow"
 spec "user.extras.matchup"
