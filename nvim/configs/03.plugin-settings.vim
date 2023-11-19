@@ -84,7 +84,7 @@ let g:EasyMotion_smartcase = 1
 let g:auto_save = 0
 let g:auto_save_events = ["InsertLeave", "TextChanged"]
 "====== COC-NVIM ======
-let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-json', 'coc-html', 'coc-ember', 'coc-eslint', 'coc-git', 'coc-go', 'coc-prettier']
+let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-json', 'coc-html', 'coc-ember', 'coc-eslint', 'coc-git', 'coc-go', 'coc-prettier', 'coc-python']
 set shortmess+=c
 
 function! s:show_documentation()
