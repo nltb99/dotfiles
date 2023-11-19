@@ -353,20 +353,3 @@ if has("persistent_undo")
     let &undodir=target_path
     set undofile
 endif
-
-" lua
-lua require("trouble").setup()
-
-lua << EOF
-  require("smoothcursor").setup {
-    fancy = {
-      enable = true,
-    },
-  }
-
-
-EOF
-
-
-
-

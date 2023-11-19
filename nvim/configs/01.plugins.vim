@@ -1,21 +1,23 @@
 call plug#begin('~/.config/nvim/bundle')
 
-" Syntax & highlight
+" Highlight & Decoration
 Plug 'pangloss/vim-javascript'    " JavaScript support
 Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 Plug 'jparise/vim-graphql'        " GraphQL syntax
 Plug 'windwp/nvim-autopairs'
-Plug 'vim-syntastic/syntastic'
 Plug 'alvan/vim-closetag'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'vim-airline/vim-airline'
-Plug 'dense-analysis/ale'
 Plug 'Xuyuanp/scrollbar.nvim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'gen740/SmoothCursor.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
+
+" Syntax
+Plug 'dense-analysis/ale'
 Plug 'folke/trouble.nvim'
+Plug 'vim-syntastic/syntastic'
 
 " Theme
 Plug 'joshdick/onedark.vim'
