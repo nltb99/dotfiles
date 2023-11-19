@@ -26,30 +26,30 @@ filetype plugin indent on
 
 syntax on
 set encoding=UTF-8
-set mouse=a
-set clipboard^=unnamed,unnamedplus
-
-set number
-set relativenumber
-" set ignorecase
-set smartcase
-
-set tabstop=4
 set softtabstop=0
-set shiftwidth=4
-set expandtab
 set lazyredraw
 set nobackup
 set noswapfile
 set nowrap
-
-set timeout timeoutlen=400
-
 set visualbell
 set noerrorbells
-
 set autoread
 set autowrite
+
+" Undo Tree
+" set undofile
+" set undodir=./undodir
+" set undolevels=1000
+" set undoreload=10000
+" set history=1000
+" set undolevels=1000
+
+"Theme
+syntax enable
+set background=dark
+highlight Normal ctermbg=None
+colorscheme onedark
+
 "imap
 inoremap jj <ESC>
 inoremap ww <ESC>:w<cr>

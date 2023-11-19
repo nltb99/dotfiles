@@ -18,13 +18,6 @@ autocmd StdinReadPre * let s:std_in=1
 "typescript
 let g:typescript_indent_disable = 1
 
-"Theme
-syntax enable
-set background=dark
-highlight Normal ctermbg=None
-colorscheme onedark
-set termguicolors
-
 "airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='onedark'
@@ -92,9 +85,7 @@ let g:auto_save = 0
 let g:auto_save_events = ["InsertLeave", "TextChanged"]
 "====== COC-NVIM ======
 let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-json', 'coc-html', 'coc-ember', 'coc-eslint', 'coc-git', 'coc-go', 'coc-prettier']
-set updatetime=300
 set shortmess+=c
-set signcolumn=yes
 
 function! s:show_documentation()
   if (index(['nvim','help'], &filetype) >= 0)
@@ -123,10 +114,7 @@ let g:NERDCustomDelimiters = { 'javascript.jsx': { 'left': '//', 'leftAlt': '/*'
 
 "Syntastic
 set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-" set statusline+=%{FugitiveStatusline()}
-" set statusline=%<%f\ %h%m%r%{kite#statusline()}%=%-14.(%l,%c%V%)\ %P
 set laststatus=2  " always display the status line
 
 let g:syntastic_always_populate_loc_list = 1
@@ -339,14 +327,6 @@ let g:blamer_show_in_insert_modes = 0
 
 " Far search and replace
 let g:far#enable_undo=1
-
-" Undo Tree
-" set undofile
-" set undodir=./undodir
-" set undolevels=1000
-" set undoreload=10000
-" set history=1000
-" set undolevels=1000
 
 noremap <silent><leader>undo :UndotreeToggle<CR>
 
