@@ -28,7 +28,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
 " Prettier
-nmap <Leader>pp <Plug>(PrettierAsync)
+nmap ,pp <Plug>(PrettierAsync)
 let g:prettier#autoformat = 0
 let g:prettier#autoformat_require_pragma = 0
 let g:prettier#autoformat_config_present = 0
@@ -176,11 +176,11 @@ let g:indentLine_enabled = 0
 " let g:floaterm_autoclose = 0
 " nnoremap   <silent>   <F12>   :FloatermToggle<CR>
 " tnoremap   <silent>   <F12>   <C-\><C-n>:FloatermToggle<CR>
-" nnoremap <leader>= :FloatermNew g++ --std=c++17 -o name main.cpp; ./name<CR>
-" nnoremap <leader>= :FloatermNew g++ --std=c++17 -o name main.cpp; ./name < input.txt<CR>
-" nnoremap <leader>ft :FloatermNew <CR>
+" nnoremap ,= :FloatermNew g++ --std=c++17 -o name main.cpp; ./name<CR>
+" nnoremap ,= :FloatermNew g++ --std=c++17 -o name main.cpp; ./name < input.txt<CR>
+" nnoremap ,ft :FloatermNew <CR>
 " nnoremap g= :FloatermNew go run main.go<CR>
-" nnoremap <leader>= :FloatermNew node script.js < input.txt > output.txt && cat output.txt<CR>
+" nnoremap ,= :FloatermNew node script.js < input.txt > output.txt && cat output.txt<CR>
 
 " Any Jump
 " let g:any_jump_search_prefered_engine = 'ag'
@@ -201,33 +201,33 @@ let g:indentLine_enabled = 0
 "       \"help":               "Comment"
 "       \}
 " let g:any_jump_disable_default_keybindings = 1
-" nmap <leader>jj :AnyJump<CR>
+" nmap ,jj :AnyJump<CR>
 " let g:any_jump_list_numbers = 1
 " let g:any_jump_grouping_enabled = 1
 " let g:any_jump_search_prefered_engine = 'ag'
 
 " Barbar Tab Buffer
-noremap <silent><leader>1 :BufferGoto 1<CR>
-noremap <silent><leader>2 :BufferGoto 2<CR>
-noremap <silent><leader>3 :BufferGoto 3<CR>
-noremap <silent><leader>4 :BufferGoto 4<CR>
-noremap <silent><leader>5 :BufferGoto 5<CR>
-noremap <silent><leader>6 :BufferGoto 6<CR>
-noremap <silent><leader>7 :BufferGoto 7<CR>
-noremap <silent><leader>8 :BufferGoto 8<CR>
-noremap <silent><leader>9 :BufferGoto 9<CR>
-noremap <silent><leader>w :BufferClose<CR>
-noremap <silent><leader>W :BufferClose!<CR>
-noremap <silent><leader>< :BufferMovePrevious<CR>
-noremap <silent><leader>> :BufferMoveNext<CR>
-noremap <silent><leader>. :BufferPrevious<CR>
-noremap <silent><leader>/ :BufferNext<CR>
+noremap <silent>,1 :BufferGoto 1<CR>
+noremap <silent>,2 :BufferGoto 2<CR>
+noremap <silent>,3 :BufferGoto 3<CR>
+noremap <silent>,4 :BufferGoto 4<CR>
+noremap <silent>,5 :BufferGoto 5<CR>
+noremap <silent>,6 :BufferGoto 6<CR>
+noremap <silent>,7 :BufferGoto 7<CR>
+noremap <silent>,8 :BufferGoto 8<CR>
+noremap <silent>,9 :BufferGoto 9<CR>
+noremap <silent>,w :BufferClose<CR>
+noremap <silent>,W :BufferClose!<CR>
+noremap <silent>,< :BufferMovePrevious<CR>
+noremap <silent>,> :BufferMoveNext<CR>
+noremap <silent>,. :BufferPrevious<CR>
+noremap <silent>,/ :BufferNext<CR>
 
 " Commentary
-noremap <silent><leader>cc :TComment<CR>
-noremap <silent><leader>ci :TComment<CR>
-noremap <silent><leader>cb :TCommentBlock<CR>
-noremap <silent><leader>cf :TCommentAs <c-r>=&ft<CR>
+noremap <silent>,cc :TComment<CR>
+noremap <silent>,ci :TComment<CR>
+noremap <silent>,cb :TCommentBlock<CR>
+noremap <silent>,cf :TCommentAs <c-r>=&ft<CR>
 
 "ALE
 " let g:ale_sign_error = '>>'
@@ -314,10 +314,10 @@ autocmd CursorHold * :call <SID>show_hover_doc()
 nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
 
 " Coc shortcut extension
-nmap <leader>do <Plug>(coc-codeaction)
-nmap <leader>fix  <Plug>(coc-fix-current)
-nmap <leader>rename <Plug>(coc-rename)
-nmap <leader>gg <Plug>(coc-definition)
+" nmap ,do <Plug>(coc-codeaction)
+" nmap ,fix  <Plug>(coc-fix-current)
+" nmap ,rename <Plug>(coc-rename)
+" nmap ,gg <Plug>(coc-definition)
 
 " Git blamer
 let g:blamer_enabled = 1
@@ -328,7 +328,7 @@ let g:blamer_show_in_insert_modes = 0
 " Far search and replace
 let g:far#enable_undo=1
 
-noremap <silent><leader>undo :UndotreeToggle<CR>
+noremap <silent>,undo :UndotreeToggle<CR>
 
 " Undo Function
 function! <SID>ForgetUndo()

@@ -63,7 +63,6 @@ require("ibl").setup({
       "startify",
       "dashboard",
       "neogitstatus",
-      "NvimTree",
       "packer",
       "checkhealth",
       "TelescopePrompt",

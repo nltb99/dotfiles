@@ -47,25 +47,14 @@ keymap("n", "<A-Down>", "<C-j>", opts)
 keymap("n", "<A-Left>", "<C-h>", opts)
 keymap("n", "<A-Right>", "<C-l>", opts)
 
--- NvimTree
--- Press "Tab" to focus to NVimTree, press "e" again to toggle
-keymap("n", "<Tab>", ":NvimTreeFocus<CR>", opts) 
-
 -- Clear highlight search
 keymap("n", "<ESC>", ":nohl<CR>", opts)
-
--- Search Text, <Space>st
-keymap(
-	"n",
-	"<leader>st",
-	":lua require'telescope.builtin'.live_grep(require('telescope.themes').get_dropdown({}))<cr>",
-	opts
-)
 
 -- Insert --
 -- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
+keymap("i", "jj", "<ESC>", opts)
 keymap("i", "ww", "<ESC>:w<cr>", opts)
 
 -- Visual --

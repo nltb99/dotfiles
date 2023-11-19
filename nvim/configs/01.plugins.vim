@@ -59,5 +59,7 @@ Plug 'lukas-reineke/lsp-format.nvim'
 Plug 'lewis6991/impatient.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'goolord/alpha-nvim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 
 call plug#end()
+

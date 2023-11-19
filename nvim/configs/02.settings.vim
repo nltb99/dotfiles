@@ -7,16 +7,11 @@ if !exists("g:os")
     endif
 endif
 
-let mapleader=","
-
 " Override copy paste
-nnoremap x "_x
-nnoremap d "_d
-nnoremap D "_D
-vnoremap d "_d
-nnoremap <leader>d ""d
-nnoremap <leader>D ""D
-vnoremap <leader>d ""d
+" nnoremap x "_x
+" nnoremap d "_d
+" nnoremap D "_D
+" vnoremap d "_d
 
 filetype plugin on
 filetype plugin indent on
@@ -51,8 +46,6 @@ highlight Normal ctermbg=None
 colorscheme onedark
 
 "imap
-inoremap jj <ESC>
-inoremap ww <ESC>:w<cr>
 inoremap <silent> <c-l> <ESC>la
 inoremap <silent><expr><Tab> pumvisible() ? "\<C-N>" : "\<Tab>"
 inoremap <silent><expr><S-Tab> pumvisible() ? "\<C-P>" : "\<S-Tab>"
@@ -88,9 +81,6 @@ if has("gui_running")
     elseif g:os == "Windows"
     endif
 endif
-
-" Switch Buffer
-nnoremap <Leader>b :ls<CR>:b<Space>
 
 " FZF
 command! -bang -nargs=? -complete=dir FF call fzf#vim#files(<q-args>, {'options': ['--info=inline', '-i', '--preview', '~/.config/nvim/preview.sh {}']}, <bang>0)
