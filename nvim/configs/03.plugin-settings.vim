@@ -84,7 +84,20 @@ let g:EasyMotion_smartcase = 1
 let g:auto_save = 0
 let g:auto_save_events = ["InsertLeave", "TextChanged"]
 "====== COC-NVIM ======
-let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-json', 'coc-html', 'coc-ember', 'coc-eslint', 'coc-git', 'coc-go', 'coc-prettier', 'coc-python']
+" let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-json', 'coc-html', 'coc-ember', 'coc-eslint', 'coc-git', 'coc-go', 'coc-prettier', 'coc-python']
+let g:coc_global_extensions = [
+\  'coc-tslint-plugin', 
+\  'coc-tsserver', 
+\  'coc-css', 
+\  'coc-json', 
+\  'coc-html', 
+\  'coc-ember', 
+\  'coc-eslint', 
+\  'coc-git', 
+\  'coc-go', 
+\  'coc-prettier', 
+\  'coc-python',
+\]
 set shortmess+=c
 
 function! s:show_documentation()
@@ -116,12 +129,10 @@ let g:NERDCustomDelimiters = { 'javascript.jsx': { 'left': '//', 'leftAlt': '/*'
 set statusline+=%#warningmsg#
 set statusline+=%*
 set laststatus=2  " always display the status line
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
 let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_rust_checkers = ['cargo']
 

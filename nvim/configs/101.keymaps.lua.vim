@@ -52,8 +52,6 @@ keymap("n", "<ESC>", ":nohl<CR>", opts)
 
 -- Insert --
 -- Press jk fast to exit insert mode
-keymap("i", "jk", "<ESC>", opts)
-keymap("i", "kj", "<ESC>", opts)
 keymap("i", "jj", "<ESC>", opts)
 keymap("i", "ww", "<ESC>:w<cr>", opts)
 

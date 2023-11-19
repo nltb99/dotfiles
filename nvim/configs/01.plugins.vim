@@ -68,7 +68,6 @@ Plug 'nvim-telescope/telescope-media-files.nvim'
 
 " Programming
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'pechorin/any-jump.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
@@ -76,6 +75,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'neoclide/coc-tsserver'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'brooth/far.vim'
+" Plug 'pechorin/any-jump.vim'
 
 call plug#end()
 
