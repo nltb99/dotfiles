@@ -59,6 +59,7 @@ Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 Plug 'ahmedkhalf/project.nvim'
 Plug 'easymotion/vim-easymotion'
 Plug 'tomtom/tcomment_vim'
+Plug 'ThePrimeagen/harpoon'
 
 " Telescope
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.3' }
