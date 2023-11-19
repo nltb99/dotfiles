@@ -17,13 +17,15 @@ Plug 'gen740/SmoothCursor.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'folke/trouble.nvim'
 
+" Theme
+Plug 'joshdick/onedark.vim'
+
 " LSP
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig' 
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'lukas-reineke/lsp-format.nvim'
-Plug 'joshdick/onedark.vim'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -47,6 +49,8 @@ Plug 'ahmedkhalf/project.nvim'
 
 " Telescope
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.3' }
+Plug 'nvim-telescope/telescope-media-files.nvim'
+Plug 'nvim-lua/popup.nvim'
 
 " Prettier
 Plug 'prettier/vim-prettier', {
