@@ -41,4 +41,16 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-syntastic/syntastic'
 Plug 'jlevesy/rust.vim'
 
+" Telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.4' }
+
+Plug 'gen740/SmoothCursor.nvim'
+Plug 'windwp/nvim-autopairs'
+Plug 'ggandor/lightspeed.nvim'
+Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
+Plug 'ahmedkhalf/project.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'goolord/alpha-nvim'
+
 call plug#end()
