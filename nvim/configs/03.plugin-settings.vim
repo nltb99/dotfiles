@@ -180,16 +180,16 @@ let g:NERDTreeSyntaxEnabledExtensions = ['hbs', 'lhs'] " enable highlight to .hb
 let g:indentLine_enabled = 0
 
 " Floating Window
-let g:floaterm_width = 0.8
-let g:floaterm_height = 0.8
-let g:floaterm_wintitle = 0
-let g:floaterm_position = 'topright'
-let g:floaterm_autoclose = 0
-nnoremap   <silent>   <F12>   :FloatermToggle<CR>
-tnoremap   <silent>   <F12>   <C-\><C-n>:FloatermToggle<CR>
+" let g:floaterm_width = 0.8
+" let g:floaterm_height = 0.8
+" let g:floaterm_wintitle = 0
+" let g:floaterm_position = 'topright'
+" let g:floaterm_autoclose = 0
+" nnoremap   <silent>   <F12>   :FloatermToggle<CR>
+" tnoremap   <silent>   <F12>   <C-\><C-n>:FloatermToggle<CR>
 " nnoremap <leader>= :FloatermNew g++ --std=c++17 -o name main.cpp; ./name<CR>
-nnoremap <leader>= :FloatermNew g++ --std=c++17 -o name main.cpp; ./name < input.txt<CR>
-nnoremap <leader>ft :FloatermNew <CR>
+" nnoremap <leader>= :FloatermNew g++ --std=c++17 -o name main.cpp; ./name < input.txt<CR>
+" nnoremap <leader>ft :FloatermNew <CR>
 " nnoremap g= :FloatermNew go run main.go<CR>
 " nnoremap <leader>= :FloatermNew node script.js < input.txt > output.txt && cat output.txt<CR>
 
@@ -374,8 +374,6 @@ if has("persistent_undo")
 endif
 
 " lua
-lua require("nvim-autopairs").setup()
-lua require("ibl").setup()
 lua require("trouble").setup()
 
 lua << EOF
