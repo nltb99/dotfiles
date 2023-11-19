@@ -43,7 +43,6 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 
 -- treat abc-def as a single word
 -- vim.cmd [[set iskeyword+=-]]
