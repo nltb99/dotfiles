@@ -28,23 +28,23 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
 " Prettier
-nmap ,pp <Plug>(PrettierAsync)
-let g:prettier#autoformat = 0
-let g:prettier#autoformat_require_pragma = 0
-let g:prettier#autoformat_config_present = 0
-let g:prettier#config#print_width = 'auto'
-let g:prettier#config#tab_width = 2
-let g:prettier#config#trailing_comma = 'all'
-let g:prettier#config#jsx_bracket_same_line = 'true'
-let g:prettier#config#jsxSingleQuote = 'true'
-let g:prettier#config#bracket_spacing = 'true'
-let g:prettier#config#arrow_parens = 'always'
-let g:prettier#config#semi = 'false'
-let g:prettier#config#single_quote = 'true'
-let g:prettier#quickfix_enabled = 0
-let g:prettier#config#require_pragma = 'false'
-let g:prettier#exec_cmd_path = "/usr/local/homebrew/bin/prettier"
-" autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.scss,*.json,*.md,*.vue,*.yaml,*.html,*.go,*.py PrettierAsync
+" nmap ,pp <Plug>(PrettierAsync)
+" let g:prettier#autoformat = 0
+" let g:prettier#autoformat_require_pragma = 0
+" let g:prettier#autoformat_config_present = 0
+" let g:prettier#config#print_width = 'auto'
+" let g:prettier#config#tab_width = 2
+" let g:prettier#config#trailing_comma = 'all'
+" let g:prettier#config#jsx_bracket_same_line = 'true'
+" let g:prettier#config#jsxSingleQuote = 'true'
+" let g:prettier#config#bracket_spacing = 'true'
+" let g:prettier#config#arrow_parens = 'always'
+" let g:prettier#config#semi = 'false'
+" let g:prettier#config#single_quote = 'true'
+" let g:prettier#quickfix_enabled = 0
+" let g:prettier#config#require_pragma = 'false'
+" let g:prettier#exec_cmd_path = "/usr/local/homebrew/bin/prettier"
+" " autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.scss,*.json,*.md,*.vue,*.yaml,*.html,*.go,*.py PrettierAsync
 
 " AUTO CLOSE TAGS
 let g:closetag_filenames = '*.html,*.jsx,*.tsx,*.js,*.vue,*.ejs,*.jsp'
@@ -163,10 +163,6 @@ set laststatus=2  " always display the status line
 " let g:ale_typescript_tslint_use_global = 1
 " let g:ale_typescript_tslint_executable = 'tslint'
 " let g:ale_typescript_tslint_config_path = ''
-" augroup FiletypeGroup
-"     autocmd!
-"     au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
-" augroup END
 
 "Highlight nerdtree
 let g:NERDTreeHighlightFolders = 1 "
@@ -365,3 +361,11 @@ if has("persistent_undo")
     let &undodir=target_path
     set undofile
 endif
+
+" BufNewFile & BufRead
+augroup FiletypeGroup
+    autocmd!
+    au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
+augroup END
+
+au BufNewFile,BufRead *.ejs set filetype=html

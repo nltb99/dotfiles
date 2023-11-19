@@ -16,9 +16,6 @@ endif
 filetype plugin on
 filetype plugin indent on
 
-" Temporarily disabled this because it leads to telescope bugs
-" autocmd BufEnter * :set scroll=10
-
 syntax on
 set encoding=UTF-8
 set softtabstop=0
@@ -43,7 +40,9 @@ set autowrite
 syntax enable
 set background=dark
 highlight Normal ctermbg=None
-colorscheme onedark
+" colorscheme onedark
+colorscheme onedarker
+" colorscheme primer_dark
 
 "imap
 inoremap <silent> <c-l> <ESC>la

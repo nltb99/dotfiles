@@ -22,6 +22,8 @@ Plug 'rafamadriz/friendly-snippets'
 
 " Theme
 Plug 'joshdick/onedark.vim'
+Plug 'LunarVim/primer.nvim'
+Plug 'LunarVim/Onedarker.nvim'
 
 " LSP
 Plug 'williamboman/mason.nvim'

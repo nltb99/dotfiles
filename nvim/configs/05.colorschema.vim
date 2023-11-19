@@ -1,5 +1,3 @@
-au BufNewFile,BufRead *.ejs set filetype=html
-
 " let g:node_host_prog = '/usr/local/bin/neovim-node-host'
 " let g:loaded_ruby_provider = 0
 
