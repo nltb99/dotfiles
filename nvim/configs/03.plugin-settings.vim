@@ -375,19 +375,18 @@ if has("persistent_undo")
 endif
 
 " lua
-lua require("toggleterm").setup()
-lua require('smoothcursor').setup()
 lua require("nvim-autopairs").setup()
 lua require("ibl").setup()
-lua require("which-key").setup()
 lua require("trouble").setup()
 
 lua << EOF
-  require("project_nvim").setup {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
+  require("smoothcursor").setup {
+    fancy = {
+      enable = true,
+    },
   }
 EOF
+
+
 
 

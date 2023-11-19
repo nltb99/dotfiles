@@ -21,7 +21,9 @@ vnoremap <leader>d ""d
 filetype plugin on
 filetype plugin indent on
 
-autocmd BufEnter * :set scroll=10
+" Temporarily disabled this because it leads to telescope bugs
+" autocmd BufEnter * :set scroll=10
+
 syntax on
 set encoding=UTF-8
 set mouse=a

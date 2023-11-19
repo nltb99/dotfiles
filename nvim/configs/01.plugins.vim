@@ -43,7 +43,7 @@ Plug 'jlevesy/rust.vim'
 
 " Telescope
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.4' }
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.3' }
 
 Plug 'gen740/SmoothCursor.nvim'
 Plug 'windwp/nvim-autopairs'
@@ -53,5 +53,11 @@ Plug 'ahmedkhalf/project.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'folke/which-key.nvim'
 Plug 'folke/trouble.nvim'
+
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'neovim/nvim-lspconfig' 
+Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'lukas-reineke/lsp-format.nvim'
 
 call plug#end()
