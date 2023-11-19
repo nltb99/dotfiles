@@ -110,7 +110,6 @@ let g:Lf_PreviewInPopup = 1
 let g:ctrlsf_default_view_mode = 'compact'
 
 " Nerd-Commenter
-set timeout timeoutlen=1500
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
@@ -385,6 +384,8 @@ lua << EOF
       enable = true,
     },
   }
+
+
 EOF
 
 

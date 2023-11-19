@@ -43,6 +43,8 @@ set nobackup
 set noswapfile
 set nowrap
 
+set timeout timeoutlen=400
+
 set visualbell
 set noerrorbells
 
