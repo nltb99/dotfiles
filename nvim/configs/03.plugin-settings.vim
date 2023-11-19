@@ -194,28 +194,28 @@ nnoremap <leader>ft :FloatermNew <CR>
 " nnoremap <leader>= :FloatermNew node script.js < input.txt > output.txt && cat output.txt<CR>
 
 " Any Jump
-let g:any_jump_search_prefered_engine = 'ag'
-let g:any_jump_ignored_files = ['*.tmp', '*.temp', '*.', 'node_modules', 'android', 'ios']
-let g:any_jump_colors = {
-      \"plain_text":         "Comment",
-      \"preview":            "Comment",
-      \"preview_keyword":    "Operator",
-      \"heading_text":       "Function",
-      \"heading_keyword":    "Identifier",
-      \"group_text":         "Comment",
-      \"group_name":         "Function",
-      \"more_button":        "Operator",
-      \"more_explain":       "Comment",
-      \"result_line_number": "Comment",
-      \"result_text":        "Statement",
-      \"result_path":        "String",
-      \"help":               "Comment"
-      \}
-let g:any_jump_disable_default_keybindings = 1
-nmap <leader>jj :AnyJump<CR>
-let g:any_jump_list_numbers = 1
-let g:any_jump_grouping_enabled = 1
-let g:any_jump_search_prefered_engine = 'ag'
+" let g:any_jump_search_prefered_engine = 'ag'
+" let g:any_jump_ignored_files = ['*.tmp', '*.temp', '*.', 'node_modules', 'android', 'ios']
+" let g:any_jump_colors = {
+"       \"plain_text":         "Comment",
+"       \"preview":            "Comment",
+"       \"preview_keyword":    "Operator",
+"       \"heading_text":       "Function",
+"       \"heading_keyword":    "Identifier",
+"       \"group_text":         "Comment",
+"       \"group_name":         "Function",
+"       \"more_button":        "Operator",
+"       \"more_explain":       "Comment",
+"       \"result_line_number": "Comment",
+"       \"result_text":        "Statement",
+"       \"result_path":        "String",
+"       \"help":               "Comment"
+"       \}
+" let g:any_jump_disable_default_keybindings = 1
+" nmap <leader>jj :AnyJump<CR>
+" let g:any_jump_list_numbers = 1
+" let g:any_jump_grouping_enabled = 1
+" let g:any_jump_search_prefered_engine = 'ag'
 
 " Barbar Tab Buffer
 noremap <silent><leader>1 :BufferGoto 1<CR>
