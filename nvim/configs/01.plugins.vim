@@ -12,9 +12,13 @@ Plug 'gen740/SmoothCursor.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 
 " Syntax
-Plug 'dense-analysis/ale'
 Plug 'folke/trouble.nvim'
-Plug 'vim-syntastic/syntastic'
+" Plug 'dense-analysis/ale'
+" Plug 'vim-syntastic/syntastic'
+
+" snippets
+Plug 'L3MON4D3/LuaSnip'
+Plug 'rafamadriz/friendly-snippets'
 
 " Theme
 Plug 'joshdick/onedark.vim'

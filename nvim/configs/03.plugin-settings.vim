@@ -125,16 +125,48 @@ let g:NERDTrimTrailingWhitespace = 1
 let g:NERDToggleCheckAllLines = 1
 let g:NERDCustomDelimiters = { 'javascript.jsx': { 'left': '//', 'leftAlt': '/*', 'rightAlt': '*/' } }
 
-"Syntastic
+" Syntastic
 set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set laststatus=2  " always display the status line
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_checkers = ['pylint']
-let g:syntastic_rust_checkers = ['cargo']
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 0
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_python_checkers = ['pylint']
+" let g:syntastic_rust_checkers = ['cargo']
+
+"ALE
+" " let g:ale_sign_error = '>>'
+" " let g:ale_sign_warning = '--'
+" " let b:ale_fixers=[]
+" " let b:ale_linters=[]
+" " let b:ale_linter_aliases=[]
+" " let g:ale_linters_explicit = 1
+" let g:ale_fixers = {
+" \   '*': ['prettier','remove_trailing_lines', 'trim_whitespace'],
+" \   'python': ['black'],
+" \   'javascript': ['prettier','eslint'],
+" \   'javascriptreact': ['prettier','eslint'],
+" \   'typescript': ['prettier','tslint'],
+" \   'typescriptreact': ['prettier','tslint'],
+" \   'css': ['prettier'],
+" \   'rust': ['prettier','rustfmt'],
+" \}
+" let g:ale_sign_error = '✘'
+" let g:ale_sign_warning = '⚠'
+" let g:ale_lint_on_enter = 0
+" let g:ale_lint_on_text_changed = 'never'
+" let g:ale_fix_on_save = 1
+" let g:ale_linters_explicit = 1
+" let g:ale_typescript_tslint_use_global = 1
+" let g:ale_typescript_tslint_executable = 'tslint'
+" let g:ale_typescript_tslint_config_path = ''
+" augroup FiletypeGroup
+"     autocmd!
+"     au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
+" augroup END
 
 "Highlight nerdtree
 let g:NERDTreeHighlightFolders = 1 "
@@ -239,37 +271,6 @@ noremap <silent>,cc :TComment<CR>
 noremap <silent>,ci :TComment<CR>
 noremap <silent>,cb :TCommentBlock<CR>
 noremap <silent>,cf :TCommentAs <c-r>=&ft<CR>
-
-"ALE
-" let g:ale_sign_error = '>>'
-" let g:ale_sign_warning = '--'
-" let b:ale_fixers=[]
-" let b:ale_linters=[]
-" let b:ale_linter_aliases=[]
-" let g:ale_linters_explicit = 1
-let g:ale_fixers = {
-\   '*': ['prettier','remove_trailing_lines', 'trim_whitespace'],
-\   'python': ['black'],
-\   'javascript': ['prettier','eslint'],
-\   'javascriptreact': ['prettier','eslint'],
-\   'typescript': ['prettier','tslint'],
-\   'typescriptreact': ['prettier','tslint'],
-\   'css': ['prettier'],
-\   'rust': ['prettier','rustfmt'],
-\}
-let g:ale_sign_error = '✘'
-let g:ale_sign_warning = '⚠'
-let g:ale_lint_on_enter = 0
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_fix_on_save = 1
-let g:ale_linters_explicit = 1
-let g:ale_typescript_tslint_use_global = 1
-let g:ale_typescript_tslint_executable = 'tslint'
-let g:ale_typescript_tslint_config_path = ''
-augroup FiletypeGroup
-    autocmd!
-    au BufNewFile,BufRead *.jsx set filetype=javascript.jsx
-augroup END
 
 " Scroll Bar
 augroup ScrollbarInit
