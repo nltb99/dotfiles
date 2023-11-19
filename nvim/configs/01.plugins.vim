@@ -56,5 +56,8 @@ Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig' 
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'lukas-reineke/lsp-format.nvim'
+Plug 'lewis6991/impatient.nvim'
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'goolord/alpha-nvim'
 
 call plug#end()
