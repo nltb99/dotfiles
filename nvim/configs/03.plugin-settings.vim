@@ -13,14 +13,17 @@ let g:NERDTreeShowBookmarks=1
 let NERDTreeShowHidden=1
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
 "typescript
 let g:typescript_indent_disable = 1
+
 "Theme
 syntax enable
 set background=dark
 highlight Normal ctermbg=None
 colorscheme onedark
 set termguicolors
+
 "airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='onedark'
@@ -376,6 +379,8 @@ lua require("toggleterm").setup()
 lua require('smoothcursor').setup()
 lua require("nvim-autopairs").setup()
 lua require("ibl").setup()
+lua require("which-key").setup()
+lua require("trouble").setup()
 
 lua << EOF
   require("project_nvim").setup {

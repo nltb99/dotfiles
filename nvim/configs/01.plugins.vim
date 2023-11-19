@@ -51,6 +51,7 @@ Plug 'ggandor/lightspeed.nvim'
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 Plug 'ahmedkhalf/project.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'goolord/alpha-nvim'
+Plug 'folke/which-key.nvim'
+Plug 'folke/trouble.nvim'
 
 call plug#end()
