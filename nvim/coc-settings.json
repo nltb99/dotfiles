@@ -4,5 +4,6 @@
   "tslint.enable": true,
   "coc.preferences.jumpCommand": "drop",
   "tslint.jsEnable": true,
-  "snippets.ultisnips.pythonPrompt": false
+  "snippets.ultisnips.pythonPrompt": false,
+  "jedi.enable": false
 }

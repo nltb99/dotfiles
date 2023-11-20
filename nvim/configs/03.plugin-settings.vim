@@ -84,7 +84,6 @@ let g:EasyMotion_smartcase = 1
 let g:auto_save = 0
 let g:auto_save_events = ["InsertLeave", "TextChanged"]
 "====== COC-NVIM ======
-" let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-json', 'coc-html', 'coc-ember', 'coc-eslint', 'coc-git', 'coc-go', 'coc-prettier', 'coc-python']
 let g:coc_global_extensions = [
 \  'coc-tslint-plugin', 
 \  'coc-tsserver', 
@@ -96,8 +95,8 @@ let g:coc_global_extensions = [
 \  'coc-git', 
 \  'coc-go', 
 \  'coc-prettier', 
-\  'coc-python',
 \]
+" \  'coc-python',
 set shortmess+=c
 
 function! s:show_documentation()
@@ -222,28 +221,34 @@ let g:indentLine_enabled = 0
 " nnoremap ,= :FloatermNew node script.js < input.txt > output.txt && cat output.txt<CR>
 
 " Any Jump
-" let g:any_jump_search_prefered_engine = 'ag'
-" let g:any_jump_ignored_files = ['*.tmp', '*.temp', '*.', 'node_modules', 'android', 'ios']
-" let g:any_jump_colors = {
-"       \"plain_text":         "Comment",
-"       \"preview":            "Comment",
-"       \"preview_keyword":    "Operator",
-"       \"heading_text":       "Function",
-"       \"heading_keyword":    "Identifier",
-"       \"group_text":         "Comment",
-"       \"group_name":         "Function",
-"       \"more_button":        "Operator",
-"       \"more_explain":       "Comment",
-"       \"result_line_number": "Comment",
-"       \"result_text":        "Statement",
-"       \"result_path":        "String",
-"       \"help":               "Comment"
-"       \}
-" let g:any_jump_disable_default_keybindings = 1
-" nmap ,jj :AnyJump<CR>
-" let g:any_jump_list_numbers = 1
-" let g:any_jump_grouping_enabled = 1
-" let g:any_jump_search_prefered_engine = 'ag'
+let g:any_jump_search_prefered_engine = 'ag'
+let g:any_jump_ignored_files = ['*.tmp', '*.temp', '*.', 'node_modules', 'android', 'ios']
+let g:any_jump_colors = {
+      \"plain_text":         "Comment",
+      \"preview":            "Comment",
+      \"preview_keyword":    "Operator",
+      \"heading_text":       "Function",
+      \"heading_keyword":    "Identifier",
+      \"group_text":         "Comment",
+      \"group_name":         "Function",
+      \"more_button":        "Operator",
+      \"more_explain":       "Comment",
+      \"result_line_number": "Comment",
+      \"result_text":        "Statement",
+      \"result_path":        "String",
+      \"help":               "Comment"
+      \}
+let g:any_jump_disable_default_keybindings = 1
+let g:any_jump_list_numbers = 1
+let g:any_jump_grouping_enabled = 1
+let g:any_jump_search_prefered_engine = 'ag'
+
+" Coc shortcut extension
+" nmap ,do <Plug>(coc-codeaction)
+" nmap ,fix  <Plug>(coc-fix-current)
+" nmap ,rename <Plug>(coc-rename)
+" nmap ,gg <Plug>(coc-definition)
+
 
 " Barbar Tab Buffer
 noremap <silent>,1 :BufferGoto 1<CR>
@@ -255,8 +260,8 @@ noremap <silent>,6 :BufferGoto 6<CR>
 noremap <silent>,7 :BufferGoto 7<CR>
 noremap <silent>,8 :BufferGoto 8<CR>
 noremap <silent>,9 :BufferGoto 9<CR>
-noremap <silent>,w :BufferClose<CR>
-noremap <silent>,W :BufferClose!<CR>
+noremap <silent>,w :Bdelete<CR>
+noremap <silent>,W :Bdelete!<CR>
 noremap <silent>,< :BufferMovePrevious<CR>
 noremap <silent>,> :BufferMoveNext<CR>
 noremap <silent>,. :BufferPrevious<CR>
@@ -320,12 +325,6 @@ endfunction
 autocmd CursorHoldI * :call <SID>show_hover_doc()
 autocmd CursorHold * :call <SID>show_hover_doc()
 nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
-
-" Coc shortcut extension
-" nmap ,do <Plug>(coc-codeaction)
-" nmap ,fix  <Plug>(coc-fix-current)
-" nmap ,rename <Plug>(coc-rename)
-" nmap ,gg <Plug>(coc-definition)
 
 " Git blamer
 let g:blamer_enabled = 1

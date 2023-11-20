@@ -62,6 +62,7 @@ Plug 'ahmedkhalf/project.nvim'
 Plug 'easymotion/vim-easymotion'
 Plug 'tomtom/tcomment_vim'
 Plug 'ThePrimeagen/harpoon'
+Plug 'moll/vim-bbye'
 
 " Telescope
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.3' }
@@ -82,7 +83,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'neoclide/coc-tsserver'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'brooth/far.vim'
-" Plug 'pechorin/any-jump.vim'
+Plug 'pechorin/any-jump.vim'
 
 call plug#end()
 
