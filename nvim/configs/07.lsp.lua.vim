@@ -303,7 +303,11 @@ local jsonlsOpts = {
 }
 
 local pylsp_opts = { 
-    cmd = { "pylsp" }, 
+	-- TODO this will be improved in the future
+    -- cmd = {"~/.pyenv/versions/3.10.2/bin/python", "pylsp" }, 
+	root_dir = function(fname)
+        return vim.fn.getcwd()
+    end,
     settings = {
 		pylsp = {
 			plugins = {
@@ -323,8 +327,11 @@ local pylsp_opts = {
 				},
 				pyflakes = {
 					enabled = false
-				}
-			}
+				},
+				mypy = {
+                    enabled = false,
+                },
+			},
     	}
     },
 }
@@ -349,7 +356,7 @@ local servers = {
 	"rust_analyzer",
 	"terraformls",
 	"tsserver",
-	-- "pylsp",
+	"pylsp",
 	"pyright",
 }
 
@@ -371,5 +378,6 @@ for _, server in pairs(servers) do
 	lspconfig[server].setup(opts)
 end
 
-
 EOF
+
+

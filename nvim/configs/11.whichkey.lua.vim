@@ -178,6 +178,7 @@ local mappings = {
     u = { "<cmd>:UndotreeToggle<cr>", "UndoTree Toggle" },
     U = { "<cmd>:UndotreePersistUndo<cr>", "UndoTree Clear" },
     a = { "<cmd>:AnyJump<cr>", "AnyJump" },
+    h = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Harpoon add file" },
   },
 }
 
