@@ -141,6 +141,7 @@ local mappings = {
     --   "Workspace Symbols",
     -- },
   },
+
   s = {
     name = "Search",
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
@@ -148,6 +149,12 @@ local mappings = {
     r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
+  },
+
+  S = {
+    name = "Spectre",
+    s = { "<cmd>lua require('spectre').open()<cr>", "Search & Replace" },
+    w = { "<cmd>lua require('spectre').open_visual({select_word=true})<CR>","Search current word" },
   },
 
   t = {

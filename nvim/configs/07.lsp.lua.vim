@@ -302,6 +302,33 @@ local jsonlsOpts = {
 	},
 }
 
+local pylsp_opts = { 
+    cmd = { "pylsp" }, 
+    settings = {
+		pylsp = {
+			plugins = {
+				flake8 = {
+					enabled = true,
+					maxLineLength = 100,
+				},
+				black = { 
+					enabled = true,
+					args = {"--fast"},
+				},
+				pycodestyle = {
+					enabled = false
+				},
+				pylint = {
+					enabled = false
+				},
+				pyflakes = {
+					enabled = false
+				}
+			}
+    	}
+    },
+}
+
 -- End jsonls
 
 local status_ok, lsp_installer = pcall(require, "mason-lspconfig")
@@ -314,7 +341,6 @@ local lspconfig = require("lspconfig")
 -- https://github.com/williamboman/mason-lspconfig.nvim
 local servers = {
 	"jsonls",
-	"pylsp",
 	"bashls",
 	"yamlls",
 	"tsserver",
@@ -323,6 +349,7 @@ local servers = {
 	"rust_analyzer",
 	"terraformls",
 	"tsserver",
+	-- "pylsp",
 	"pyright",
 }
 
@@ -337,11 +364,12 @@ for _, server in pairs(servers) do
 		capabilities = M.capabilities,
 	}
 
-	-- Custom opts from ./lsp/settings/<server>.lua
-	local has_custom_opts, server_custom_opts = pcall(require, "user.lsp.settings." .. server)
 	opts = vim.tbl_deep_extend("force", opts, jsonlsOpts)
+
+	opts = vim.tbl_deep_extend("force", pylsp_opts, opts)
 
 	lspconfig[server].setup(opts)
 end
+
 
 EOF

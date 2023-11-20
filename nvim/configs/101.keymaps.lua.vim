@@ -88,4 +88,9 @@ keymap("n", "gt", ":Telescope lsp_type_definitions<CR>", opts)
 keymap("n", "gi", ":Telescope lsp_implementations<CR>", opts)
 keymap("n", "gsy", ":Telescope lsp_document_symbols<CR>", opts)
 
+-- LightSpeed temporarili disabled key mappings
+keymap('n', 's', '<Nop>', opts)
+keymap('n', 'S', '<Nop>', opts)
+keymap('n', 's', 's', opts)
+
 EOF

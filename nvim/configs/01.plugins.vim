@@ -63,6 +63,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'tomtom/tcomment_vim'
 Plug 'ThePrimeagen/harpoon'
 Plug 'moll/vim-bbye'
+Plug 'nvim-pack/nvim-spectre'
 
 " Telescope
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.3' }
