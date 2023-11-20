@@ -11,10 +11,17 @@ local function has_extension(extension)
 end
 
 -- This func to format Python code using Black
-function format_python()
+function format_function()
     if has_extension('py') then
-        -- Run Black formatter
-        vim.fn.system('black .')
+        local root_dir = vim.fn.finddir('pyproject.toml', '.;')
+
+        if root_dir ~= '' and vim.fn.filereadable(root_dir .. '/pyproject.toml') then
+            -- Run Black formatter with Poetry
+            vim.fn.system('poetry run black .')
+        else
+            -- Run plain Black formatter
+            vim.fn.system('black .')
+        end
     else
         -- Run LSP format for other file types
         vim.lsp.buf.format{async=true}
@@ -129,7 +136,7 @@ local mappings = {
       "<cmd>Telescope lsp_workspace_diagnostics<cr>",
       "Workspace Diagnostics",
     },
-    f = { '<cmd>lua format_python()<CR>', "Format" },
+    f = { '<cmd>lua format_function()<CR>', "Format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
     j = {
       "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
