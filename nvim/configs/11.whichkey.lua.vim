@@ -165,6 +165,8 @@ local mappings = {
     name = "Other",
     p = { ":MarkdownPreview<cr>", "Markdown Preview" },
     c = { "<cmd>!code .<cr>", "VSCode" },
+    u = { "<cmd>:UndotreeToggle<cr>", "UndoTree Toggle" },
+    U = { "<cmd>:UndotreePersistUndo<cr>", "UndoTree Clear" },
   },
 }
 

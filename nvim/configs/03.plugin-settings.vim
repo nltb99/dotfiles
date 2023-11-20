@@ -336,8 +336,6 @@ let g:blamer_show_in_insert_modes = 0
 " Far search and replace
 let g:far#enable_undo=1
 
-noremap <silent>,undo :UndotreeToggle<CR>
-
 " Undo Function
 function! <SID>ForgetUndo()
     let old_undolevels = &undolevels
