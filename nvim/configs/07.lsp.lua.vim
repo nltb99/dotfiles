@@ -305,9 +305,6 @@ local jsonlsOpts = {
 local pylsp_opts = { 
 	-- TODO this will be improved in the future
     -- cmd = {"~/.pyenv/versions/3.10.2/bin/python", "pylsp" }, 
-	root_dir = function(fname)
-        return vim.fn.getcwd()
-    end,
     settings = {
 		pylsp = {
 			plugins = {
@@ -336,6 +333,23 @@ local pylsp_opts = {
     },
 }
 
+local pyright_opts = { 
+	settings = {
+        python = {
+            analysis = {
+                autoImportCompletions = true,
+                diagnosticMode = "workspace",
+                typeCheckingMode = "off", -- Options: "strict," "basic," "off"
+            },
+            formatting = {
+                provider = "black",
+            },
+            pyright = {
+            },
+        },
+    },
+}
+
 -- End jsonls
 
 local status_ok, lsp_installer = pcall(require, "mason-lspconfig")
@@ -356,7 +370,6 @@ local servers = {
 	"rust_analyzer",
 	"terraformls",
 	"tsserver",
-	"pylsp",
 	"pyright",
 }
 
@@ -372,8 +385,8 @@ for _, server in pairs(servers) do
 	}
 
 	opts = vim.tbl_deep_extend("force", opts, jsonlsOpts)
-
 	opts = vim.tbl_deep_extend("force", pylsp_opts, opts)
+	opts = vim.tbl_deep_extend("force", pyright_opts, opts)
 
 	lspconfig[server].setup(opts)
 end
