@@ -12,7 +12,7 @@ Plug 'gen740/SmoothCursor.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 
 " Syntax
-Plug 'folke/trouble.nvim'
+Plug 'folke/trouble.nvim', { 'dependencies': ['nvim-tree/nvim-web-devicons'] }
 " Plug 'dense-analysis/ale'
 " Plug 'vim-syntastic/syntastic'
 
