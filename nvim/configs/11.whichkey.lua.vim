@@ -5,6 +5,23 @@ if not status_ok then
   return
 end
 
+-- This func to check if the current file has a specific extension
+local function has_extension(extension)
+    return vim.fn.expand('%:e') == extension
+end
+
+-- This func to format Python code using Black
+function format_python()
+    if has_extension('py') then
+        -- Run Black formatter
+        vim.fn.system('black .')
+    else
+        -- Run LSP format for other file types
+        vim.lsp.buf.format{async=true}
+    end
+end
+
+
 local setup = {
   plugins = {
     marks = true, -- shows a list of your marks on ' and `
@@ -71,15 +88,6 @@ local setup = {
   },
 }
 
-local opts = {
-  mode = "n", -- NORMAL mode
-  prefix = "<leader>",
-  buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
-  silent = true, -- use `silent` when creating keymaps
-  noremap = true, -- use `noremap` when creating keymaps
-  nowait = true, -- use `nowait` when creating keymaps
-}
-
 local mappings = {
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
   ["b"] = {
@@ -121,7 +129,7 @@ local mappings = {
       "<cmd>Telescope lsp_workspace_diagnostics<cr>",
       "Workspace Diagnostics",
     },
-    f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
+    f = { '<cmd>lua format_python()<CR>', "Format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
     j = {
       "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
@@ -176,6 +184,15 @@ local mappings = {
     U = { "<cmd>:UndotreePersistUndo<cr>", "UndoTree Clear" },
     a = { "<cmd>:AnyJump<cr>", "AnyJump" },
   },
+}
+
+local opts = {
+  mode = "n", -- NORMAL mode
+  prefix = "<leader>",
+  buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+  silent = true, -- use `silent` when creating keymaps
+  noremap = true, -- use `noremap` when creating keymaps
+  nowait = true, -- use `nowait` when creating keymaps
 }
 
 which_key.setup(setup)
