@@ -110,14 +110,8 @@ local setup = {
 
 local mappings = {
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
-  ["b"] = {
-    "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-    "Buffers",
-  },
-  ["f"] = {
-    "<cmd>lua require('telescope.builtin').find_files()<cr>",
-    "Find files",
-  },
+  ["b"] = { "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Buffers" },
+  ["f"] = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "Find files" },
   ["F"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
   ["h"] = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Harpoon" },
@@ -141,34 +135,11 @@ local mappings = {
   l = {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-    d = {
-      "<cmd>Telescope diagnostics<cr>",
-      "Diagnostics",
-    },
-    w = {
-      "<cmd>Telescope lsp_workspace_diagnostics<cr>",
-      "Workspace Diagnostics",
-    },
+    d = { "<cmd>Telescope diagnostics<cr>","Diagnostics" },
     f = { '<cmd>lua common_format()<CR>', "Format" },
     E = { '<cmd>lua eslint_format()<CR>', "Eslint format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
-    j = {
-      "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
-      "Next Diagnostic",
-    },
-    k = {
-      "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
-      "Prev Diagnostic",
-    },
     s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
-    -- l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
-    -- q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
-    -- r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
-    -- I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
-    -- S = {
-    --   "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
-    --   "Workspace Symbols",
-    -- },
   },
 
   s = {
