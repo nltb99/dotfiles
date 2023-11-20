@@ -10,8 +10,8 @@ local function has_extension(extension)
     return vim.fn.expand('%:e') == extension
 end
 
--- This func to format Python code using Black
-function format_function()
+-- This func to format file based on file extension (python, js, ts)
+function common_format()
     if has_extension('py') then
         local root_dir = vim.fn.finddir('pyproject.toml', '.;')
 
@@ -22,9 +22,22 @@ function format_function()
             -- Run plain Black formatter
             vim.fn.system('black .')
         end
+    elseif has_extension('ts') or has_extension('tsx') or has_extension('js') or has_extension('jsx') then
+        local file_path = vim.fn.expand('%:p')  -- Get the full path of the current file
+        local cmd = string.format("prettier --write --ignore-path .gitignore %s", file_path)
+        vim.fn.system(cmd)
     else
         -- Run LSP format for other file types
         vim.lsp.buf.format{async=true}
+    end
+end
+
+-- This func to format file using eslint
+function eslint_format()
+    if has_extension('ts') or has_extension('tsx') or has_extension('js') or has_extension('jsx') then
+        local file_path = vim.fn.expand('%:p')  -- Get the full path of the current file
+        local cmd = string.format("eslint --fix --ignore-path .gitignore %s", file_path)
+        vim.fn.system(cmd)
     end
 end
 
@@ -136,7 +149,8 @@ local mappings = {
       "<cmd>Telescope lsp_workspace_diagnostics<cr>",
       "Workspace Diagnostics",
     },
-    f = { '<cmd>lua format_function()<CR>', "Format" },
+    f = { '<cmd>lua common_format()<CR>', "Format" },
+    E = { '<cmd>lua eslint_format()<CR>', "Eslint format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
     j = {
       "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
