@@ -28,14 +28,6 @@ set noerrorbells
 set autoread
 set autowrite
 
-" Undo Tree
-" set undofile
-" set undodir=./undodir
-" set undolevels=1000
-" set undoreload=10000
-" set history=1000
-" set undolevels=1000
-
 "Theme
 syntax enable
 set background=dark

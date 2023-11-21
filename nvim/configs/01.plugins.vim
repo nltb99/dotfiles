@@ -43,7 +43,7 @@ Plug 'lukas-reineke/lsp-format.nvim'
 
 " Git
 Plug 'lewis6991/gitsigns.nvim'
-Plug 'APZelos/blamer.nvim'
+Plug 'f-person/git-blame.nvim'
 
 " Markdown preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }

@@ -181,11 +181,11 @@ local mappings = {
   },
 
   k = {
-    name = "Other",
+    name = "Kools",
     p = { ":MarkdownPreview<cr>", "Markdown Preview" },
     c = { "<cmd>lua vscode_open()<CR>", "VSCode" },
     u = { "<cmd>:UndotreeToggle<cr>", "UndoTree Toggle" },
-    U = { "<cmd>:UndotreePersistUndo<cr>:echo 'UndoTree Cleared'<CR>", "UndoTree Clear" },
+    f = { "<cmd>:CU<cr>:echo 'Forget Undo'<CR>", "Forget Undo" },
     a = { "<cmd>:AnyJump<cr>", "AnyJump" },
     h = { "<cmd>lua require('harpoon.mark').add_file()<cr>:echo 'Harpoon added file'<CR>", "Harpoon add file" },
   },

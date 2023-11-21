@@ -366,3 +366,8 @@ augroup FiletypeGroup
 augroup END
 
 au BufNewFile,BufRead *.ejs set filetype=html
+
+" Git blame
+let g:gitblame_message_template = '<author> • <date> • <summary>'
+let g:gitblame_date_format = '%r'
+
