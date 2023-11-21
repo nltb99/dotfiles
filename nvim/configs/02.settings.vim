@@ -32,9 +32,9 @@ set autowrite
 syntax enable
 set background=dark
 highlight Normal ctermbg=None
-" colorscheme onedark
-colorscheme onedarker
-" colorscheme primer_dark
+" colorscheme onedarker
+" colorscheme gruvbox
+colorscheme github_dark_dimmed
 
 "imap
 inoremap <silent> <c-l> <ESC>la

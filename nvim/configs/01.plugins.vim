@@ -21,9 +21,9 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 
 " Theme
-Plug 'joshdick/onedark.vim'
-Plug 'LunarVim/primer.nvim'
-Plug 'LunarVim/Onedarker.nvim'
+" Plug 'LunarVim/Onedarker.nvim'
+" Plug 'morhetz/gruvbox'
+Plug 'projekt0n/github-nvim-theme'
 
 " LSP
 Plug 'williamboman/mason.nvim'
