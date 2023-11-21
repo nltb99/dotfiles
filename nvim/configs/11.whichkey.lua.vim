@@ -12,18 +12,21 @@ end
 
 -- This func to format file based on file extension (python, js, ts)
 function common_format()
+    local file_path = vim.fn.expand('%:p')  -- Get the full path of the current file
+
     if has_extension('py') then
         local root_dir = vim.fn.finddir('pyproject.toml', '.;')
 
         if root_dir ~= '' and vim.fn.filereadable(root_dir .. '/pyproject.toml') then
             -- Run Black formatter with Poetry
-            vim.fn.system('poetry run black .')
+            local cmd = string.format("poetry run black %s", file_path)
+            vim.fn.system(cmd)
         else
             -- Run plain Black formatter
-            vim.fn.system('black .')
+            local cmd = string.format("black %s", file_path)
+            vim.fn.system(cmd)
         end
     elseif has_extension('ts') or has_extension('tsx') or has_extension('js') or has_extension('jsx') then
-        local file_path = vim.fn.expand('%:p')  -- Get the full path of the current file
         local cmd = string.format("prettier --write --ignore-path .gitignore %s", file_path)
         vim.fn.system(cmd)
     else
@@ -176,9 +179,15 @@ local mappings = {
     p = { ":MarkdownPreview<cr>", "Markdown Preview" },
     c = { "<cmd>!code .<cr>", "VSCode" },
     u = { "<cmd>:UndotreeToggle<cr>", "UndoTree Toggle" },
-    U = { "<cmd>:UndotreePersistUndo<cr>", "UndoTree Clear" },
+    U = { "<cmd>:UndotreePersistUndo<cr>:echo 'UndoTree Cleared'<CR>", "UndoTree Clear" },
     a = { "<cmd>:AnyJump<cr>", "AnyJump" },
-    h = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Harpoon add file" },
+    h = { "<cmd>lua require('harpoon.mark').add_file()<cr>:echo 'Harpoon added file'<CR>", "Harpoon add file" },
+  },
+
+  C = {
+    name = "Clipboard",
+    a = { "<cmd>let @+=expand('%:p')<CR>:echo 'Absolute path copied to clipboard'<CR>", "Copy absolute path" },
+    r = { "<cmd>collect/lazada/build_api.py<CR>:echo 'Relative path copied to clipboard'<CR>", "Copy relative path" },
   },
 }
 
