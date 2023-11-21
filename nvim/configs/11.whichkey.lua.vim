@@ -44,6 +44,12 @@ function eslint_format()
     end
 end
 
+-- This func to open current working directory using vscode
+function vscode_open()
+  local current_dir_path = vim.fn.fnamemodify(vim.fn.getcwd(), ':~:.') .. '/'
+  local cmd = string.format("code %s", current_dir_path)
+  vim.fn.system(cmd)
+end
 
 local setup = {
   plugins = {
@@ -177,7 +183,7 @@ local mappings = {
   k = {
     name = "Other",
     p = { ":MarkdownPreview<cr>", "Markdown Preview" },
-    c = { "<cmd>!code .<cr>", "VSCode" },
+    c = { "<cmd>lua vscode_open()<CR>", "VSCode" },
     u = { "<cmd>:UndotreeToggle<cr>", "UndoTree Toggle" },
     U = { "<cmd>:UndotreePersistUndo<cr>:echo 'UndoTree Cleared'<CR>", "UndoTree Clear" },
     a = { "<cmd>:AnyJump<cr>", "AnyJump" },
@@ -187,7 +193,8 @@ local mappings = {
   C = {
     name = "Clipboard",
     a = { "<cmd>let @+=expand('%:p')<CR>:echo 'Absolute path copied to clipboard'<CR>", "Copy absolute path" },
-    r = { "<cmd>collect/lazada/build_api.py<CR>:echo 'Relative path copied to clipboard'<CR>", "Copy relative path" },
+    r = { "<cmd>let @+=fnamemodify(expand('%'), ':~:.')<CR>:echo 'Relative path copied to clipboard'<CR>", "Copy relative path" },
+    d = { "<cmd>let @+=fnamemodify(getcwd(), ':~:.') . '/'<CR>:echo 'Directory path copied to clipboard'<CR>", "Copy directory path" },
   },
 }
 
