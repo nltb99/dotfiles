@@ -8,10 +8,24 @@ if !exists("g:os")
 endif
 
 " Override copy paste
-" nnoremap x "_x
-" nnoremap d "_d
-" nnoremap D "_D
-" vnoremap d "_d
+nnoremap x "_x
+nnoremap d "_d
+nnoremap D "_D
+vnoremap d "_d
+nnoremap ciw "_ciw
+nnoremap caw "_caw
+nnoremap ci{ "_ci{
+nnoremap ci} "_ci}
+nnoremap ci( "_ci(
+nnoremap ci) "_ci)
+nnoremap ci[ "_ci[
+nnoremap ci] "_ci]
+nnoremap ca{ "_ca{
+nnoremap ca} "_ca}
+nnoremap ca( "_ca(
+nnoremap ca) "_ca)
+nnoremap ca[ "_ca[
+nnoremap ca] "_ca]
 
 filetype plugin on
 filetype plugin indent on

@@ -122,7 +122,7 @@ local mappings = {
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
   ["b"] = { "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>", "Buffers" },
   ["f"] = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "Find files" },
-  ["F"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
+  ["F"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Find text in file" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
   ["h"] = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Harpoon" },
 
@@ -155,6 +155,9 @@ local mappings = {
 
   s = {
     name = "Search",
+    f = { "<cmd>Telescope live_grep<cr>", "Find text global" },
+    F = { "<cmd>Telescope grep_string<cr>", "Find current text global" },
+    d = { "<cmd>lua require('telescope.builtin').find_files({ cwd = vim.fn.expand('%:p:h') })<cr>", "Find files current dir" },
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
     h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
     r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
@@ -188,6 +191,7 @@ local mappings = {
     f = { "<cmd>:CU<cr>:echo 'Forget Undo'<CR>", "Forget Undo" },
     a = { "<cmd>:AnyJump<cr>", "AnyJump" },
     h = { "<cmd>lua require('harpoon.mark').add_file()<cr>:echo 'Harpoon added file'<CR>", "Harpoon add file" },
+    g = { "<cmd>!gh browse<CR>", "Github browse" },
   },
 
   C = {

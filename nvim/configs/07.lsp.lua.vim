@@ -339,6 +339,8 @@ local pyright_opts = {
             analysis = {
                 autoImportCompletions = true,
                 diagnosticMode = "workspace",
+				autoSearchPaths = true,
+        		useLibraryCodeForTypes = true,
                 typeCheckingMode = "off", -- Options: "strict," "basic," "off"
             },
             formatting = {

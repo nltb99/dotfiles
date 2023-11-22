@@ -49,6 +49,9 @@ telescope.setup {
       },
 
       n = {
+        ["<C-n>"] = actions.cycle_history_next,
+        ["<C-p>"] = actions.cycle_history_prev,
+
         ["<esc>"] = actions.close,
         ["<CR>"] = actions.select_default,
         ["<C-x>"] = actions.select_horizontal,
@@ -57,8 +60,6 @@ telescope.setup {
 
         ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
         ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
-        ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
-        ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 
         ["j"] = actions.move_selection_next,
         ["k"] = actions.move_selection_previous,
