@@ -152,7 +152,7 @@ alias jsrun='node main.js < input.txt'
 alias cpprun='cp main.cpp < input.txt'
 alias chromeinsecure='open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security'
 alias pypath='export PYTHONPATH=$(pwd)'
-alias pystart='pypath & poetry shell'
+alias pppp='poetry shell && export PYTHONPATH=$(pwd)'
 
 # Commands
 export EDITOR=vim 
@@ -245,4 +245,3 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 export PATH="$HOME/.local/bin:$PATH"
 
-unset PYTHONHOME
