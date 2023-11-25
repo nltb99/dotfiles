@@ -136,7 +136,6 @@ alias yayi="yay -S"
 alias yayu="yay -Syu"
 alias ytdl="youtube-dl"
 alias zshrc="vim ~/.zshrc"
-# Config alias
 alias py="python"
 alias wstorm="open -a /Applications/WebStorm.app"
 alias preview="ag -i -S . | fzf --preview 'cat {}' --info inline -i -e | pbcopy"
@@ -145,14 +144,13 @@ alias ls="ls -G"
 alias gcc="g++ -std=c++17"
 alias cheat="curl cheat.sh/"
 alias weather="curl wttr.in/hochiminh"
-# alias brow='arch --x86_64 /usr/local/Homebrew/bin/brew'
-# alias brew='arch -x86_64 brew'
 alias gorun='go run main.go'
 alias jsrun='node main.js < input.txt'
 alias cpprun='cp main.cpp < input.txt'
 alias chromeinsecure='open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security'
 alias pypath='export PYTHONPATH=$(pwd)'
-alias pppp='poetry shell && export PYTHONPATH=$(pwd)'
+alias pppp='source /Users/nltbao/Desktop/scripts/pppp.sh'
+alias ghsync='/Users/nltbao/Desktop/scripts/sync.sh'
 
 # Commands
 export EDITOR=vim 
@@ -161,9 +159,6 @@ export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias: "
 export PATH=$HOME/.node_modules/bin:$PATH
 export PATH=$HOME/Applications/bin:$PATH
 export PATH="/usr/local/bin:$PATH"
-# export PATH="/opt/homebrew/bin:$PATH"
-# export PATH="/usr/local/homebrew/bin:$PATH"
-# export PATH="/usr/local/homebrew/sbin:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
@@ -179,12 +174,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/Users/nltbao/.local/bin/fig:$PATH"
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:"$PATH"
 export PATH=$(go env GOPATH)/bin:$PATH
-
-# config androi studio
-# export ANDROID_HOME=$HOME/Library/Android/sdk
-# export PATH=$PATH:$ANDROID_HOME/emulator
-# export PATH=$PATH:$ANDROID_HOME/platform-tools
-# export PATH="${HOME}/Library/Android/sdk/tools:${HOME}/Library/Android/sdk/platform-tools:${PATH}"
 
 # https://stackoverflow.com/questions/394230/how-to-detect-the-os-from-a-bash-script
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
@@ -221,24 +210,8 @@ cplusplus(){
     fi
 }
 
-
 # Auto start Tmux
 if [ "$TMUX" = "" ]; then tmux; fi
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/nltbao/Downloads/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/nltbao/Downloads/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/nltbao/Downloads/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/nltbao/Downloads/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
