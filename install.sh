@@ -1,25 +1,24 @@
-# Link neovim
-ln -s  $(pwd)/nvim ~/.config
+# MacOS & Linux
+if [[ "$OSTYPE" =~ ^darwin || "$OSTYPE" =~ ^linux ]]; then
+   echo 'Linking "./nvim" to "~/.config"'
+   # ln -s  $(pwd)/nvim ~/.config
 
-# Link zsh
-ln -s  $(pwd)/.zshrc ~/
+   echo 'Linking "./zshrc" to "~/"'
+   ln -s  $(pwd)/.zshrc ~/
 
-if [[ "$OSTYPE" =~ ^darwin ]]; then
-    # Link alacritty config
+   echo 'Linking "./alacritty.yml" to "~/.config"'
    ln -s  $(pwd)/alacritty.yml ~/.config
 
-    # Link tmux config
+   echo 'Linking ".tmux.conf" to "~/"'
    ln -s  $(pwd)/.tmux.conf ~/
 
-    # Link vscode settings
+   echo 'Linking vscode settings'
    ln -s  $(pwd)/settings.json ~/Library/Application\ Support/Code/User
    ln -s $(pwd)/keybindings.json ~/Library/Application\ Support/Code/User
 fi
 
-if [[ "$OSTYPE" =~ ^linux ]]; then
-   # Linux
-fi
-
+# TODO: Will update this after experienced setup with windows
+# Windows
 if [[ "$OSTYPE" =~ ^msys ]]; then
-   # Windows
+
 fi
