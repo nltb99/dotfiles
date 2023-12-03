@@ -104,7 +104,7 @@ selection:
 dynamic_title: true
 
 cursor:
-  style: Block
+  style: Beam
 
   unfocused_hollow: true
 
