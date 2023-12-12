@@ -1,32 +1,101 @@
-# Neovim, Zsh/Ohmyzsh, Tmux, Alacritty, Vscode
+### Dotfiles
+
+My personal settings, crafted to enhance productivity and my workflow when engaging with code.
+The following configurations are:
+
+- Neovim
+- Zsh
+- VSCode
+- Tmux (multiplexer)
+- Alacritty (terminal)
+- Kitty (terminal)
+- vimium (browser extension)
+
+![](./screenshot/screenshot_1.png)
+![](./screenshot/screenshot_2.png)
+![](./screenshot/screenshot_3.png)
 
 ## Installation
 
-```ruby
-
-$ ./install.sh
-
+```shell
+./install.sh
 ```
+
+### Prerequisites
+
+- Neovim >= v0.9.x
+
+###### macOS
+
+```sh
+# Neovim
+brew install chafa gnu-sed imagemagick lazygit lua luajit prettier
+
+# Searcher
+brew install ripgrep fzf the_silver_searcher
+
+# Python
+brew install black flake8 poetry pyenv python-setuptools python-packaging
+
+# Optionals
+brew install cmatrix yarn tree neovim git tmux gcc gpp gh go htop n node wget zoxide
+```
+
+###### Linux
+
+> **NOTE:** This section will be updated soon!
+
+###### Windows
+
+> **NOTE:** This section will be updated soon!
 
 ## vim-plug
 
-```ruby
+###### macOS
+
+```sh
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-## Font Family
+###### Linux
 
-```ruby
-FuraCode Nerd Font
-Source Code Pro
-JetBrains Mono
-Consolas
+```sh
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
 
+###### Windows (PowerShell)
+
+```powershell
+iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+    ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
+```
+
+## Keybindings
+
+> **NOTE:** This section will be updated soon!
+
+## Fonts
+
+```py
+# FuraCode Nerd Font
+https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip
+
+# Source Code Pro
+https://fonts.google.com/specimen/Source+Code+Pro
+
+# JetBrains Mono
+https://www.jetbrains.com/lp/mono/
+
+# Consolas
+https://freefontsdownload.net/free-consolas-font-33098.htm
+
+# References
 https://www.nerdfonts.com/font-downloads
 ```
 
-```console
+```js
 
                                                bbbbbbbb
                   lllllll         tttt         b::::::b               999999999          999999999
