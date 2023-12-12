@@ -150,6 +150,7 @@ alias cpprun='cp main.cpp < input.txt'
 alias chromeinsecure='open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security'
 alias pypath='export PYTHONPATH=$(pwd)'
 alias pppp='source /Users/nltbao/Desktop/scripts/pppp.sh'
+alias p2p2='poetry env use /Users/nltbao/.pyenv/shims/python'
 alias ghsync='/Users/nltbao/Desktop/scripts/sync.sh'
 
 # Commands
@@ -218,9 +219,5 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 export PATH="$HOME/.local/bin:$PATH"
 
-
 # zoxide
 eval "$(zoxide init zsh)"
-
-
-
