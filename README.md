@@ -29,7 +29,7 @@ The following configurations are:
 
 ```sh
 # Neovim
-brew install chafa gnu-sed imagemagick lazygit lua luajit prettier
+brew install chafa gnu-sed imagemagick lazygit lua luajit prettier eslint
 
 # Searcher
 brew install ripgrep fzf the_silver_searcher
