@@ -18,6 +18,7 @@ SAVEHIST=99999
 plugins=(
     zsh-autosuggestions
     globalias
+    poetry
 )
 
 # Theme
@@ -202,14 +203,14 @@ else
 fi
 
 # CPP
-cplusplus(){
-    if [ "$#" -ne 1 ]; then
-        echo "Usage: cp <file.cpp>"
-    else
-        name=$(echo $1 | cut -f 1 -d '.')
-        g++ --std=c++17 -Wshadow -Wall -O2 -Wno-unused-result $1 -o name; ./name
-    fi
-}
+# cplusplus(){
+#     if [ "$#" -ne 1 ]; then
+#         echo "Usage: cp <file.cpp>"
+#     else
+#         name=$(echo $1 | cut -f 1 -d '.')
+#         g++ --std=c++17 -Wshadow -Wall -O2 -Wno-unused-result $1 -o name; ./name
+#     fi
+# }
 
 # Auto start Tmux
 if [ "$TMUX" = "" ]; then tmux; fi
@@ -221,3 +222,8 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # zoxide
 eval "$(zoxide init zsh)"
+
+# poetry
+fpath+=~/.zfunc
+autoload -Uz compinit && compinit
+
