@@ -150,9 +150,11 @@ alias jsrun='node main.js < input.txt'
 alias cpprun='cp main.cpp < input.txt'
 alias chromeinsecure='open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security'
 alias pypath='export PYTHONPATH=$(pwd)'
-alias pppp='source /Users/nltbao/Desktopp/nvim/scripts/pppp.sh'
+alias pppp='source /Users/nltbao/Desktop/nvim/scripts/pppp.sh'
 alias p2p2='poetry env use /Users/nltbao/.pyenv/shims/python'
 alias ghsync='/Users/nltbao/Desktop/nvim/scripts/sync.sh'
+alias cdecrypt='/Users/nltbao/Desktop/nvim/scripts/customore_decrypt.sh $1'
+alias cpurgequeue='/Users/nltbao/Documents/CUSTOMORE/rabbitmq/purge_all_queue.sh'
 
 # Commands
 export EDITOR=vim 
@@ -230,3 +232,5 @@ autoload -Uz compinit && compinit
 
 export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/libpq/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/libpq/include"
+
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
