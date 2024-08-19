@@ -1,4 +1,7 @@
 # Insert your preferred key mappings here.
+# unmap H # go back history
+# unmap L # go forward history
+
 unmap o
 unmap /
 unmap p
@@ -11,8 +14,6 @@ unmap B
 unmap T
 unmap n
 unmap N
-unmap H
-unmap L
 unmap t
 unmap x
 unmap g0
