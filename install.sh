@@ -6,7 +6,10 @@ if [[ "$OSTYPE" =~ ^darwin || "$OSTYPE" =~ ^linux ]]; then
    echo 'Linking alacritty.yml'
    ln -s  $(pwd)/.config/alacritty.yml ~/.config
 
-   echo 'Linking .config/skhd'
+   echo 'Linking yabai'
+   ln -s  $(pwd)/.config/yabai ~/.config
+
+   echo 'Linking skhd'
    ln -s  $(pwd)/.config/skhd ~/.config
 
    echo 'Linking .zshrc'
