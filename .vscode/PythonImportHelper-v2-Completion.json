@@ -35,64 +35,64 @@
     {
         "label": "main",
         "kind": 2,
-        "importPath": "kitty.neighboring_window",
-        "description": "kitty.neighboring_window",
+        "importPath": ".config.kitty.neighboring_window",
+        "description": ".config.kitty.neighboring_window",
         "peekOfCode": "def main():\n    pass\ndef handle_result(args, result, target_window_id, boss):\n    boss.active_tab.neighboring_window(args[1])\nhandle_result.no_ui = True",
-        "detail": "kitty.neighboring_window",
+        "detail": ".config.kitty.neighboring_window",
         "documentation": {}
     },
     {
         "label": "handle_result",
         "kind": 2,
-        "importPath": "kitty.neighboring_window",
-        "description": "kitty.neighboring_window",
+        "importPath": ".config.kitty.neighboring_window",
+        "description": ".config.kitty.neighboring_window",
         "peekOfCode": "def handle_result(args, result, target_window_id, boss):\n    boss.active_tab.neighboring_window(args[1])\nhandle_result.no_ui = True",
-        "detail": "kitty.neighboring_window",
+        "detail": ".config.kitty.neighboring_window",
         "documentation": {}
     },
     {
         "label": "handle_result.no_ui",
         "kind": 5,
-        "importPath": "kitty.neighboring_window",
-        "description": "kitty.neighboring_window",
+        "importPath": ".config.kitty.neighboring_window",
+        "description": ".config.kitty.neighboring_window",
         "peekOfCode": "handle_result.no_ui = True",
-        "detail": "kitty.neighboring_window",
+        "detail": ".config.kitty.neighboring_window",
         "documentation": {}
     },
     {
         "label": "is_window_vim",
         "kind": 2,
-        "importPath": "kitty.pass_keys",
-        "description": "kitty.pass_keys",
+        "importPath": ".config.kitty.pass_keys",
+        "description": ".config.kitty.pass_keys",
         "peekOfCode": "def is_window_vim(window, vim_id):\n    fp = window.child.foreground_processes\n    return any(re.search(vim_id, p['cmdline'][0] if len(p['cmdline']) else '', re.I) for p in fp)\ndef encode_key_mapping(window, key_mapping):\n    mods, key = parse_shortcut(key_mapping)\n    event = KeyEvent(\n        mods=mods,\n        key=key,\n        shift=bool(mods & 1),\n        alt=bool(mods & 2),",
-        "detail": "kitty.pass_keys",
+        "detail": ".config.kitty.pass_keys",
         "documentation": {}
     },
     {
         "label": "encode_key_mapping",
         "kind": 2,
-        "importPath": "kitty.pass_keys",
-        "description": "kitty.pass_keys",
+        "importPath": ".config.kitty.pass_keys",
+        "description": ".config.kitty.pass_keys",
         "peekOfCode": "def encode_key_mapping(window, key_mapping):\n    mods, key = parse_shortcut(key_mapping)\n    event = KeyEvent(\n        mods=mods,\n        key=key,\n        shift=bool(mods & 1),\n        alt=bool(mods & 2),\n        ctrl=bool(mods & 4),\n        super=bool(mods & 8),\n        hyper=bool(mods & 16),",
-        "detail": "kitty.pass_keys",
+        "detail": ".config.kitty.pass_keys",
         "documentation": {}
     },
     {
         "label": "main",
         "kind": 2,
-        "importPath": "kitty.pass_keys",
-        "description": "kitty.pass_keys",
+        "importPath": ".config.kitty.pass_keys",
+        "description": ".config.kitty.pass_keys",
         "peekOfCode": "def main():\n    pass\n@result_handler(no_ui=True)\ndef handle_result(args, result, target_window_id, boss):\n    window = boss.window_id_map.get(target_window_id)\n    direction = args[2]\n    key_mapping = args[3]\n    vim_id = args[4] if len(args) > 4 else \"n?vim\"\n    if window is None:\n        return",
-        "detail": "kitty.pass_keys",
+        "detail": ".config.kitty.pass_keys",
         "documentation": {}
     },
     {
         "label": "handle_result",
         "kind": 2,
-        "importPath": "kitty.pass_keys",
-        "description": "kitty.pass_keys",
+        "importPath": ".config.kitty.pass_keys",
+        "description": ".config.kitty.pass_keys",
         "peekOfCode": "def handle_result(args, result, target_window_id, boss):\n    window = boss.window_id_map.get(target_window_id)\n    direction = args[2]\n    key_mapping = args[3]\n    vim_id = args[4] if len(args) > 4 else \"n?vim\"\n    if window is None:\n        return\n    if is_window_vim(window, vim_id):\n        for keymap in key_mapping.split(\">\"):\n            encoded = encode_key_mapping(window, keymap)",
-        "detail": "kitty.pass_keys",
+        "detail": ".config.kitty.pass_keys",
         "documentation": {}
     }
 ]
