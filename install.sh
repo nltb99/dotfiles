@@ -24,7 +24,7 @@ if [[ "$OSTYPE" =~ ^darwin || "$OSTYPE" =~ ^linux ]]; then
 
 fi
 
-# TODO: Will update this after experienced setup with windows
+# TODO: Will update this after experiencing setup with Windows.
 # Windows
 if [[ "$OSTYPE" =~ ^msys ]]; then
 
