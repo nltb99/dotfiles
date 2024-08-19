@@ -19,9 +19,8 @@ if [[ "$OSTYPE" =~ ^darwin || "$OSTYPE" =~ ^linux ]]; then
    ln -s  $(pwd)/.config/.tmux.conf ~/
 
    echo 'Linking vscode settings'
-   ln -s  $(pwd)/.config/settings.json ~/Library/Application\ Support/Code/User
-   ln -s $(pwd)/.config/keybindings.json ~/Library/Application\ Support/Code/User
-
+   ln -s ~/Library/Application\ Support/Code/User/settings.json $(pwd)/.config/vscode/settings.json
+   ln -s ~/Library/Application\ Support/Code/User/keybindings.json $(pwd)/.config/vscode/keybindings.json
 fi
 
 # TODO: Will update this after experiencing setup with Windows.
