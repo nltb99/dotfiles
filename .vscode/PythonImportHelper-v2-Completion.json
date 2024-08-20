@@ -1036,7 +1036,7 @@
         "kind": 5,
         "importPath": ".qutebrowser.config",
         "description": ".qutebrowser.config",
-        "peekOfCode": "c.content.javascript.clipboard = \"access\"\n# Enable JavaScript.\n# Type: Bool\nconfig.set(\"content.javascript.enabled\", True, \"chrome-devtools://*\")\n# Enable JavaScript.\n# Type: Bool\nconfig.set(\"content.javascript.enabled\", True, \"devtools://*\")\n# Enable JavaScript.\n# Type: Bool\nconfig.set(\"content.javascript.enabled\", True, \"chrome://*/*\")",
+        "peekOfCode": "c.content.javascript.clipboard = \"access\"\n# Enable JavaScript.\n# Type: Bool\nconfig.set(\"content.javascript.enabled\", True, \"file://*\")\nconfig.set(\"content.javascript.enabled\", True, \"chrome-devtools://*\")\nconfig.set(\"content.javascript.enabled\", True, \"devtools://*\")\nconfig.set(\"content.javascript.enabled\", True, \"chrome://*/*\")\nconfig.set(\"content.javascript.enabled\", True, \"qute://*/*\")\n# Allow websites to record audio.\n# Type: BoolAsk",
         "detail": ".qutebrowser.config",
         "documentation": {}
     },
@@ -1045,7 +1045,7 @@
         "kind": 5,
         "importPath": ".qutebrowser.config",
         "description": ".qutebrowser.config",
-        "peekOfCode": "c.hints.chars = \"aoeuidhtns\"\n# c.hints.mode = \"number\"\nc.hints.mode = \"letter\"\n# Enable smooth scrolling for web pages. Note smooth scrolling does not\n# work with the `:scroll-px` command.\n# Type: Bool\nc.scrolling.smooth = False\n# Page to open if :open -t/-b/-w is used without URL. Use `about:blank`\n# for a blank page.\n# Type: FuzzyUrl",
+        "peekOfCode": "c.hints.chars = \"aoeuidhtns\"\n# c.hints.mode = \"number\"\nc.hints.mode = \"letter\"\n# Enable smooth scrolling for web pages. Note smooth scrolling does not\n# work with the `:scroll-px` command.\n# Type: Bool\nc.scrolling.smooth = False\nc.scrolling.bar = \"always\"\n# Page to open if :open -t/-b/-w is used without URL. Use `about:blank`\n# for a blank page.",
         "detail": ".qutebrowser.config",
         "documentation": {}
     },
@@ -1054,7 +1054,7 @@
         "kind": 5,
         "importPath": ".qutebrowser.config",
         "description": ".qutebrowser.config",
-        "peekOfCode": "c.hints.mode = \"letter\"\n# Enable smooth scrolling for web pages. Note smooth scrolling does not\n# work with the `:scroll-px` command.\n# Type: Bool\nc.scrolling.smooth = False\n# Page to open if :open -t/-b/-w is used without URL. Use `about:blank`\n# for a blank page.\n# Type: FuzzyUrl\nc.url.default_page = \"https://google.com.vn\"\n# Search engines which can be used via the address bar.  Maps a search",
+        "peekOfCode": "c.hints.mode = \"letter\"\n# Enable smooth scrolling for web pages. Note smooth scrolling does not\n# work with the `:scroll-px` command.\n# Type: Bool\nc.scrolling.smooth = False\nc.scrolling.bar = \"always\"\n# Page to open if :open -t/-b/-w is used without URL. Use `about:blank`\n# for a blank page.\n# Type: FuzzyUrl\nc.url.default_page = \"https://google.com.vn\"",
         "detail": ".qutebrowser.config",
         "documentation": {}
     },
@@ -1063,7 +1063,16 @@
         "kind": 5,
         "importPath": ".qutebrowser.config",
         "description": ".qutebrowser.config",
-        "peekOfCode": "c.scrolling.smooth = False\n# Page to open if :open -t/-b/-w is used without URL. Use `about:blank`\n# for a blank page.\n# Type: FuzzyUrl\nc.url.default_page = \"https://google.com.vn\"\n# Search engines which can be used via the address bar.  Maps a search\n# engine name (such as `DEFAULT`, or `ddg`) to a URL with a `{}`\n# placeholder. The placeholder will be replaced by the search term, use\n# `{{` and `}}` for literal `{`/`}` braces.  The following further\n# placeholds are defined to configure how special characters in the",
+        "peekOfCode": "c.scrolling.smooth = False\nc.scrolling.bar = \"always\"\n# Page to open if :open -t/-b/-w is used without URL. Use `about:blank`\n# for a blank page.\n# Type: FuzzyUrl\nc.url.default_page = \"https://google.com.vn\"\n# Search engines which can be used via the address bar.  Maps a search\n# engine name (such as `DEFAULT`, or `ddg`) to a URL with a `{}`\n# placeholder. The placeholder will be replaced by the search term, use\n# `{{` and `}}` for literal `{`/`}` braces.  The following further",
+        "detail": ".qutebrowser.config",
+        "documentation": {}
+    },
+    {
+        "label": "c.scrolling.bar",
+        "kind": 5,
+        "importPath": ".qutebrowser.config",
+        "description": ".qutebrowser.config",
+        "peekOfCode": "c.scrolling.bar = \"always\"\n# Page to open if :open -t/-b/-w is used without URL. Use `about:blank`\n# for a blank page.\n# Type: FuzzyUrl\nc.url.default_page = \"https://google.com.vn\"\n# Search engines which can be used via the address bar.  Maps a search\n# engine name (such as `DEFAULT`, or `ddg`) to a URL with a `{}`\n# placeholder. The placeholder will be replaced by the search term, use\n# `{{` and `}}` for literal `{`/`}` braces.  The following further\n# placeholds are defined to configure how special characters in the",
         "detail": ".qutebrowser.config",
         "documentation": {}
     },

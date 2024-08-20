@@ -151,27 +151,11 @@ c.content.javascript.clipboard = "access"
 
 # Enable JavaScript.
 # Type: Bool
+config.set("content.javascript.enabled", True, "file://*")
 config.set("content.javascript.enabled", True, "chrome-devtools://*")
-
-# Enable JavaScript.
-# Type: Bool
 config.set("content.javascript.enabled", True, "devtools://*")
-
-# Enable JavaScript.
-# Type: Bool
 config.set("content.javascript.enabled", True, "chrome://*/*")
-
-# Enable JavaScript.
-# Type: Bool
 config.set("content.javascript.enabled", True, "qute://*/*")
-
-# Allow locally loaded documents to access remote URLs.
-# Type: Bool
-# config.set('content.local_content_can_access_remote_urls', True, 'file:///Users/leonsilicon/Library/Application%20Support/qutebrowser/userscripts/*')
-
-# Allow locally loaded documents to access other local URLs.
-# Type: Bool
-# config.set('content.local_content_can_access_file_urls', False, 'file:///Users/leonsilicon/Library/Application%20Support/qutebrowser/userscripts/*')
 
 # Allow websites to record audio.
 # Type: BoolAsk
@@ -215,6 +199,7 @@ c.hints.mode = "letter"
 # work with the `:scroll-px` command.
 # Type: Bool
 c.scrolling.smooth = False
+c.scrolling.bar = "always"
 
 # Page to open if :open -t/-b/-w is used without URL. Use `about:blank`
 # for a blank page.
@@ -294,6 +279,18 @@ config.unbind("<Shift-K>")
 # Macro
 config.unbind("q")
 config.unbind("@")
+
+# Unbind common
+config.unbind("gd")
+config.unbind("M")
+config.unbind("gf")
+config.unbind("gu")
+config.unbind("gU")
+config.unbind("th")
+config.unbind("wh")
+config.unbind("tl")
+config.unbind("wl")
+
 
 ############## THEMES #################
 
