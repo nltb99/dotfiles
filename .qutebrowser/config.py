@@ -291,6 +291,8 @@ config.unbind("wh")
 config.unbind("tl")
 config.unbind("wl")
 
+# To reload the page due to the error 'unknown error while getting elements qutebrowser'
+config.bind("gs", "cmd-set-text -s :open -t {url} ;; tab-close")
 
 ############## THEMES #################
 
