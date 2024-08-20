@@ -1,6 +1,3 @@
-nvim_v1/bundle
-nvim_v1/configs/undodir
-
 nvim/bundle
 nvim/configs/undodir
 
@@ -45,7 +42,6 @@ luac.out
 *.x86_64
 *.hex
 
-
-plugin/packer_compiled.lua
-
-.DS_Store
+*DS_Store
+*PythonImportHelper-v2-Completion.json
+.vscode
