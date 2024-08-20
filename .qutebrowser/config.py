@@ -213,7 +213,7 @@ c.hints.mode = "number"
 # Enable smooth scrolling for web pages. Note smooth scrolling does not
 # work with the `:scroll-px` command.
 # Type: Bool
-c.scrolling.smooth = True
+c.scrolling.smooth = False
 
 # Page to open if :open -t/-b/-w is used without URL. Use `about:blank`
 # for a blank page.
@@ -283,5 +283,15 @@ config.unbind("d")
 # Undo closing tab
 config.bind("<Cmd-Shift-T>", "undo")
 config.unbind("u")
+
+# Move tabs left right
+config.bind("<Cmd-Alt-Left>", "tab-prev")
+config.bind("<Cmd-Alt-Right>", "tab-next")
+config.unbind("<Shift-J>")
+config.unbind("<Shift-K>")
+
+# Macro
+config.unbind("q")
+config.unbind("@")
 
 # Bindings for insert mode
