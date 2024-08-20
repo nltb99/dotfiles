@@ -13,10 +13,10 @@ if [[ "$OSTYPE" =~ ^darwin || "$OSTYPE" =~ ^linux ]]; then
    ln -s  $(pwd)/.config/skhd ~/.config
 
    echo 'Linking .zshrc'
-   ln -s  $(pwd)/.config/.zshrc ~/
+   ln -s  $(pwd)/.zshrc ~/
 
    echo 'Linking .tmux.conf'
-   ln -s  $(pwd)/.config/.tmux.conf ~/
+   ln -s  $(pwd)/.tmux.conf ~/
 
    echo 'Linking vscode settings'
    ln -s ~/Library/Application\ Support/Code/User/settings.json $(pwd)/.config/vscode/settings.json
