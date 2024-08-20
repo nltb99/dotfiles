@@ -208,7 +208,8 @@ config.set("content.media.video_capture", True, "https://meet.google.com")
 # Characters used for hint strings.
 # Type: UniqueCharString
 c.hints.chars = "aoeuidhtns"
-c.hints.mode = "number"
+# c.hints.mode = "number"
+c.hints.mode = "letter"
 
 # Enable smooth scrolling for web pages. Note smooth scrolling does not
 # work with the `:scroll-px` command.
@@ -293,10 +294,6 @@ config.unbind("<Shift-K>")
 # Macro
 config.unbind("q")
 config.unbind("@")
-
-
-# Bindings for insert mode
-
 
 ############## THEMES #################
 

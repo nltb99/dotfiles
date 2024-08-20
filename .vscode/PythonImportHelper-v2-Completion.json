@@ -1045,7 +1045,7 @@
         "kind": 5,
         "importPath": ".qutebrowser.config",
         "description": ".qutebrowser.config",
-        "peekOfCode": "c.hints.chars = \"aoeuidhtns\"\nc.hints.mode = \"number\"\n# Enable smooth scrolling for web pages. Note smooth scrolling does not\n# work with the `:scroll-px` command.\n# Type: Bool\nc.scrolling.smooth = False\n# Page to open if :open -t/-b/-w is used without URL. Use `about:blank`\n# for a blank page.\n# Type: FuzzyUrl\nc.url.default_page = \"https://google.com.vn\"",
+        "peekOfCode": "c.hints.chars = \"aoeuidhtns\"\n# c.hints.mode = \"number\"\nc.hints.mode = \"letter\"\n# Enable smooth scrolling for web pages. Note smooth scrolling does not\n# work with the `:scroll-px` command.\n# Type: Bool\nc.scrolling.smooth = False\n# Page to open if :open -t/-b/-w is used without URL. Use `about:blank`\n# for a blank page.\n# Type: FuzzyUrl",
         "detail": ".qutebrowser.config",
         "documentation": {}
     },
@@ -1054,7 +1054,7 @@
         "kind": 5,
         "importPath": ".qutebrowser.config",
         "description": ".qutebrowser.config",
-        "peekOfCode": "c.hints.mode = \"number\"\n# Enable smooth scrolling for web pages. Note smooth scrolling does not\n# work with the `:scroll-px` command.\n# Type: Bool\nc.scrolling.smooth = False\n# Page to open if :open -t/-b/-w is used without URL. Use `about:blank`\n# for a blank page.\n# Type: FuzzyUrl\nc.url.default_page = \"https://google.com.vn\"\n# Search engines which can be used via the address bar.  Maps a search",
+        "peekOfCode": "c.hints.mode = \"letter\"\n# Enable smooth scrolling for web pages. Note smooth scrolling does not\n# work with the `:scroll-px` command.\n# Type: Bool\nc.scrolling.smooth = False\n# Page to open if :open -t/-b/-w is used without URL. Use `about:blank`\n# for a blank page.\n# Type: FuzzyUrl\nc.url.default_page = \"https://google.com.vn\"\n# Search engines which can be used via the address bar.  Maps a search",
         "detail": ".qutebrowser.config",
         "documentation": {}
     },
