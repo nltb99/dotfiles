@@ -12,6 +12,9 @@ if [[ "$OSTYPE" =~ ^darwin || "$OSTYPE" =~ ^linux ]]; then
    echo 'Linking skhd'
    ln -s  $(pwd)/.config/skhd ~/.config
 
+   echo 'Linking qutebrowser'
+   ln -s  $(pwd)/.qutebrowser ~/
+
    echo 'Linking .zshrc'
    ln -s  $(pwd)/.zshrc ~/
 
