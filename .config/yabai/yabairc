@@ -35,16 +35,16 @@ yabai -m mouse_drop_action swap
 
 # yabai blacklist rules
 yabai -m rule --add app="^System Settings$" manage=off
-yabai -m rule --add app="^Chromium$" manage=off
-yabai -m rule --add app="^pgAdmin 4$" sticky=on layer=above manage=off
+yabai -m rule --add app="Chromium" manage=off
+yabai -m rule --add app="pgAdmin" sticky=on layer=above manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
 yabai -m rule --add app="^QuickTime Player$" manage=off
 yabai -m rule --add app="^Raycast Settings$" manage=off
 yabai -m rule --add app="^Gestimer$" manage=off
 yabai -m rule --add app="^Mail$" manage=off
-yabai -m rule --add app="^Note$" manage=off
-yabai -m rule --add app="^Finder$" manage=on
+yabai -m rule --add app="Note" manage=off
+yabai -m rule --add app="Finder" manage=off
 yabai -m rule --add app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off
 yabai -m rule --add app="^App Store$" manage=off
 yabai -m rule --add app="^Activity Monitor$" manage=off
