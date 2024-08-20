@@ -40,6 +40,26 @@ shift + alt - e: yabai -m space --balance
 
 ############ Moving Windows Around ############
 
+############ Minimized ############
+# yabai -m query --windows | ag -A 5 -B 2 'code'
+# yabai -m query --windows | ag -B 2 'github' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/'
+
+# shift + alt - j: yabai -m window --minimize
+
+# Github
+shift + alt - 0: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m query --windows | ag -B 2 'github' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/')
+
+# VsCode
+shift + alt - 9: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m query --windows | ag -B 2 'Code' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/')
+
+# qutebrowser
+shift + alt - 8: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m query --windows | ag -B 2 'qutebrowser' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/')
+
+# Chrome
+shift + alt - 7: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m query --windows | ag -B 2 'Google Chrome' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/')
+
+####################################
+
 # swap windows
 shift + alt - j: yabai -m window --swap south
 shift + alt - k: yabai -m window --swap north
@@ -94,5 +114,11 @@ shift + alt - s: yabai -m window --display west; yabai -m display --focus west;
 shift + alt - g: yabai -m window --display east; yabai -m display --focus east;
 
 ############# DISABLE #############
+
+# Mac minimize app
+# cmd - m: None
+
+# Mac hide app
 cmd - h: None
+
 0x39: None
