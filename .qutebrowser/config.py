@@ -72,7 +72,8 @@ config.set("content.cookies.accept", "all", "devtools://*")
 # Value to send in the `Accept-Language` header. Note that the value
 # read from JavaScript is always the global value.
 # Type: String
-config.set("content.headers.accept_language", "", "https://matchmaker.krunker.io/*")
+# config.set("content.headers.accept_language", "", "https://matchmaker.krunker.io/*")
+config.set("content.headers.accept_language", "vi-VN,vi")
 
 # User agent to send.  The following placeholders are defined:  *
 # `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
@@ -238,7 +239,9 @@ c.url.default_page = "https://google.com.vn"
 # the search engine name to the search term, e.g. `:open google
 # qutebrowser`.
 # Type: Dict
-c.url.searchengines = {"DEFAULT": "https://google.com/search?q={}"}
+c.url.searchengines = {
+    "DEFAULT": "https://www.google.com/search?hl=vi&q={}",
+}
 
 # Page(s) to open at the start.
 # Type: List of FuzzyUrl, or FuzzyUrl

@@ -163,7 +163,7 @@
         "kind": 5,
         "importPath": ".qutebrowser.config",
         "description": ".qutebrowser.config",
-        "peekOfCode": "c.url.searchengines = {\"DEFAULT\": \"https://google.com/search?q={}\"}\n# Page(s) to open at the start.\n# Type: List of FuzzyUrl, or FuzzyUrl\nc.url.start_pages = \"https://google.com.vn\"\n# Default font size to use. Whenever \"default_size\" is used in a font\n# setting, it's replaced with the size listed here. Valid values are\n# either a float value with a \"pt\" suffix, or an integer value with a\n# \"px\" suffix.\n# Type: String\nc.fonts.default_size = \"20pt\"",
+        "peekOfCode": "c.url.searchengines = {\n    \"DEFAULT\": \"https://www.google.com/search?hl=vi&q={}\",\n}\n# Page(s) to open at the start.\n# Type: List of FuzzyUrl, or FuzzyUrl\nc.url.start_pages = \"https://google.com.vn\"\n# Default font size to use. Whenever \"default_size\" is used in a font\n# setting, it's replaced with the size listed here. Valid values are\n# either a float value with a \"pt\" suffix, or an integer value with a\n# \"px\" suffix.",
         "detail": ".qutebrowser.config",
         "documentation": {}
     },
