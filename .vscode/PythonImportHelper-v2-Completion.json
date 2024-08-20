@@ -94,5 +94,95 @@
         "peekOfCode": "def handle_result(args, result, target_window_id, boss):\n    window = boss.window_id_map.get(target_window_id)\n    direction = args[2]\n    key_mapping = args[3]\n    vim_id = args[4] if len(args) > 4 else \"n?vim\"\n    if window is None:\n        return\n    if is_window_vim(window, vim_id):\n        for keymap in key_mapping.split(\">\"):\n            encoded = encode_key_mapping(window, keymap)",
         "detail": ".config.kitty.pass_keys",
         "documentation": {}
+    },
+    {
+        "label": "c.qt.highdpi",
+        "kind": 5,
+        "importPath": ".qutebrowser.config",
+        "description": ".qutebrowser.config",
+        "peekOfCode": "c.qt.highdpi = True\n# Which cookies to accept. With QtWebEngine, this setting also controls\n# other features with tracking capabilities similar to those of cookies;\n# including IndexedDB, DOM storage, filesystem API, service workers, and\n# AppCache. Note that with QtWebKit, only `all` and `never` are\n# supported as per-domain values. Setting `no-3rdparty` or `no-\n# unknown-3rdparty` per-domain on QtWebKit will have the same effect as\n# `all`. If this setting is used with URL patterns, the pattern gets\n# applied to the origin/first party URL of the page making the request,\n# not the request URL. With QtWebEngine 5.15.0+, paths will be stripped",
+        "detail": ".qutebrowser.config",
+        "documentation": {}
+    },
+    {
+        "label": "c.content.headers.user_agent",
+        "kind": 5,
+        "importPath": ".qutebrowser.config",
+        "description": ".qutebrowser.config",
+        "peekOfCode": "c.content.headers.user_agent = \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\"\n# User agent to send.  The following placeholders are defined:  *\n# `{os_info}`: Something like \"X11; Linux x86_64\". * `{webkit_version}`:\n# The underlying WebKit version (set to a fixed value   with\n# QtWebEngine). * `{qt_key}`: \"Qt\" for QtWebKit, \"QtWebEngine\" for\n# QtWebEngine. * `{qt_version}`: The underlying Qt version. *\n# `{upstream_browser_key}`: \"Version\" for QtWebKit, \"Chrome\" for\n# QtWebEngine. * `{upstream_browser_version}`: The corresponding\n# Safari/Chrome version. * `{qutebrowser_version}`: The currently\n# running qutebrowser version.  The default value is equal to the",
+        "detail": ".qutebrowser.config",
+        "documentation": {}
+    },
+    {
+        "label": "c.content.javascript.clipboard",
+        "kind": 5,
+        "importPath": ".qutebrowser.config",
+        "description": ".qutebrowser.config",
+        "peekOfCode": "c.content.javascript.clipboard = \"access\"\n# Enable JavaScript.\n# Type: Bool\nconfig.set(\"content.javascript.enabled\", True, \"chrome-devtools://*\")\n# Enable JavaScript.\n# Type: Bool\nconfig.set(\"content.javascript.enabled\", True, \"devtools://*\")\n# Enable JavaScript.\n# Type: Bool\nconfig.set(\"content.javascript.enabled\", True, \"chrome://*/*\")",
+        "detail": ".qutebrowser.config",
+        "documentation": {}
+    },
+    {
+        "label": "c.hints.chars",
+        "kind": 5,
+        "importPath": ".qutebrowser.config",
+        "description": ".qutebrowser.config",
+        "peekOfCode": "c.hints.chars = \"aoeuidhtns\"\nc.hints.mode = \"number\"\n# Enable smooth scrolling for web pages. Note smooth scrolling does not\n# work with the `:scroll-px` command.\n# Type: Bool\nc.scrolling.smooth = True\n# Page to open if :open -t/-b/-w is used without URL. Use `about:blank`\n# for a blank page.\n# Type: FuzzyUrl\nc.url.default_page = \"https://google.com.vn\"",
+        "detail": ".qutebrowser.config",
+        "documentation": {}
+    },
+    {
+        "label": "c.hints.mode",
+        "kind": 5,
+        "importPath": ".qutebrowser.config",
+        "description": ".qutebrowser.config",
+        "peekOfCode": "c.hints.mode = \"number\"\n# Enable smooth scrolling for web pages. Note smooth scrolling does not\n# work with the `:scroll-px` command.\n# Type: Bool\nc.scrolling.smooth = True\n# Page to open if :open -t/-b/-w is used without URL. Use `about:blank`\n# for a blank page.\n# Type: FuzzyUrl\nc.url.default_page = \"https://google.com.vn\"\n# Search engines which can be used via the address bar.  Maps a search",
+        "detail": ".qutebrowser.config",
+        "documentation": {}
+    },
+    {
+        "label": "c.scrolling.smooth",
+        "kind": 5,
+        "importPath": ".qutebrowser.config",
+        "description": ".qutebrowser.config",
+        "peekOfCode": "c.scrolling.smooth = True\n# Page to open if :open -t/-b/-w is used without URL. Use `about:blank`\n# for a blank page.\n# Type: FuzzyUrl\nc.url.default_page = \"https://google.com.vn\"\n# Search engines which can be used via the address bar.  Maps a search\n# engine name (such as `DEFAULT`, or `ddg`) to a URL with a `{}`\n# placeholder. The placeholder will be replaced by the search term, use\n# `{{` and `}}` for literal `{`/`}` braces.  The following further\n# placeholds are defined to configure how special characters in the",
+        "detail": ".qutebrowser.config",
+        "documentation": {}
+    },
+    {
+        "label": "c.url.default_page",
+        "kind": 5,
+        "importPath": ".qutebrowser.config",
+        "description": ".qutebrowser.config",
+        "peekOfCode": "c.url.default_page = \"https://google.com.vn\"\n# Search engines which can be used via the address bar.  Maps a search\n# engine name (such as `DEFAULT`, or `ddg`) to a URL with a `{}`\n# placeholder. The placeholder will be replaced by the search term, use\n# `{{` and `}}` for literal `{`/`}` braces.  The following further\n# placeholds are defined to configure how special characters in the\n# search terms are replaced by safe characters (called 'quoting'):  *\n# `{}` and `{semiquoted}` quote everything except slashes; this is the\n# most   sensible choice for almost all search engines (for the search\n# term   `slash/and&amp` this placeholder expands to `slash/and%26amp`).",
+        "detail": ".qutebrowser.config",
+        "documentation": {}
+    },
+    {
+        "label": "c.url.searchengines",
+        "kind": 5,
+        "importPath": ".qutebrowser.config",
+        "description": ".qutebrowser.config",
+        "peekOfCode": "c.url.searchengines = {\"DEFAULT\": \"https://google.com/search?q={}\"}\n# Page(s) to open at the start.\n# Type: List of FuzzyUrl, or FuzzyUrl\nc.url.start_pages = \"https://google.com.vn\"\n# Default font size to use. Whenever \"default_size\" is used in a font\n# setting, it's replaced with the size listed here. Valid values are\n# either a float value with a \"pt\" suffix, or an integer value with a\n# \"px\" suffix.\n# Type: String\nc.fonts.default_size = \"20pt\"",
+        "detail": ".qutebrowser.config",
+        "documentation": {}
+    },
+    {
+        "label": "c.url.start_pages",
+        "kind": 5,
+        "importPath": ".qutebrowser.config",
+        "description": ".qutebrowser.config",
+        "peekOfCode": "c.url.start_pages = \"https://google.com.vn\"\n# Default font size to use. Whenever \"default_size\" is used in a font\n# setting, it's replaced with the size listed here. Valid values are\n# either a float value with a \"pt\" suffix, or an integer value with a\n# \"px\" suffix.\n# Type: String\nc.fonts.default_size = \"20pt\"\n######### Bindings for normal mode #########\n# Tab selection\nconfig.bind(\"<Cmd-1>\", \"tab-select 1\")",
+        "detail": ".qutebrowser.config",
+        "documentation": {}
+    },
+    {
+        "label": "c.fonts.default_size",
+        "kind": 5,
+        "importPath": ".qutebrowser.config",
+        "description": ".qutebrowser.config",
+        "peekOfCode": "c.fonts.default_size = \"20pt\"\n######### Bindings for normal mode #########\n# Tab selection\nconfig.bind(\"<Cmd-1>\", \"tab-select 1\")\nconfig.bind(\"<Cmd-2>\", \"tab-select 2\")\nconfig.bind(\"<Cmd-3>\", \"tab-select 3\")\nconfig.bind(\"<Cmd-4>\", \"tab-select 4\")\nconfig.bind(\"<Cmd-5>\", \"tab-select 5\")\nconfig.bind(\"<Cmd-6>\", \"tab-select 6\")\nconfig.bind(\"<Cmd-7>\", \"tab-select 7\")",
+        "detail": ".qutebrowser.config",
+        "documentation": {}
     }
 ]

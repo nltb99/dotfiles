@@ -212,12 +212,12 @@ c.hints.mode = "number"
 # Enable smooth scrolling for web pages. Note smooth scrolling does not
 # work with the `:scroll-px` command.
 # Type: Bool
-c.scrolling.smooth = False
+c.scrolling.smooth = True
 
 # Page to open if :open -t/-b/-w is used without URL. Use `about:blank`
 # for a blank page.
 # Type: FuzzyUrl
-c.url.default_page = "https://google.com"
+c.url.default_page = "https://google.com.vn"
 
 # Search engines which can be used via the address bar.  Maps a search
 # engine name (such as `DEFAULT`, or `ddg`) to a URL with a `{}`
@@ -242,7 +242,7 @@ c.url.searchengines = {"DEFAULT": "https://google.com/search?q={}"}
 
 # Page(s) to open at the start.
 # Type: List of FuzzyUrl, or FuzzyUrl
-c.url.start_pages = "https://google.com"
+c.url.start_pages = "https://google.com.vn"
 
 # Default font size to use. Whenever "default_size" is used in a font
 # setting, it's replaced with the size listed here. Valid values are
@@ -251,11 +251,34 @@ c.url.start_pages = "https://google.com"
 # Type: String
 c.fonts.default_size = "20pt"
 
-# Bindings for normal mode
-# config.bind("<Shift+Tab>", "fake-key <Shift-Tab>")
-# config.bind("E", "fake-key <Escape>")
-# config.bind("W", "download-open")
-# config.bind("e", "hint")
-# config.bind("f", "spawn --userscript qute-1pass")
+######### Bindings for normal mode #########
+
+# Tab selection
+config.bind("<Cmd-1>", "tab-select 1")
+config.bind("<Cmd-2>", "tab-select 2")
+config.bind("<Cmd-3>", "tab-select 3")
+config.bind("<Cmd-4>", "tab-select 4")
+config.bind("<Cmd-5>", "tab-select 5")
+config.bind("<Cmd-6>", "tab-select 6")
+config.bind("<Cmd-7>", "tab-select 7")
+config.bind("<Cmd-8>", "tab-select 8")
+config.bind("<Cmd-9>", "tab-select 9")
+config.unbind("<Alt-1>")
+config.unbind("<Alt-2>")
+config.unbind("<Alt-3>")
+config.unbind("<Alt-4>")
+config.unbind("<Alt-5>")
+config.unbind("<Alt-6>")
+config.unbind("<Alt-7>")
+config.unbind("<Alt-8>")
+config.unbind("<Alt-9>")
+
+# Tab close
+config.bind("<Cmd-w>", "tab-close")
+config.unbind("d")
+
+# Undo closing tab
+config.bind("<Cmd-Shift-T>", "undo")
+config.unbind("u")
 
 # Bindings for insert mode
