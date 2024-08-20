@@ -43,8 +43,8 @@ shift + alt - e: yabai -m space --balance
 ############ Minimized ############
 # yabai -m query --windows | ag -A 5 -B 2 'code'
 # yabai -m query --windows | ag -B 2 'github' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/'
-
-# shift + alt - j: yabai -m window --minimize
+# yabai -m window --minimize
+# yabai -m window --focus 123
 
 # Github
 shift + alt - 0: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m query --windows | ag -B 2 'github' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/')
@@ -57,6 +57,9 @@ shift + alt - 8: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m que
 
 # Chrome
 shift + alt - 7: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m query --windows | ag -B 2 'Google Chrome' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/')
+
+# pgAdmin
+shift + alt - 6: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m query --windows | ag -B 2 'pgAdmin 4' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/') | sed -n '2p'
 
 ####################################
 
