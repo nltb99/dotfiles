@@ -294,4 +294,10 @@ config.unbind("<Shift-K>")
 config.unbind("q")
 config.unbind("@")
 
+
 # Bindings for insert mode
+
+
+############## THEMES #################
+
+config.source("themes/onedark.py")
