@@ -73,7 +73,7 @@ config.set("content.cookies.accept", "all", "devtools://*")
 # read from JavaScript is always the global value.
 # Type: String
 # config.set("content.headers.accept_language", "", "https://matchmaker.krunker.io/*")
-config.set("content.headers.accept_language", "vi-VN,vi")
+config.set("content.headers.accept_language", "en-US,en,vi-VN,vi")
 
 # User agent to send.  The following placeholders are defined:  *
 # `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
@@ -292,9 +292,22 @@ config.unbind("tl")
 config.unbind("wl")
 config.unbind("co")
 
+# To reset the scroll feature after escaping the insert mode
+config.bind("gf", "search . ;; clear-keychain ;; search ;; fullscreen --leave")
+
 # To reload the page due to the error 'unknown error while getting elements qutebrowser'
 config.bind("gs", "cmd-set-text -s :open -t {url} ;; tab-close")
 
 ############## THEMES #################
 
 config.source("themes/onedark.py")
+
+# Config color for the selected tab
+# c.colors.tabs.selected.even.bg = "#FF0000" # Red
+# c.colors.tabs.selected.odd.bg = "#FF0000" # Red
+# c.colors.tabs.selected.even.bg = "#BC243C"  # True Red
+# c.colors.tabs.selected.odd.bg = "#BC243C"  # True Red
+c.colors.tabs.selected.even.bg = "#DD4124"  # Tango
+c.colors.tabs.selected.odd.bg = "#DD4124"  # Tango
+c.colors.tabs.selected.even.fg = "#FFFFFF"
+c.colors.tabs.selected.odd.fg = "#FFFFFF"

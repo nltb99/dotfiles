@@ -27,8 +27,8 @@ shift + alt - x: yabai -m space --mirror x-axis
 
 ############ Resize Window ############
 
-shift + alt - 0x2B: yabai -m window --resize right:-50:0
-shift + alt - 0x2F: yabai -m window --resize right:50:0
+shift + alt - 0x2B: yabai -m window --resize right:-50:0 # <
+shift + alt - 0x2F: yabai -m window --resize right:50:0 # >
 
 ############ Modifying Window Size ############
 
@@ -67,6 +67,8 @@ shift + alt - 0: osascript -e 'tell application "Google Chrome" to activate'
 # shift + alt - p: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m query --windows | ag -B 2 'pgAdmin 4' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/') | sed -n '2p'
 shift + alt - p: osascript -e 'tell application "pgAdmin 4" to activate'
 
+# Notion
+shift + alt - n: osascript -e 'tell application "Notion" to activate'
 ####################################
 
 # swap windows
@@ -115,12 +117,12 @@ ctrl + alt + cmd - s: yabai --start-service;
 ############ External display ############
 
 # change focus between external displays (left and right)
-alt - 0x21: yabai -m display --focus west
-alt - 0x1E: yabai -m display --focus east
+alt - 0x21: yabai -m display --focus west # [
+alt - 0x1E: yabai -m display --focus east # ]
 
 # move window to display left and right
-shift + alt - s: yabai -m window --display west; yabai -m display --focus west;
-shift + alt - g: yabai -m window --display east; yabai -m display --focus east;
+shift + alt - 0x1B: yabai -m window --display west; yabai -m display --focus west; # -
+shift + alt - 0x18: yabai -m window --display east; yabai -m display --focus east; # +
 
 ############# DISABLE #############
 
@@ -130,4 +132,5 @@ shift + alt - g: yabai -m window --display east; yabai -m display --focus east;
 # Mac hide app
 cmd - h: None
 
+# Capslock
 0x39: None

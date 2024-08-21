@@ -1111,5 +1111,41 @@
         "peekOfCode": "c.fonts.default_size = \"20pt\"\n######### Bindings for normal mode #########\n# Tab selection\nconfig.bind(\"<Cmd-1>\", \"tab-select 1\")\nconfig.bind(\"<Cmd-2>\", \"tab-select 2\")\nconfig.bind(\"<Cmd-3>\", \"tab-select 3\")\nconfig.bind(\"<Cmd-4>\", \"tab-select 4\")\nconfig.bind(\"<Cmd-5>\", \"tab-select 5\")\nconfig.bind(\"<Cmd-6>\", \"tab-select 6\")\nconfig.bind(\"<Cmd-7>\", \"tab-select 7\")",
         "detail": ".qutebrowser.config",
         "documentation": {}
+    },
+    {
+        "label": "c.colors.tabs.selected.even.bg",
+        "kind": 5,
+        "importPath": ".qutebrowser.config",
+        "description": ".qutebrowser.config",
+        "peekOfCode": "c.colors.tabs.selected.even.bg = \"#DD4124\"  # Tango\nc.colors.tabs.selected.odd.bg = \"#DD4124\"  # Tango\nc.colors.tabs.selected.even.fg = \"#FFFFFF\"\nc.colors.tabs.selected.odd.fg = \"#FFFFFF\"",
+        "detail": ".qutebrowser.config",
+        "documentation": {}
+    },
+    {
+        "label": "c.colors.tabs.selected.odd.bg",
+        "kind": 5,
+        "importPath": ".qutebrowser.config",
+        "description": ".qutebrowser.config",
+        "peekOfCode": "c.colors.tabs.selected.odd.bg = \"#DD4124\"  # Tango\nc.colors.tabs.selected.even.fg = \"#FFFFFF\"\nc.colors.tabs.selected.odd.fg = \"#FFFFFF\"",
+        "detail": ".qutebrowser.config",
+        "documentation": {}
+    },
+    {
+        "label": "c.colors.tabs.selected.even.fg",
+        "kind": 5,
+        "importPath": ".qutebrowser.config",
+        "description": ".qutebrowser.config",
+        "peekOfCode": "c.colors.tabs.selected.even.fg = \"#FFFFFF\"\nc.colors.tabs.selected.odd.fg = \"#FFFFFF\"",
+        "detail": ".qutebrowser.config",
+        "documentation": {}
+    },
+    {
+        "label": "c.colors.tabs.selected.odd.fg",
+        "kind": 5,
+        "importPath": ".qutebrowser.config",
+        "description": ".qutebrowser.config",
+        "peekOfCode": "c.colors.tabs.selected.odd.fg = \"#FFFFFF\"",
+        "detail": ".qutebrowser.config",
+        "documentation": {}
     }
 ]
