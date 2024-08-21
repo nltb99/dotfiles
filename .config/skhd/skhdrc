@@ -45,21 +45,27 @@ shift + alt - e: yabai -m space --balance
 # yabai -m query --windows | ag -B 2 'github' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/'
 # yabai -m window --minimize
 # yabai -m window --focus 123
+# yabai -m query --windows --window | ag -A 28 'alacritty'
 
 # Github
-shift + alt - g: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m query --windows | ag -B 2 'github' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/')
+# shift + alt - g: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m query --windows | ag -B 2 'github' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/')
+shift + alt - g: osascript -e 'tell application "Github Desktop" to activate'
 
 # VsCode
-shift + alt - c: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m query --windows | ag -B 2 'Code' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/')
+# shift + alt - c: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m query --windows | ag -B 2 'Code' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/')
+shift + alt - c: osascript -e 'tell application "Code" to activate'
 
 # qutebrowser
-shift + alt - b: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m query --windows | ag -B 2 'qutebrowser' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/')
+# shift + alt - b: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m query --windows | ag -B 2 'qutebrowser' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/')
+shift + alt - b: osascript -e 'tell application "qutebrowser" to activate'
 
 # Chrome
-shift + alt - 0: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m query --windows | ag -B 2 'Google Chrome' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/')
+# shift + alt - 0: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m query --windows | ag -B 2 'Google Chrome' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/')
+shift + alt - 0: osascript -e 'tell application "Google Chrome" to activate'
 
 # pgAdmin
-shift + alt - p: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m query --windows | ag -B 2 'pgAdmin 4' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/') | sed -n '2p'
+# shift + alt - p: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m query --windows | ag -B 2 'pgAdmin 4' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/') | sed -n '2p'
+shift + alt - p: osascript -e 'tell application "pgAdmin 4" to activate'
 
 ####################################
 
