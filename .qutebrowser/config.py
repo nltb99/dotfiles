@@ -242,6 +242,9 @@ c.fonts.default_size = "20pt"
 
 ######### Bindings for normal mode #########
 
+# Replace ':' with ';'
+config.bind(";", "cmd-set-text :")
+
 # Tab selection
 config.bind("<Cmd-1>", "tab-select 1")
 config.bind("<Cmd-2>", "tab-select 2")
@@ -313,6 +316,11 @@ config.bind("gf", "search . ;; clear-keychain ;; search ;; fullscreen --leave")
 
 # To reload the page due to the error 'unknown error while getting elements qutebrowser'
 config.bind("gs", "cmd-set-text -s :open -t {url} ;; tab-close")
+
+# Playwright mapping
+config.bind(
+    "gp", "cmd-set-text -s :open -t https://trace.playwright.dev/?trace={clipboard}"
+)
 
 ############## THEMES #################
 

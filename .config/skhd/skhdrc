@@ -17,13 +17,13 @@ alt - l: yabai -m window --focus east
 ############ Modifying the Layout ############
 
 # rotate layout clockwise
-shift + alt - r: yabai -m space --rotate 270
+# shift + alt - r: yabai -m space --rotate 270
 
 # flip along y-axis
-shift + alt - y: yabai -m space --mirror y-axis
+# shift + alt - y: yabai -m space --mirror y-axis
 
 # flip along x-axis
-shift + alt - x: yabai -m space --mirror x-axis
+# shift + alt - x: yabai -m space --mirror x-axis
 
 ############ Resize Window ############
 
