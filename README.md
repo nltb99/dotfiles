@@ -43,11 +43,11 @@ brew install cmatrix yarn tree neovim git tmux gcc gpp gh go htop n node wget zo
 
 ###### Linux
 
-> **NOTE:** This section will be updated soon!
+> **TODO:** To update!
 
 ###### Windows
 
-> **NOTE:** This section will be updated soon!
+> **TODO:** To update!
 
 ## vim-plug
 
@@ -74,7 +74,7 @@ iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
 
 ## Keybindings
 
-> **NOTE:** This section will be updated soon!
+> **TODO:** To update!
 
 ## Fonts
 

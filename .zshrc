@@ -1,30 +1,33 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # Path to oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export TERM="xterm-256color"
 
-# Options
-setopt hist_ignore_dups
+# Settings
+setopt HIST_IGNORE_DUPS  # Ignore duplicates in history
+setopt HIST_IGNORE_SPACE  # Ignore commands with leading spaces
+setopt HIST_REDUCE_BLANKS  # Reduce unnecessary blanks in history commands
 setopt hist_expire_dups_first
+setopt APPEND_HISTORY
+setopt SHARE_HISTORY
 
 # General
 DISABLE_AUTO_TITLE="false"
 ENABLE_CORRECTION="false"
 COMPLETION_WAITING_DOTS="true"
-SAVEHIST=99999
+HISTFILE=~/.zsh_history  # Set the location of the history file
+SAVEHIST=9999999 # Save the last n commands to the history file
 
 # Plugins
 plugins=(
     zsh-autosuggestions
     globalias
-    poetry
 )
+
+####################### Powerlevel9k #######################
 
 # Theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# Powerlevel9k
 POWERLEVEL9K_MODE="nerdfont-complete"
 
 # Prompt
@@ -103,60 +106,35 @@ POWERLEVEL9K_VI_MODE_INSERT_FOREGROUND="black"
 POWERLEVEL9K_VI_MODE_NORMAL_BACKGROUND="black"
 POWERLEVEL9K_VI_MODE_NORMAL_FOREGROUND="white"
 
-source $ZSH/oh-my-zsh.sh
+####################### Alias #######################
 
-alias cpa="clippaste"
-alias diff="diff --color=auto"
-alias exag="exa -ahlT -L=1  -s=extension --git --group-directories-first"
-alias fdir='find . -type d -name'
-alias ffil='find . -type f -name'
-alias grep="grep --color=auto"
-alias jupn="jupyter notebook"
-alias ncdu="ncdu --color=dark -x"
-alias pacai="pacaur -S"
-alias pacas="pacaur -Ss"
-alias paci="sudo pacman -S"
-alias pacq="pacman -Qi"
-alias pacr="sudo pacman -R"
-alias pacs="pacman -Ss"
-alias pacu="sudo pacman -Syu"
-alias pp="prettyping --nolegend"
-alias sysd="sudo systemctl disable"
-alias syse="sudo systemctl enable"
-alias sysr="sudo systemctl restart"
-alias syss="systemctl status"
-alias systa="sudo systemctl start"
-alias systo="sudo systemctl stop"
-alias tmux="tmux -u"
-alias tmuxm="tmux new-session \; split-window -h \; split-window -v \; attach"
-alias trii="trizen -S --noedit"
-alias tris="trizen -Ss --noedit"
-alias triu="trizen -Syu --noedit"
-alias vimrc="vim ~/.vimrc"
-alias yayi="yay -S"
-alias yayu="yay -Syu"
-alias ytdl="youtube-dl"
-alias zshrc="vim ~/.zshrc"
-alias py="python"
-alias wstorm="open -a /Applications/WebStorm.app"
+GLOBALIAS_FILTER_VALUES=('ls' 'grep')
+
 alias preview="ag -i -S . | fzf --preview 'cat {}' --info inline -i -e | pbcopy"
 alias filepreview="ag -l -i -S . | fzf --preview 'cat {}' --info inline -i -e | pbcopy"
-alias ls="ls -G"
 alias gcc="g++ -std=c++17"
 alias cheat="curl cheat.sh/"
 alias weather="curl wttr.in/hochiminh"
+
+# Coding challenge
 alias gorun='go run main.go'
 alias jsrun='node main.js < input.txt'
 alias cpprun='cp main.cpp < input.txt'
 alias chromeinsecure='open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security'
+
+# Python
+alias py="python"
 alias pypath='export PYTHONPATH=$(pwd)'
 alias pppp='source /Users/nltbao/Desktop/nvim/scripts/pppp.sh'
 alias p2p2='poetry env use /Users/nltbao/.pyenv/shims/python'
+
+# Github
 alias ghsync='/Users/nltbao/Desktop/nvim/scripts/sync.sh'
 alias cdecrypt='/Users/nltbao/Desktop/nvim/scripts/customore_decrypt.sh $1'
 alias cpurgequeue='/Users/nltbao/Documents/CUSTOMORE/rabbitmq/purge_all_queue.sh'
 
-# Commands
+####################### ENV variable #######################
+
 export EDITOR=vim 
 export GREP_COLOR="1;32"
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias: "
@@ -175,9 +153,23 @@ export PATH=$PATH:/usr/local/mongodb/bin
 export PATH="$PATH:/Users/nltbao/flutter 2/bin"
 export PATH=$PATH:/Users/nltbao/ffmpeg
 export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="/Users/nltbao/.local/bin/fig:$PATH"
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:"$PATH"
+
+# Go
 export PATH=$(go env GOPATH)/bin:$PATH
+export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/libpq/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/libpq/include"
+
+# Celery
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+export PATH="$HOME/.local/bin:$PATH"
+
+####################### OS Specification #######################
 
 # https://stackoverflow.com/questions/394230/how-to-detect-the-os-from-a-bash-script
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
@@ -214,23 +206,14 @@ fi
 #     fi
 # }
 
-# Auto start Tmux
+####################### Initialize #######################
+
+# oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
+# tmux
 if [ "$TMUX" = "" ]; then tmux; fi
-
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-export PATH="$HOME/.local/bin:$PATH"
-
-# zoxide
-eval "$(zoxide init zsh)"
 
 # poetry
 fpath+=~/.zfunc
 autoload -Uz compinit && compinit
-
-
-export LDFLAGS="-L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/libpq/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/libpq/include"
-
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
