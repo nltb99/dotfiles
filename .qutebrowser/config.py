@@ -317,10 +317,13 @@ config.bind("gf", "search . ;; clear-keychain ;; search ;; fullscreen --leave")
 # To reload the page due to the error 'unknown error while getting elements qutebrowser'
 config.bind("gs", "cmd-set-text -s :open -t {url} ;; tab-close")
 
-# Playwright mapping
+# Goto Playwright tracer review
 config.bind(
-    "gp", "cmd-set-text -s :open -t https://trace.playwright.dev/?trace={clipboard}"
+    "gP", "cmd-set-text -s :open -t https://trace.playwright.dev/?trace={clipboard}"
 )
+
+# Goto Dropbox
+config.bind("gD", "cmd-set-text -s :open -t https://www.dropbox.com/home{clipboard}")
 
 ############## THEMES #################
 
