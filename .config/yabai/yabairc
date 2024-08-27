@@ -43,6 +43,8 @@ yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
 yabai -m rule --add app="^QuickTime Player$" manage=off
 yabai -m rule --add app="^Raycast Settings$" manage=off
+yabai -m rule --add app="^Photo Booth$" manage=off
+@REM yabai -m rule --add app="^ChatGPT$" manage=off
 yabai -m rule --add app="^Gestimer$" manage=off
 yabai -m rule --add app="^Mail$" manage=off
 yabai -m rule --add app="Note" manage=off
