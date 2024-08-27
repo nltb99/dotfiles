@@ -9,3 +9,7 @@ github github.com/customore-org
 cheatsheet https://raw.githubusercontent.com/qutebrowser/qutebrowser/main/doc/img/cheatsheet-big.png
 dropbox https://www.dropbox.com/home
 dropbox_bao dropbox.com/home/v3/Test/bao
+dropbox_daily https://www.dropbox.com/home/v3/input/daily
+api_test https://v3-api-t.herokuapp.com/docs#/
+api_staging https://v3-api-s.herokuapp.com/docs#/
+api_production https://v3-api-p.herokuapp.com/docs#/
