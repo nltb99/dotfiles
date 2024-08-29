@@ -310,6 +310,10 @@ config.unbind("sl")
 config.unbind("ss")
 config.unbind("g^")
 config.unbind("gi")
+# Caret mode
+config.unbind("v")
+config.unbind("V")
+
 
 # To reset the scroll feature after escaping the insert mode
 config.bind("gf", "search . ;; clear-keychain ;; search ;; fullscreen --leave")
