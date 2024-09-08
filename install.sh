@@ -1,5 +1,6 @@
 # MacOS & Linux
 if [[ "$OSTYPE" =~ ^darwin || "$OSTYPE" =~ ^linux ]]; then
+   ## ~/.config
    echo 'Linking nvim'
    ln -s  $(pwd)/.config/nvim ~/.config
 
@@ -12,6 +13,10 @@ if [[ "$OSTYPE" =~ ^darwin || "$OSTYPE" =~ ^linux ]]; then
    echo 'Linking skhd'
    ln -s  $(pwd)/.config/skhd ~/.config
 
+   echo 'Linking Karabiner'
+   ln -s  $(pwd)/.config/karabiner ~/.config
+
+   ## root
    echo 'Linking qutebrowser'
    ln -s  $(pwd)/.qutebrowser ~/
 

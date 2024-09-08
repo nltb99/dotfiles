@@ -1,7 +1,59 @@
 {
+  "global": { "show_in_menu_bar": false },
   "profiles": [
     {
-      "name": "Default profile",
+      "fn_function_keys": [
+        {
+          "from": { "key_code": "f3" },
+          "to": [{ "mouse_key": { "x": -3072 } }]
+        },
+        {
+          "from": { "key_code": "f4" },
+          "to": [{ "mouse_key": { "y": 3072 } }]
+        },
+        {
+          "from": { "key_code": "f5" },
+          "to": [{ "mouse_key": { "y": -3072 } }]
+        },
+        {
+          "from": { "key_code": "f6" },
+          "to": [{ "mouse_key": { "x": 3072 } }]
+        },
+        {
+          "from": { "key_code": "f7" },
+          "to": [{ "mouse_key": { "vertical_wheel": 32 } }]
+        },
+        {
+          "from": { "key_code": "f9" },
+          "to": [{ "mouse_key": { "vertical_wheel": -32 } }]
+        }
+      ],
+      "complex_modifications": {
+        "rules": [
+          {
+            "description": "Mouse move left",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "modifiers": {
+                    "mandatory": ["control", "option", "command"]
+                  },
+                  "key_code": "h"
+                },
+                "to": [
+                  {
+                    "mouse_key": {
+                      "x": -3072
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "name": "nltb99",
       "selected": true
     }
   ]
