@@ -2,57 +2,127 @@
   "global": { "show_in_menu_bar": false },
   "profiles": [
     {
-      "fn_function_keys": [
-        {
-          "from": { "key_code": "f3" },
-          "to": [{ "mouse_key": { "x": -3072 } }]
-        },
-        {
-          "from": { "key_code": "f4" },
-          "to": [{ "mouse_key": { "y": 3072 } }]
-        },
-        {
-          "from": { "key_code": "f5" },
-          "to": [{ "mouse_key": { "y": -3072 } }]
-        },
-        {
-          "from": { "key_code": "f6" },
-          "to": [{ "mouse_key": { "x": 3072 } }]
-        },
-        {
-          "from": { "key_code": "f7" },
-          "to": [{ "mouse_key": { "vertical_wheel": 32 } }]
-        },
-        {
-          "from": { "key_code": "f9" },
-          "to": [{ "mouse_key": { "vertical_wheel": -32 } }]
-        }
-      ],
       "complex_modifications": {
         "rules": [
           {
             "description": "Mouse move left",
             "manipulators": [
               {
-                "type": "basic",
                 "from": {
-                  "modifiers": {
-                    "mandatory": ["control", "option", "command"]
-                  },
-                  "key_code": "h"
+                  "key_code": "h",
+                  "modifiers": { "mandatory": ["control", "option", "command"] }
                 },
-                "to": [
-                  {
-                    "mouse_key": {
-                      "x": -3072
-                    }
-                  }
-                ]
+                "to": [{ "mouse_key": { "x": -2800 } }],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Mouse move down",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "j",
+                  "modifiers": { "mandatory": ["control", "option", "command"] }
+                },
+                "to": [{ "mouse_key": { "y": 2800 } }],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Mouse move up",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "k",
+                  "modifiers": { "mandatory": ["control", "option", "command"] }
+                },
+                "to": [{ "mouse_key": { "y": -2800 } }],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Mouse move right",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "l",
+                  "modifiers": { "mandatory": ["control", "option", "command"] }
+                },
+                "to": [{ "mouse_key": { "x": 2800 } }],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Scroll down",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "open_bracket",
+                  "modifiers": { "mandatory": ["control", "option", "command"] }
+                },
+                "to": [{ "mouse_key": { "vertical_wheel": 32 } }],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Scroll up",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "close_bracket",
+                  "modifiers": { "mandatory": ["control", "option", "command"] }
+                },
+                "to": [{ "mouse_key": { "vertical_wheel": -32 } }],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Mouse click",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "return_or_enter",
+                  "modifiers": { "mandatory": ["control", "option", "command"] }
+                },
+                "to": [{ "pointing_button": "button1" }],
+                "type": "basic"
               }
             ]
           }
         ]
       },
+      "fn_function_keys": [
+        {
+          "from": { "key_code": "f3" },
+          "to": [{ "mouse_key": { "x": -4200 } }]
+        },
+        {
+          "from": { "key_code": "f4" },
+          "to": [{ "mouse_key": { "y": 4200 } }]
+        },
+        {
+          "from": { "key_code": "f5" },
+          "to": [{ "mouse_key": { "y": -4200 } }]
+        },
+        {
+          "from": { "key_code": "f6" },
+          "to": [{ "mouse_key": { "x": 4200 } }]
+        },
+        {
+          "from": { "key_code": "f7" },
+          "to": [{ "key_code": "vk_none" }]
+        },
+        {
+          "from": { "key_code": "f9" },
+          "to": [{ "key_code": "vk_none" }]
+        }
+      ],
       "name": "nltb99",
       "selected": true
     }
