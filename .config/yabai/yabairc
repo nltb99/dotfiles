@@ -5,9 +5,9 @@ yabai -m config layout bsp
 
 # new window spawns to the right if vertical split, or bottom if horizontal split
 yabai -m config window_placement first_child
-@REM yabai -m config window_placement second_child
+# yabai -m config window_placement second_child
 
-yabai -m config window_topmost on
+# yabai -m config window_topmost on
 
 # padding set to 12px
 yabai -m config top_padding 6
@@ -21,30 +21,28 @@ yabai -m config window_gap 6
 # global settings
 yabai -m config mouse_follows_focus          off
 yabai -m config focus_follows_mouse          off
-@REM yabai -m config focus_follows_mouse          autoraise
-@REM yabai -m config focus_follows_mouse          autofocus
+# yabai -m config focus_follows_mouse          autoraise
+# yabai -m config focus_follows_mouse          autofocus
 yabai -m config auto_balance                 off
 yabai -m config mouse_modifier               fn
 yabai -m config mouse_action1                move
 yabai -m config mouse_action2                resize
-yabai -m config mouse_drop_action            swap
 
 # when window is dropped in center of another window, swap them (on edges it will split it)
-yabai -m mouse_drop_action swap
-
+# yabai -m mouse_drop_action swap
 
 # yabai blacklist rules
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="Chromium" manage=off
-@REM yabai -m rule --add title="GitHub Desktop" manage=off
-@REM yabai -m rule --add app="Code" manage=off
-@REM yabai -m rule --add app="pgAdmin 4" manage=off
+# yabai -m rule --add title="GitHub Desktop" manage=off
+# yabai -m rule --add app="Code" manage=off
+# yabai -m rule --add app="pgAdmin 4" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
 yabai -m rule --add app="^QuickTime Player$" manage=off
 yabai -m rule --add app="^Raycast Settings$" manage=off
 yabai -m rule --add app="^Photo Booth$" manage=off
-@REM yabai -m rule --add app="^ChatGPT$" manage=off
+# yabai -m rule --add app="^ChatGPT$" manage=off
 yabai -m rule --add app="^Gestimer$" manage=off
 yabai -m rule --add app="^Mail$" manage=off
 yabai -m rule --add app="Note" manage=off
