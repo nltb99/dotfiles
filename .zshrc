@@ -140,7 +140,7 @@ alias tkill='tmux ls | grep -v '\''(attached)'\'' | awk '\''{print $1}'\'' | xar
 alias pskill='ps -eo pid,tty | grep ttys | awk '\''{print $1}'\'' | xargs sudo kill -9'
 
 # Kill all celery
-alias celerykill='ps aux | grep '\''celery'\'' | grep -v '\''grep'\'' | awk '\''{print $2}'\'' | xargs kill -9'
+alias ckill='ps aux | grep '\''celery'\'' | grep -v '\''grep'\'' | awk '\''{print $2}'\'' | xargs kill -9'
 
 ####################### ENV variable #######################
 
@@ -226,3 +226,6 @@ if [ "$TMUX" = "" ]; then tmux; fi
 # poetry
 fpath+=~/.zfunc
 autoload -Uz compinit && compinit
+
+# To increase the number of open files
+ulimit -n 65536
