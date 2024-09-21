@@ -130,8 +130,8 @@ alias p2p2='poetry env use /Users/nltbao/.pyenv/shims/python'
 
 # Github
 alias ghsync='/Users/nltbao/Desktop/nvim/scripts/sync.sh'
-alias cdecrypt='/Users/nltbao/Desktop/nvim/scripts/customore_decrypt.sh $1'
-alias cpurgequeue='/Users/nltbao/Documents/CUSTOMORE/rabbitmq/purge_all_queue.sh'
+alias cdecrypt='/Users/nltbao/Desktop/nvim/scripts/c_decrypt.sh $1'
+alias cpurgequeue='/Users/nltbao/Desktop/nvim/scripts/rabbitmq/purge_all_queue.sh'
 
 # Tmux kill all sessions & windows except window currently open
 alias tkill='tmux ls | grep -v '\''(attached)'\'' | awk '\''{print $1}'\'' | xargs -I {} tmux kill-session -t {} && tmux kill-window -a'

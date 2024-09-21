@@ -1,15 +1,19 @@
 ### Dotfiles
 
-My personal settings, crafted to enhance productivity and my workflow when engaging with code.
-The following configurations are:
+- [neovim](https://github.com/neovim/neovim)
+- [zsh](https://github.com/ohmyzsh/ohmyzsh)
+- [alacritty](https://github.com/alacritty/alacritty)
+- [tmux](https://github.com/tmux/tmux)
+- [vscode](https://github.com/microsoft/vscode)
+- [raycast](https://www.raycast.com)
+- [qutebrowser](https://github.com/qutebrowser/qutebrowser)
+- [yabai](https://github.com/koekeishiya/yabai)
+- [skhd](https://github.com/koekeishiya/skhd)
+- [vimium](https://vimium.github.io)
+- [neofetch](https://github.com/dylanaraps/neofetch)
+- [sublime](https://www.sublimetext.com)
 
-- Neovim
-- Zsh
-- VSCode
-- Tmux (multiplexer)
-- Alacritty (terminal)
-- Kitty (terminal)
-- vimium (browser extension)
+Here is some text with an [external link](https://www.example.com) included.
 
 ![](./screenshot/screenshot_1.png)
 ![](./screenshot/screenshot_2.png)
@@ -37,17 +41,17 @@ brew install ripgrep fzf the_silver_searcher
 # Python
 brew install black flake8 poetry pyenv python-setuptools python-packaging
 
-# Optionals
-brew install cmatrix yarn tree neovim git tmux gcc gpp gh go htop n node wget zoxide
+# Miscellaneous
+brew install cmatrix yarn tree neovim git tmux gcc gpp gh go htop n wget
 ```
 
 ###### Linux
 
-> **TODO:** To update!
+> TODO: To be updated!
 
 ###### Windows
 
-> **TODO:** To update!
+> TODO: To be updated!
 
 ## vim-plug
 
@@ -74,7 +78,7 @@ iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
 
 ## Keybindings
 
-> **TODO:** To update!
+> TODO: To be updated!
 
 ## Fonts
 
@@ -114,5 +118,4 @@ nn:::::::::::::::n l::::ltttttt:::::::tttttt    b:::::bbbbb:::::::b99:::::::::::
   n::::n    n::::nl::::::l     tt::::::::::::::tb::::::::::::::::b    9::::::9           9::::::9
   n::::n    n::::nl::::::l       tt:::::::::::ttb:::::::::::::::b    9::::::9           9::::::9
   nnnnnn    nnnnnnllllllll         ttttttttttt  bbbbbbbbbbbbbbbb    99999999           99999999
-
 ```
