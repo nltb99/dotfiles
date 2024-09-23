@@ -60,7 +60,10 @@ shift + alt - 0: osascript -e 'tell application "Google Chrome" to activate'
 
 # pgAdmin
 # shift + alt - p: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m query --windows | ag -B 2 'pgAdmin 4' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/') | sed -n '2p'
-shift + alt - p: osascript -e 'tell application "pgAdmin 4" to activate'
+shift + alt - 9: osascript -e 'tell application "pgAdmin 4" to activate'
+
+# DBeaver
+shift + alt - p: osascript -e 'tell application "DBeaver" to activate'
 
 # Notion
 shift + alt - n: osascript -e 'tell application "Notion" to activate'

@@ -57,13 +57,14 @@ yabai -m config mouse_action2                resize
 # ============================
 
 yabai -m rule --add app="Finder" manage=off grid=5:5:1:1:3:3
-yabai -m rule --add app="Note" manage=off grid=5:5:1:1:3:3
-yabai -m rule --add app="^ChatGPT$" manage=off grid=5:5:1:1:3:3
-yabai -m rule --add app="Preview" manage=off grid=5:5:1:1:3:3
+yabai -m rule --add app="Note" manage=off grid=6:6:1:1:4:4
+yabai -m rule --add app="^ChatGPT$" manage=off grid=6:6:1:1:4:4
+yabai -m rule --add app="Preview" manage=off grid=6:6:1:1:4:4
 yabai -m rule --add app="Messenger" manage=off grid=5:5:1:1:3:3
 yabai -m rule --add app="Microsoft To Do" manage=off grid=4:4:1:1:2:2
 yabai -m rule --add app="^(Calculator|System Preferences|System Settings|Archieve Utilitiy)$" manage=off grid=5:5:1:1:3:3
 yabai -m rule --add app="Chromium" manage=off
+yabai -m rule --add app="DBeaver Community" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
 yabai -m rule --add app="^QuickTime Player$" manage=off
 yabai -m rule --add app="^Raycast Settings$" manage=off
