@@ -5,6 +5,25 @@
       "complex_modifications": {
         "rules": [
           {
+            "description": "Disable fn+c",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "c",
+                  "modifiers": {
+                    "mandatory": ["fn"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "vk_none"
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "description": "Mouse move left slow",
             "manipulators": [
               {

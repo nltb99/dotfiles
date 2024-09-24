@@ -115,12 +115,12 @@ alias filepreview="ag -l -i -S . | fzf --preview 'cat {}' --info inline -i -e | 
 alias gcc="g++ -std=c++17"
 alias cheat="curl cheat.sh/"
 alias weather="curl wttr.in/hochiminh"
+alias chromeinsecure='open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security'
 
 # Coding challenge
 alias gorun='go run main.go'
 alias jsrun='node main.js < input.txt'
 alias cpprun='cp main.cpp < input.txt'
-alias chromeinsecure='open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security'
 
 # Python
 alias py="python"
@@ -143,6 +143,9 @@ alias pskill='ps -eo pid,tty | grep ttys | awk '\''{print $1}'\'' | xargs sudo k
 # Kill all celery
 alias ckill='ps aux | grep '\''celery'\'' | grep -v '\''grep'\'' | awk '\''{print $2}'\'' | xargs kill -9'
 
+# Yabai: enable fullscreen-zoom for every app that is not currently in fullscreen-zoom mode 
+alias yafull='for window_id in $(yabai -m query --windows | ag -B 31 '"has-fullscreen-zoom":false,' | ag '"id"' | cut -d ':' -f2 | cut -d ',' -f1); do yabai -m window "$window_id" --toggle zoom-fullscreen; done'
+
 ####################### ENV variable #######################
 
 export EDITOR=vim 
@@ -157,13 +160,13 @@ export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/lib/node_modules:$PATH"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-11.0.15.jdk/Contents/Home"
-export FZF_DEFAULT_COMMAND=""
 export PATH=$PATH:/usr/local/mongodb/bin  
 export PATH="$PATH:/Users/nltbao/flutter 2/bin"
 export PATH=$PATH:/Users/nltbao/ffmpeg
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:"$PATH"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-11.0.15.jdk/Contents/Home"
+export FZF_DEFAULT_COMMAND=""
 
 # Go
 export PATH=$(go env GOPATH)/bin:$PATH

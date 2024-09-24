@@ -14,10 +14,16 @@
 
 # To search app & title
 # yabai -m query --windows | ag -A 5 -B 2 'code'
+# yabai -m query --windows | ag -A 10 -B 2 '"id"'
 # yabai -m query --windows | ag -B 2 'github' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/'
 # yabai -m window --minimize
 # yabai -m window --focus 123
 # yabai -m query --windows --window | ag -A 28 'alacritty'
+
+# Get windows that not in fullscreen-zoom
+# yabai -m query --windows | ag -B 31 '"has-fullscreen-zoom":false,' | ag '"id"' | cut -d ':' -f2 | cut -d ',' -f1
+# for window_id in $(yabai -m query --windows | ag -B 31 '"has-fullscreen-zoom":false,' | ag '"id"' | cut -d ':' -f2 | cut -d ',' -f1); do yabai -m window "$window_id" --toggle zoom-fullscreen; done
+
 # ============================
 
 # default layout
@@ -62,6 +68,7 @@ yabai -m rule --add app="^ChatGPT$" manage=off grid=6:6:1:1:4:4
 yabai -m rule --add app="Preview" manage=off grid=6:6:1:1:4:4
 yabai -m rule --add app="Messenger" manage=off grid=5:5:1:1:3:3
 yabai -m rule --add app="Microsoft To Do" manage=off grid=4:4:1:1:2:2
+yabai -m rule --add app="iPhone Mirroring" manage=off grid=4:4:1:1:2:2
 yabai -m rule --add app="^(Calculator|System Preferences|System Settings|Archieve Utilitiy)$" manage=off grid=5:5:1:1:3:3
 yabai -m rule --add app="Chromium" manage=off
 yabai -m rule --add app="DBeaver Community" manage=off
