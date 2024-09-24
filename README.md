@@ -13,8 +13,6 @@
 - [neofetch](https://github.com/dylanaraps/neofetch)
 - [sublime](https://www.sublimetext.com)
 
-Here is some text with an [external link](https://www.example.com) included.
-
 ![](./screenshot/screenshot_1.png)
 ![](./screenshot/screenshot_2.png)
 ![](./screenshot/screenshot_3.png)

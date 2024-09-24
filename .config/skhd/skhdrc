@@ -2,6 +2,7 @@
 
 cmd + ctrl + alt - b: yabai -m space --layout bsp
 cmd + ctrl + alt - f: yabai -m space --layout float
+cmd + ctrl + alt - t: for window_id in $(yabai -m query --windows | ag -B 31 '"has-fullscreen-zoom":false,' | ag '"id"' | cut -d ':' -f2 | cut -d ',' -f1); do yabai -m window "$window_id" --toggle zoom-fullscreen; done
 
 ############ Close ############
 

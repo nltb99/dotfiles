@@ -144,7 +144,7 @@ alias pskill='ps -eo pid,tty | grep ttys | awk '\''{print $1}'\'' | xargs sudo k
 alias ckill='ps aux | grep '\''celery'\'' | grep -v '\''grep'\'' | awk '\''{print $2}'\'' | xargs kill -9'
 
 # Yabai: enable fullscreen-zoom for every app that is not currently in fullscreen-zoom mode 
-alias yafull='for window_id in $(yabai -m query --windows | ag -B 31 '"has-fullscreen-zoom":false,' | ag '"id"' | cut -d ':' -f2 | cut -d ',' -f1); do yabai -m window "$window_id" --toggle zoom-fullscreen; done'
+alias yafull='for window_id in $(yabai -m query --windows | ag -B 31 '\'\"'has-fullscreen-zoom":false,'"'"' | ag '\'\"'id"'\'' | cut -d ":" -f2 | cut -d "," -f1); do yabai -m window "$window_id" --toggle zoom-fullscreen; done'
 
 ####################### ENV variable #######################
 
