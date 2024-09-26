@@ -24,6 +24,23 @@
             ]
           },
           {
+            "description": "Disable minimize app key",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "m",
+                  "modifiers": { "mandatory": ["command"] }
+                },
+                "to": [
+                  {
+                    "key_code": "vk_none"
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "description": "Mouse move left slow",
             "manipulators": [
               {
