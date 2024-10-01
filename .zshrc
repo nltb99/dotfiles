@@ -121,6 +121,7 @@ alias chromeinsecure='open -n -a /Applications/Google\ Chrome.app/Contents/MacOS
 alias gorun='go run main.go'
 alias jsrun='node main.js < input.txt'
 alias cpprun='cp main.cpp < input.txt'
+alias pyrun='python main.py < input.txt'
 
 # Python
 alias py="python"
@@ -145,6 +146,9 @@ alias ckill='ps aux | grep '\''celery'\'' | grep -v '\''grep'\'' | awk '\''{prin
 
 # Yabai: enable fullscreen-zoom for every app that is not currently in fullscreen-zoom mode 
 alias yafull='for window_id in $(yabai -m query --windows | ag -B 31 '\'\"'has-fullscreen-zoom":false,'"'"' | ag '\'\"'id"'\'' | cut -d ":" -f2 | cut -d "," -f1); do yabai -m window "$window_id" --toggle zoom-fullscreen; done'
+
+# Gcloud CLI
+alias gcloud='/Users/nltbao/Documents/libs/google-cloud-sdk/bin/gcloud'
 
 ####################### ENV variable #######################
 
