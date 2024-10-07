@@ -150,6 +150,10 @@ alias yafull='for window_id in $(yabai -m query --windows | ag -B 31 '\'\"'has-f
 # Gcloud CLI
 alias gcloud='/Users/nltbao/Documents/libs/google-cloud-sdk/bin/gcloud'
 
+# Docker Compose
+alias dockerup='docker-compose -f /Users/nltbao/Desktop/nvim/scripts/redis_rabbitmq_mongo.yaml up -d'
+alias dockerdown='docker-compose -f /Users/nltbao/Desktop/nvim/scripts/redis_rabbitmq_mongo.yaml down'
+
 ####################### ENV variable #######################
 
 export EDITOR=vim 
@@ -237,3 +241,6 @@ autoload -Uz compinit && compinit
 
 # To increase the number of open files
 ulimit -n 65536
+
+# Amazon Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
