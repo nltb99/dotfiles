@@ -154,6 +154,9 @@ alias gcloud='/Users/nltbao/Documents/libs/google-cloud-sdk/bin/gcloud'
 alias dockerup='docker-compose -f /Users/nltbao/Desktop/nvim/scripts/redis_rabbitmq_mongo.yaml up -d'
 alias dockerdown='docker-compose -f /Users/nltbao/Desktop/nvim/scripts/redis_rabbitmq_mongo.yaml down'
 
+# Kubernetes
+alias k='kubectl'
+
 ####################### ENV variable #######################
 
 export EDITOR=vim 
