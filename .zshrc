@@ -239,11 +239,8 @@ source $ZSH/oh-my-zsh.sh
 if [ "$TMUX" = "" ]; then tmux; fi
 
 # poetry
-fpath+=~/.zfunc
-autoload -Uz compinit && compinit
+# fpath+=~/.zfunc
+# autoload -Uz compinit && compinit
 
 # To increase the number of open files
 ulimit -n 65536
-
-# Amazon Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
