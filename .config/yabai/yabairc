@@ -92,6 +92,7 @@ yabai -m rule --add title="^Preferences$" manage=off
 yabai -m rule --add title="^Digital Colour Meter$" manage=off
 yabai -m rule --add title="^General.*" manage=off
 yabai -m rule --add title="^Steam*" manage=off
+yabai -m rule --add app="^Microsoft Excel*" manage=off
 
 # LOL
 yabai -m rule --add app="League of Legends" manage=off grid=6:6:1:1:4:4
