@@ -57,7 +57,7 @@ shift + alt - c: osascript -e 'tell application "Code" to activate'
 
 # qutebrowser
 # shift + alt - b: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m query --windows | ag -B 2 'qutebrowser' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/')
-shift + alt - b: osascript -e 'tell application "qutebrowser" to activate'
+# shift + alt - b: osascript -e 'tell application "qutebrowser" to activate'
 
 # Chrome
 # shift + alt - 0: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m query --windows | ag -B 2 'Google Chrome' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/')
@@ -65,7 +65,7 @@ shift + alt - 0: osascript -e 'tell application "Google Chrome" to activate'
 
 # pgAdmin
 # shift + alt - p: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m query --windows | ag -B 2 'pgAdmin 4' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/') | sed -n '2p'
-shift + alt - 9: osascript -e 'tell application "pgAdmin 4" to activate'
+# shift + alt - 9: osascript -e 'tell application "pgAdmin 4" to activate'
 
 # DBeaver
 shift + alt - p: osascript -e 'tell application "DBeaver" to activate'
