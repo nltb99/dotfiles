@@ -74,7 +74,10 @@ shift + alt - p: osascript -e 'tell application "DBeaver" to activate'
 shift + alt - n: osascript -e 'tell application "Notion" to activate'
 
 # Miro (Whiteboard)
-shift + alt - 0x2C: osascript -e 'tell application "Miro" to activate'
+# shift + alt - 0x2C: osascript -e 'tell application "Miro" to activate'
+
+# Postman
+shift + alt - 0x2C: osascript -e 'tell application "Postman" to activate'
 
 ####################################
 
