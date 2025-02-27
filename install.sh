@@ -5,7 +5,8 @@ if [[ "$OSTYPE" =~ ^darwin || "$OSTYPE" =~ ^linux ]]; then
    ln -s  $(pwd)/.config/nvim ~/.config
 
    echo 'Linking alacritty.yml'
-   ln -s  $(pwd)/.config/alacritty.yml ~/.config
+   # ln -s  $(pwd)/.config/alacritty.yml ~/.config
+   ln -s  $(pwd)/.config/alacritty.toml ~/.config
 
    echo 'Linking yabai'
    ln -s  $(pwd)/.config/yabai ~/.config
