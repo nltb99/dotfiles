@@ -40,7 +40,7 @@ brew install ripgrep fzf the_silver_searcher
 brew install black flake8 poetry pyenv python-setuptools python-packaging
 
 # Miscellaneous
-brew install cmatrix yarn tree neovim git tmux gcc gpp gh go htop n wget
+brew install cmatrix yarn tree neovim git tmux gcc gpp gh go htop n wget code-minimap
 ```
 
 ###### Linux
