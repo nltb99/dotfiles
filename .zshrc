@@ -171,6 +171,7 @@ export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/lib/node_modules:$PATH"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 export PATH=$PATH:/usr/local/mongodb/bin  
 export PATH="$PATH:/Users/nltbao/flutter 2/bin"
 export PATH=$PATH:/Users/nltbao/ffmpeg
