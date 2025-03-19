@@ -55,6 +55,9 @@ shift + alt - g: osascript -e 'tell application "Github Desktop" to activate'
 # shift + alt - c: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m query --windows | ag -B 2 'Code' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/')
 shift + alt - c: osascript -e 'tell application "Code" to activate'
 
+# Code - Insiders
+# shift + alt - c: osascript -e 'tell application "Code - Insiders" to activate'
+
 # qutebrowser
 # shift + alt - b: yabai -m window --toggle zoom-fullscreen --focus $(yabai -m query --windows | ag -B 2 'qutebrowser' | ag 'id' | grep '"id":' | sed -E 's/.*"id":([0-9]+),.*/\1/')
 shift + alt - b: osascript -e 'tell application "qutebrowser" to activate'

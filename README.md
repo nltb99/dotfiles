@@ -44,6 +44,15 @@ brew install cmatrix yarn tree neovim git tmux gcc gpp gh go htop n wget code-mi
 
 # Tmux Plugin Manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# Enable hold the key while pressing
+defaults write -g ApplePressAndHoldEnabled -bool false: Hold key press
+
+# Disable spellcheck in notes MacBook
+defaults write com.apple.notes NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Enable Show Hidden Files
+defaults write com.apple.finder AppleShowAllFiles YES
 ```
 
 ###### Linux
