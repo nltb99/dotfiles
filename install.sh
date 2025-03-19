@@ -9,13 +9,13 @@ if [[ "$OSTYPE" =~ ^darwin || "$OSTYPE" =~ ^linux ]]; then
    ln -s  $(pwd)/.config/alacritty.toml ~/.config
 
    echo 'Linking yabai'
-   ln -s  $(pwd)/.config/yabai ~/.config
+   ln -s  $(pwd)/.config/yabai ~/.config/yabai
 
    echo 'Linking skhd'
-   ln -s  $(pwd)/.config/skhd ~/.config
+   ln -s  $(pwd)/.config/skhd ~/.config/skhd
 
    echo 'Linking Karabiner'
-   ln -s  $(pwd)/.config/karabiner ~/.config
+   ln -s  $(pwd)/.config/karabiner ~/.config/karabiner
 
    ## root
    echo 'Linking qutebrowser'
