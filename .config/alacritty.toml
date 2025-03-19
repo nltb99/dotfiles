@@ -665,7 +665,7 @@ render_timer = false
 size = 14.5
 
 [font.bold]
-family = "FiraCode Nerd Font"
+family = "FuraCode Nerd Font"
 style = "Bold"
 
 [font.glyph_offset]
@@ -677,7 +677,7 @@ family = "Source Code Pro"
 style = "Medium Italic"
 
 [font.normal]
-family = "FiraCode Nerd Font"
+family = "FuraCode Nerd Font"
 style = "Retina"
 
 [font.offset]
