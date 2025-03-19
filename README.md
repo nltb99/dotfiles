@@ -41,6 +41,9 @@ brew install black flake8 poetry pyenv python-setuptools python-packaging
 
 # Miscellaneous
 brew install cmatrix yarn tree neovim git tmux gcc gpp gh go htop n wget code-minimap
+
+# Tmux Plugin Manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
 ###### Linux
