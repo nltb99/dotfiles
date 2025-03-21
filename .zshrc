@@ -158,7 +158,7 @@ alias dockerdown='docker-compose -f /Users/nltbao/Desktop/nvim/scripts/redis_rab
 alias k='kubectl'
 
 # Code Insiders
-alias codei='code-insiders'
+alias code='code-insiders'
 
 ####################### ENV variable #######################
 
