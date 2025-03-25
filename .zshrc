@@ -126,13 +126,13 @@ alias pyrun='python main.py < input.txt'
 # Python
 alias py="python"
 alias pypath='export PYTHONPATH=$(pwd)'
-alias pppp='source /Users/nltbao/Desktop/nvim/scripts/pppp.sh'
-alias p2p2='poetry env use /Users/nltbao/.pyenv/shims/python'
+alias pppp='source ~/Desktop/nvim/scripts/pppp.sh'
+alias p2p2='poetry env use ~/.pyenv/shims/python'
 
 # Github
-alias ghsync='/Users/nltbao/Desktop/nvim/scripts/sync.sh'
-alias cdecrypt='/Users/nltbao/Desktop/nvim/scripts/c_decrypt.sh $1'
-alias cpurgequeue='/Users/nltbao/Desktop/nvim/scripts/rabbitmq/purge_all_queue.sh'
+alias ghsync='~/Desktop/nvim/scripts/sync.sh'
+alias cdecrypt='~/Desktop/nvim/scripts/c_decrypt.sh $1'
+alias cpurgequeue='~/Desktop/nvim/scripts/rabbitmq/purge_all_queue.sh'
 
 # Tmux kill all sessions & windows except current session
 # alias tkill='tmux ls | grep -v '\''(attached)'\'' | awk '\''{print $1}'\'' | xargs -I {} tmux kill-session -t {} && tmux kill-window -a'
@@ -148,11 +148,11 @@ alias ckill='ps aux | grep '\''celery'\'' | grep -v '\''grep'\'' | awk '\''{prin
 alias yafull='for window_id in $(yabai -m query --windows | ag -B 31 '\'\"'has-fullscreen-zoom":false,'"'"' | ag '\'\"'id"'\'' | cut -d ":" -f2 | cut -d "," -f1); do yabai -m window "$window_id" --toggle zoom-fullscreen; done'
 
 # Gcloud CLI
-alias gcloud='/Users/nltbao/Documents/libs/google-cloud-sdk/bin/gcloud'
+alias gcloud='~/Documents/libs/google-cloud-sdk/bin/gcloud'
 
 # Docker Compose
-alias dockerup='docker-compose -f /Users/nltbao/Desktop/nvim/scripts/redis_rabbitmq_mongo.yaml up -d'
-alias dockerdown='docker-compose -f /Users/nltbao/Desktop/nvim/scripts/redis_rabbitmq_mongo.yaml down'
+alias dockerup='docker-compose -f ~/Desktop/nvim/scripts/docker_compose.yaml up -d'
+alias dockerdown='docker-compose -f ~/Desktop/nvim/scripts/docker_compose.yaml down'
 
 # Kubernetes
 alias k='kubectl'
@@ -176,8 +176,6 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/lib/node_modules:$PATH"
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 export PATH=$PATH:/usr/local/mongodb/bin  
-export PATH="$PATH:/Users/nltbao/flutter 2/bin"
-export PATH=$PATH:/Users/nltbao/ffmpeg
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:"$PATH"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-11.0.15.jdk/Contents/Home"
@@ -248,3 +246,9 @@ if [ "$TMUX" = "" ]; then tmux; fi
 
 # To increase the number of open files
 ulimit -n 65536
+
+# Start the SSH agent
+eval $(ssh-agent)
+
+# Add the GPG key 
+export GPG_TTY=$(tty)
