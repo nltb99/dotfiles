@@ -158,7 +158,12 @@ alias dockerdown='docker-compose -f ~/Desktop/nvim/scripts/docker_compose.yaml d
 alias k='kubectl'
 
 # Code Insiders
-alias code='code-insiders'
+# alias code='code'
+# alias code='code-insiders'
+alias code='cursor'
+
+# Forti
+alias ftinternal='sudo openfortivpn -c /Users/bao.nguyen2/Desktop/nvim/scripts/forti/internal.conf'
 
 ####################### ENV variable #######################
 
@@ -179,6 +184,9 @@ export PATH=$PATH:/usr/local/mongodb/bin
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:"$PATH"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-11.0.15.jdk/Contents/Home"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+
 export FZF_DEFAULT_COMMAND=""
 
 # Go
