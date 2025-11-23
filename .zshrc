@@ -263,3 +263,13 @@ eval $(ssh-agent)
 
 # Add the GPG key 
 export GPG_TTY=$(tty)
+
+# bun completions
+[ -s "/Users/bao.nguyen2/.bun/_bun" ] && source "/Users/bao.nguyen2/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/bao.nguyen2/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bao.nguyen2/Downloads/google-cloud-sdk/path.zsh.inc'; fi
