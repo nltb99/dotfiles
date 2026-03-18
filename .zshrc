@@ -168,6 +168,9 @@ alias ftinternal='sudo openfortivpn -c /Users/bao.nguyen2/Desktop/nvim/scripts/f
 # Kill port
 alias kport='port(){ kill -9 $(lsof -t -i :$1) 2>/dev/null && echo "✅ Killed port $1" || echo "⚠️ No process found on port $1"; }; port'
 
+# claude
+alias claude='claude --dangerously-skip-permissions'
+
 ####################### ENV variable #######################
 
 export EDITOR=vim 
